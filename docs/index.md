@@ -78,7 +78,7 @@ Interested in collaborating or discussing technology? Feel free to reach out!
 
 [Email Me](mailto:esubalewchekol6@gmail.com){ .md-button }
 [View Resume](resume.md){ .md-button }
-[Read My Blog](blog.md){ .md-button }
+[Read My Blog](blog/index.md){ .md-button }
 
 ---
 

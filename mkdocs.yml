@@ -123,6 +123,11 @@ plugins:
 nav:
   - Home: index.md
   - Projects: projects.md
-  - Blog: blog.md
+  - Blog:
+    - blog/index.md
+    - blog/using-run-kit-multi-language-rust.md
+    - blog/bridging-rust-python-pyo3.md
+    - blog/hosting-django-app-on-cpanel-tutorial.md
+    - blog/hosting-telegram-bots-python-free.md
   - Resume: resume.md
 
