@@ -168,12 +168,12 @@ if __name__ == '__main__':
 
 | Platform | Speed | Database Support | Free Tier Duration | Best For |
 |----------|-------|------------------|-------------------|----------|
-| Railway | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Limited by credits | Production bots |
-| PythonAnywhere | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | Unlimited | Development & testing |
-| Vercel | ⭐⭐⭐ | ⭐⭐ | Unlimited | Serverless bots |
-| Render | ⭐⭐⭐ | ⭐⭐⭐⭐ | Unlimited | Small-scale bots |
-| Back4App | ⭐⭐⭐ | ⭐⭐⭐ | Limited time | Testing |
-| Koyeb | ⭐⭐ | ⭐⭐⭐ | Limited | Basic bots |
+| Railway | Excellent | Good | Limited by credits | Production bots |
+| PythonAnywhere | Very Good | Excellent | Unlimited | Development & testing |
+| Vercel | Good | Fair | Unlimited | Serverless bots |
+| Render | Good | Very Good | Unlimited | Small-scale bots |
+| Back4App | Good | Good | Limited time | Testing |
+| Koyeb | Fair | Good | Limited | Basic bots |
 
 ---
 
@@ -194,4 +194,4 @@ So, what are you waiting for? Spin up your Python-powered Telegram bot, pick a p
 
 ---
 
-*Happy bot building! 🤖*
+*Happy bot building!*

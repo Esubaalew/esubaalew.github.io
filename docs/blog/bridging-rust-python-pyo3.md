@@ -15,7 +15,7 @@ In this guide, we’ll build a Python extension in Rust that processes input eve
 
 ---
 
-## ⚙️ Step 1: Project Setup
+## Step 1: Project Setup
 
 First, create a Rust library project:
 
@@ -47,7 +47,7 @@ pip install maturin
 
 ---
 
-## 🦀 Step 2: Writing Rust Functions for Python
+## Step 2: Writing Rust Functions for Python
 
 Let’s start with a simple Rust function exposed to Python.
 
@@ -76,7 +76,7 @@ fn afrim_py(_py: Python, m: &PyModule) -> PyResult<()> {
 
 ---
 
-## 🧩 Step 3: Exposing Rust Structs as Python Classes
+## Step 3: Exposing Rust Structs as Python Classes
 
 You can also expose Rust structs as Python classes. For example, here’s a `Preprocessor` with methods:
 
@@ -115,7 +115,7 @@ print(p.get_buffer())  # "Hello"
 
 ---
 
-## 🚀 Step 4: Building and Installing
+## Step 4: Building and Installing
 
 Run:
 
@@ -127,7 +127,7 @@ This builds your Rust code into a Python extension and installs it locally.
 
 ---
 
-## 🐍 Step 5: Using It in Python
+## Step 5: Using It in Python
 
 Here’s a taste of what you can now do:
 
@@ -145,7 +145,7 @@ print(p.get_buffer())
 
 ---
 
-## 🎯 Why This Matters
+## Why This Matters
 
 * **Performance:** Rust handles heavy tasks much faster than pure Python.
 * **Safety:** No segfaults or data races.
@@ -159,16 +159,16 @@ This approach is perfect for:
 
 ---
 
-## ✅ Final Thoughts
+## Final Thoughts
 
 With **PyO3** and **maturin**, bridging Rust and Python is easier than ever.
 You write safe, fast Rust code—and expose it directly as Python modules.
 
-If you’re building performance-critical Python tools, give this combo a try. It’s like giving Python a **turbo engine** without losing its simplicity.
+If you're building performance-critical Python tools, give this combo a try. It's like giving Python a **turbo engine** without losing its simplicity.
 
 ---
 
-*Happy hacking with Rust & Python!* 🦀🐍
+*Happy hacking with Rust & Python!*
 
 ```
 

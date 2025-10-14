@@ -207,14 +207,14 @@ When hosting a Django website, you might need to serve media files, such as imag
 
 ---
 
-## 🎯 Conclusion
+## Conclusion
 
 By following this guide, you should now have your Django application successfully hosted on cPanel. You can manage your project, handle static and media files, and ensure your site runs smoothly.
 
-✅ **Pro tips**:
+**Pro tips**:
 
 * Always set `DEBUG = False` in production.
 * Use environment variables for DB credentials and secrets.
 * Regularly check logs and back up your data.
 
-*Happy coding!* 🎉
+*Happy coding!*

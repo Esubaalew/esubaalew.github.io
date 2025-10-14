@@ -1,5 +1,5 @@
 site_name: Esubalew Chekol
-site_description: Software Engineer & MSc AI Student exploring the intersection of mathematics, artificial intelligence, and systems programming.
+site_description: Software Engineer & MSc AI Student. Passionate about mathematics, artificial intelligence, and systems programming.
 site_author: Esubalew Chekol
 site_url: https://esubalew.et
 
@@ -12,7 +12,7 @@ copyright: Copyright &copy; 2025 Esubalew Chekol
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/logo.png
+  # logo: assets/logo.png
   favicon: assets/favicon.png
   
   palette:
@@ -60,6 +60,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Esubaalew
       name: GitHub
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/esubbalew
+      name: Telegram
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/esubaalew
       name: X

@@ -4,17 +4,15 @@
 Software Engineer & MSc AI Student
 </p>
 
-Currently exploring the intersection of mathematics, artificial intelligence, and systems programming.
-
 ---
 
 ## About Me
 
-I'm fascinated by the mathematical foundations of computer science and their practical applications. My work spans from low-level systems programming in Rust and C++ to high-level machine learning applications in Python.
+I'm a software engineer passionate about the mathematical foundations of computer science and their practical applications. My work spans from low-level systems programming in Rust and C++ to machine learning applications in Python.
 
-Currently pursuing my **MSc in Artificial Intelligence** at Addis Ababa University while building production systems that solve real-world problems. I believe in writing code that is both mathematically sound and practically useful.
+Currently pursuing my **MSc in Artificial Intelligence** at Addis Ababa University while building production systems. I focus on writing code that is both mathematically sound and practically useful.
 
-When I'm not coding, you'll find me exploring new algorithms, contributing to open source projects, or diving deep into research papers on machine learning and systems design.
+When I'm not coding, you'll find me exploring algorithms, contributing to open source projects, or reading research papers on machine learning and systems design.
 
 ---
 
@@ -44,7 +42,7 @@ When I'm not coding, you'll find me exploring new algorithms, contributing to op
 
     ---
 
-    Specialized in building robust **Telegram bots** and mini applications that serve thousands of users.
+    Building robust **Telegram bots** and mini applications for automation and user engagement.
 
 </div>
 
