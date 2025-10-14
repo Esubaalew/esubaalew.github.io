@@ -5,26 +5,7 @@ description: "Learn how to deploy a Django application on cPanel with Passenger 
 tags: ["Django", "cPanel", "Hosting", "Deployment", "Tutorial"]
 ---
 
-Deploying a Django application on cPanel can seem daunting, but with the right steps, it can be straightforward. This guide will walk you through the process, from creating a cPanel account to configuring your Django settings. 
-
----
-
-## 📑 Table of Contents
-1. [Create a cPanel Account](#1-create-a-cpanel-account)  
-2. [Set Up Your Domain](#2-set-up-your-domain)  
-3. [Upload Your Django Project](#3-upload-your-django-project)  
-4. [Set Up a Python Application](#4-set-up-a-python-application)  
-5. [Configure Passenger WSGI](#5-configure-passenger-wsgi)  
-6. [Install Required Packages](#6-install-required-packages)  
-7. [Set Up a Database](#7-set-up-a-database)  
-8. [Configure Database Settings](#8-configure-database-settings)  
-9. [Set Up Static Files](#9-set-up-static-files)  
-10. [Collect Static Files](#10-collect-static-files)  
-11. [Set Up Allowed Hosts](#11-set-up-allowed-hosts)  
-12. [Configure Middleware](#12-configure-middleware)  
-13. [Set Up HTTPS](#13-set-up-https)  
-14. [Test Your Application](#14-test-your-application)  
-15. [Set Up Hosting for Media Files](#15-set-up-hosting-for-media-files)  
+Deploying a Django application on cPanel can seem daunting, but with the right steps, it can be straightforward. This guide will walk you through the process, from creating a cPanel account to configuring your Django settings.
 
 ---
 

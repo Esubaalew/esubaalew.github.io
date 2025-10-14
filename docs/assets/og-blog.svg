@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9C27B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#673AB7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="60" fill="#9C27B0" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="80" fill="#673AB7" opacity="0.08"/>
+  
+  <!-- Blog icon -->
+  <g transform="translate(80, 200)">
+    <rect x="0" y="0" width="120" height="160" rx="8" fill="none" stroke="url(#accentGrad)" stroke-width="4"/>
+    <line x1="20" y1="40" x2="100" y2="40" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="70" x2="100" y2="70" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="100" x2="80" y2="100" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="240" y="290" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="72" font-weight="700" fill="#ffffff">
+    Blog
+  </text>
+  <text x="240" y="350" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="36" fill="#b0b0b0">
+    Esubalew Chekol
+  </text>
+  <text x="240" y="420" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="28" fill="#888888">
+    Thoughts on software, AI, and systems
+  </text>
+  
+  <!-- Bottom accent bar -->
+  <rect x="0" y="600" width="1200" height="30" fill="url(#accentGrad)"/>
+  
+  <!-- Website URL -->
+  <text x="240" y="560" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="24" fill="#9C27B0" font-weight="500">
+    esubalew.et
+  </text>
+</svg>
+

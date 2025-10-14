@@ -4,7 +4,7 @@
 Software Engineer & MSc AI Student
 </p>
 
-I build systems that think, learn, and scale. Currently exploring the intersection of mathematics, artificial intelligence, and systems programming.
+Currently exploring the intersection of mathematics, artificial intelligence, and systems programming.
 
 ---
 
