@@ -1,0 +1,115 @@
+/* Custom styles for Esubalew's Portfolio */
+
+/* Hero section styling */
+.md-typeset h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Grid cards for the "What I Do" section */
+.grid.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.grid.cards > * {
+    padding: 1.5rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid.cards > *:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Button enhancements */
+.md-button {
+    transition: all 0.2s;
+}
+
+.md-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.md-button--primary {
+    background-color: var(--md-primary-fg-color);
+    border-color: var(--md-primary-fg-color);
+}
+
+/* Project cards */
+.md-typeset h3 a {
+    text-decoration: none;
+    color: var(--md-primary-fg-color);
+}
+
+.md-typeset h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+    .grid.cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Homepage hero styling */
+.md-content article > p:first-of-type {
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+}
+
+/* Icon styling */
+.md-typeset .lg.middle {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+/* Footer enhancement */
+.md-footer-meta {
+    background-color: var(--md-footer-bg-color);
+}
+
+/* Link hover effects */
+.md-typeset a:hover {
+    color: var(--md-accent-fg-color);
+}
+
+/* Code block enhancements */
+.md-typeset pre > code {
+    border-radius: 0.4rem;
+}
+
+/* Custom spacing for sections */
+.md-typeset hr {
+    margin: 3rem 0;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Social icons in footer */
+.md-social__link svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+/* Table styling for resume */
+.md-typeset table:not([class]) {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.4rem;
+}
+
+/* Enhanced readability */
+.md-typeset {
+    line-height: 1.7;
+}
+
+/* Project tags/tech stack */
+.md-typeset strong {
+    color: var(--md-primary-fg-color);
+}
+
