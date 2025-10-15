@@ -110,6 +110,56 @@ Master any subject with AI-generated practice questions and adaptive learning pa
 
 ---
 
+### [Wereb Collection](https://wereb.esubalew.et)
+**Ethiopian Orthodox Church Music Collection**
+
+Traditional hymns and spiritual music from the Ethiopian Orthodox Church. Comprehensive collection of liturgical music.
+
+**Technologies:** Next.js  
+**Status:** Active
+
+---
+
+### [WikiRandom](https://wiki.esubalew.et)
+**Random Wikipedia explorer**
+
+Explore random Wikipedia articles and expand your horizons with each click. Discover something new every time.
+
+**Technologies:** Next.js, Wikipedia API  
+**Status:** Active
+
+---
+
+### [Telegram Analysis](https://telegram.esubalew.et)
+**Telegram chat analyzer**
+
+Telegram chat analysis tool for insights into your conversations and messaging patterns. Understand your communication habits.
+
+**Technologies:** Next.js  
+**Status:** Active
+
+---
+
+### [Geez Blog](https://geez.esubalew.et)
+**Traditional Ethiopian literature**
+
+Geez blogs collection featuring traditional Ethiopian literature and spiritual writings in the ancient Ge'ez language.
+
+**Technologies:** Next.js  
+**Status:** Active
+
+---
+
+### [Chewata Quest](https://chewata.esubalew.et)
+**Patience-testing game collection**
+
+Epic journey through five challenging games testing your problem-solving skills and patience. Can you complete them all?
+
+**Technologies:** Next.js  
+**Status:** Active
+
+---
+
 ## Python Packages & Tools
 
 ### [britannica-dictionary](https://pypi.org/project/britannica-dictionary/)
@@ -168,19 +218,126 @@ Desktop search engine using web scraping to aggregate results from multiple webs
 
 ## Telegram Bots
 
-### [GradeReport](https://github.com/Esubaalew/AAUROBOT)
+### [Hagerie | ሐገሬ](https://t.me/HagerieRobot)
+**Ethiopian Language Dictionary Bot**
+
+AI-powered translation between Amharic, Ge'ez, Tigrinya, Oromo, and English with cultural context understanding. The flagship bot for Ethiopian language learning.
+
+**Technologies:** Python, Telegram API, AI  
+**Demo:** [t.me/HagerieRobot](https://t.me/HagerieRobot) | [Web Version](https://ethiopia.esubalew.et)  
+**Status:** Active
+
+---
+
+### [AAU Robot](https://aau-robot.esubalew.et)
 **Addis Ababa University student bot**
 
-Simple but effective Telegram bot serving Addis Ababa University students with grade reports and academic information.
+Telegram bot for viewing grade reports for AAU students. Simple but effective tool serving the university community.
 
 **Technologies:** Python, Telegram API  
+**Demo:** [t.me/AAU_Robot](https://t.me/AAU_Robot)  
 **Status:** Active
+
+---
+
+### [Meaning Robot](https://d.esubalew.et)
+**Dictionary telegram bot**
+
+Telegram version of the modern dictionary, bringing Britannica and Merriam-Webster dictionaries together for quick word lookups.
+
+**Technologies:** Python, Telegram API  
+**Demo:** [t.me/MeaningRobot](https://t.me/MeaningRobot)  
+**Status:** Active
+
+---
+
+### [SaveLink Robot](https://t.me/SaveLink_Robot)
+**Video download bot**
+
+Download videos from Instagram, Facebook, TikTok, and YouTube with ease. One of the most popular utility bots.
+
+**Technologies:** Python, Telegram API, yt-dlp  
+**Demo:** [t.me/SaveLink_Robot](https://t.me/SaveLink_Robot)  
+**Status:** Active
+
+---
+
+### [Steel AI Bot](https://t.me/SteelAI_bot)
+**AI agent powered by Steel and Gemini**
+
+Open source agent that does the right thing and helps you accomplish tasks using advanced AI capabilities.
+
+**Technologies:** Python, Telegram API, Steel, Gemini API  
+**Demo:** [t.me/SteelAI_bot](https://t.me/SteelAI_bot)  
+**Status:** Active
+
+---
+
+### [Identification Robot](https://t.me/IdentificationROBot)
+**Telegram user info analyzer**
+
+Get detailed user info, account age estimates, and forwarded message analysis for any Telegram content.
+
+**Technologies:** Python, Telegram API  
+**Demo:** [t.me/IdentificationROBot](https://t.me/IdentificationROBot)  
+**Status:** Active
+
+---
+
+### [Results Robot](https://t.me/ResultsRobot)
+**Grade 12 examination results checker**
+
+Unofficial result accessing robot for Grade 12 students to check their examination results quickly.
+
+**Technologies:** Python, Telegram API  
+**Demo:** [t.me/ResultsRobot](https://t.me/ResultsRobot)  
+**Status:** Active
+
+---
+
+### [Campus Robot](https://t.me/CampusRobot)
+**Sentiment analysis bot**
+
+Simple sentiment analysis bot for analyzing text sentiment and emotional tone in conversations.
+
+**Technologies:** Python, Telegram API, NLP  
+**Demo:** [t.me/CampusRobot](https://t.me/CampusRobot)  
+**Status:** Active
+
+---
+
+### [Wereb Bot](https://wereb.esubalew.et)
+**Ethiopian Orthodox Church music bot**
+
+Telegram bot version of the Ethiopian Orthodox Church music collection. Access traditional hymns and spiritual music.
+
+**Technologies:** Python, Telegram API  
+**Demo:** [t.me/werebBot](https://t.me/werebBot) | [Web Version](https://wereb.esubalew.et)  
+**Status:** Active
+
+---
+
+### [Pen Robot](https://t.me/PenRobot)
+**Quotes and inspiration bot**
+
+Bot that sends quotes and images periodically. Currently discontinued but was a source of daily inspiration.
+
+**Technologies:** Python, Telegram API  
+**Status:** Discontinued
 
 ---
 
 ## Open Source Contributions
 
 I regularly contribute to open-source projects and maintain several packages used by the community. Check out my [GitHub profile](https://github.com/Esubaalew) for more projects and contributions.
+
+---
+
+## 🎯 Hobby Projects Hub
+
+All of the above projects (except client work) are **free and public hobby projects** created by [@esubalew](https://github.com/Esubaalew).
+
+**Visit [hagerie.esubalew.et](https://hagerie.esubalew.et)** - A comprehensive showcase of all my Telegram bots and web applications in one place.
 
 ---
 
