@@ -1,0 +1,77 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="resumeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#512DA8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A237E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle pattern -->
+    <pattern id="dotsPattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#fff" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#resumeGrad)"/>
+  <rect width="1200" height="630" fill="url(#dotsPattern)"/>
+  
+  <!-- Decorative geometric shapes -->
+  <rect x="900" y="50" width="200" height="200" rx="20" fill="#fff" fill-opacity="0.05" transform="rotate(15 1000 150)"/>
+  <rect x="50" y="400" width="150" height="150" rx="15" fill="#fff" fill-opacity="0.05" transform="rotate(-20 125 475)"/>
+  
+  <!-- Main content area -->
+  <rect x="80" y="120" width="1040" height="390" rx="25" fill="#fff" fill-opacity="0.12"/>
+  
+  <!-- Left section with icon -->
+  <g transform="translate(140, 200)">
+    <!-- Document/CV icon -->
+    <rect x="0" y="0" width="120" height="160" rx="10" fill="#7C4DFF" stroke="#fff" stroke-width="3"/>
+    <line x1="20" y1="40" x2="100" y2="40" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="20" y1="70" x2="100" y2="70" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="20" y1="100" x2="80" y2="100" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <line x1="20" y1="130" x2="90" y2="130" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Right section with text -->
+  <g transform="translate(320, 200)">
+    <text x="0" y="0" fill="#fff" font-family="Arial, sans-serif" font-size="50" font-weight="bold">
+      ESUBALEW CHEKOL
+    </text>
+    
+    <text x="0" y="60" fill="#B39DDB" font-family="Arial, sans-serif" font-size="32" font-weight="600">
+      Software Engineer &amp; AI Researcher
+    </text>
+    
+    <!-- Info lines -->
+    <g transform="translate(0, 110)">
+      <circle cx="0" cy="-5" r="6" fill="#7C4DFF"/>
+      <text x="20" y="0" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="22">
+        MSc AI @ Addis Ababa University
+      </text>
+    </g>
+    
+    <g transform="translate(0, 155)">
+      <circle cx="0" cy="-5" r="6" fill="#7C4DFF"/>
+      <text x="20" y="0" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="22">
+        Software Engineer @ INTAPS
+      </text>
+    </g>
+    
+    <g transform="translate(0, 200)">
+      <circle cx="0" cy="-5" r="6" fill="#7C4DFF"/>
+      <text x="20" y="0" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="22">
+        GPA 3.9/4.0 • Rust • Python • C# • ML
+      </text>
+    </g>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <line x1="140" y1="520" x2="1060" y2="520" stroke="#7C4DFF" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Footer -->
+  <text x="600" y="575" fill="#B39DDB" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="600">
+    esubalew.et/resume
+  </text>
+</svg>
+

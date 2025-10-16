@@ -1,0 +1,81 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="projectsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#673AB7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#311B92;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Pattern for code background -->
+    <pattern id="codePattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <text x="10" y="20" fill="#fff" fill-opacity="0.03" font-family="monospace" font-size="12">
+        fn main() {
+      </text>
+      <text x="10" y="40" fill="#fff" fill-opacity="0.03" font-family="monospace" font-size="12">
+        let code =
+      </text>
+      <text x="10" y="60" fill="#fff" fill-opacity="0.03" font-family="monospace" font-size="12">
+        "Rust";
+      </text>
+      <text x="10" y="80" fill="#fff" fill-opacity="0.03" font-family="monospace" font-size="12">
+        }
+      </text>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#projectsGrad)"/>
+  <rect width="1200" height="630" fill="url(#codePattern)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="1100" cy="100" r="150" fill="#fff" fill-opacity="0.05"/>
+  <circle cx="100" cy="500" r="100" fill="#fff" fill-opacity="0.05"/>
+  
+  <!-- Code brackets decoration -->
+  <text x="80" y="150" fill="#fff" fill-opacity="0.2" font-family="monospace" font-size="120" font-weight="bold">{</text>
+  <text x="1080" y="550" fill="#fff" fill-opacity="0.2" font-family="monospace" font-size="120" font-weight="bold">}</text>
+  
+  <!-- Main content container -->
+  <rect x="100" y="180" width="1000" height="270" rx="20" fill="#fff" fill-opacity="0.1"/>
+  
+  <!-- Icon area -->
+  <g transform="translate(150, 240)">
+    <!-- Code icon -->
+    <rect x="0" y="0" width="80" height="80" rx="10" fill="#FFD54F"/>
+    <text x="15" y="60" fill="#311B92" font-family="monospace" font-size="50" font-weight="bold">&lt;/&gt;</text>
+  </g>
+  
+  <!-- Text content -->
+  <text x="280" y="280" fill="#fff" font-family="Arial, sans-serif" font-size="36" font-weight="bold">
+    SOFTWARE PROJECTS
+  </text>
+  
+  <text x="280" y="330" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="28">
+    Esubalew Chekol
+  </text>
+  
+  <text x="280" y="380" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="300">
+    Open Source • Systems Programming • AI
+  </text>
+  
+  <!-- Tech stack badges -->
+  <g transform="translate(280, 400)">
+    <rect x="0" y="0" width="80" height="35" rx="17.5" fill="#FF6F00" fill-opacity="0.8"/>
+    <text x="40" y="23" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Rust</text>
+    
+    <rect x="95" y="0" width="100" height="35" rx="17.5" fill="#3776AB" fill-opacity="0.8"/>
+    <text x="145" y="23" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Python</text>
+    
+    <rect x="210" y="0" width="70" height="35" rx="17.5" fill="#239120" fill-opacity="0.8"/>
+    <text x="245" y="23" fill="#fff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">C#</text>
+    
+    <rect x="295" y="0" width="90" height="35" rx="17.5" fill="#61DAFB" fill-opacity="0.8"/>
+    <text x="340" y="23" fill="#000" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">React</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="580" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">
+    esubalew.et/projects
+  </text>
+</svg>
+

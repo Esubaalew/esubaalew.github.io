@@ -5,7 +5,7 @@ keywords: "Rust projects, Python projects, open source, run-kit, Telegram bots, 
 author: "Esubalew Chekol"
 og:title: "Software Projects Portfolio - Esubalew Chekol"
 og:description: "Explore my open-source projects: universal code runners, AI models, web applications, and Telegram bots serving thousands of users."
-og:image: "assets/og-image.png"
+og:image: "assets/og-projects.png"
 og:type: "website"
 ---
 

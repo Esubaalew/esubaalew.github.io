@@ -49,7 +49,7 @@ When I'm not coding, you'll find me exploring algorithms, contributing to open s
 
     Creating scalable web applications with **ASP.NET Core**, **Django**, **FastAPI**, and **Next.js/React**. From APIs to complete systems.
 
--   :material-telegram:{ .lg .middle } **Bot Development**
+-   :fontawesome-brands-telegram:{ .lg .middle } **Bot Development**
 
     ---
 

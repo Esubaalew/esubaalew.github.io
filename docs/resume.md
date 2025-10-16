@@ -5,7 +5,7 @@ keywords: "Esubalew Chekol resume, software engineer resume, AI researcher, Rust
 author: "Esubalew Chekol"
 og:title: "Esubalew Chekol - Resume & Work Experience"
 og:description: "Software Engineer with expertise in Rust, Python, C#, and AI. Building mission-critical systems and machine learning applications."
-og:image: "assets/og-image.png"
+og:image: "assets/og-resume.png"
 og:type: "profile"
 ---
 
