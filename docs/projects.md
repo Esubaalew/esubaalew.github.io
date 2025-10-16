@@ -1,3 +1,14 @@
+---
+title: "Projects - Esubalew Chekol | Open Source & Software Development"
+description: "Portfolio of open-source projects including run-kit (Rust polyglot runner), Telegram bots, machine learning models, web applications, and systems programming tools. Built with Rust, Python, C#, and Next.js."
+keywords: "Rust projects, Python projects, open source, run-kit, Telegram bots, machine learning, web development, systems programming, PyO3, Django, FastAPI, Next.js, Ethiopian developer, software portfolio"
+author: "Esubalew Chekol"
+og:title: "Software Projects Portfolio - Esubalew Chekol"
+og:description: "Explore my open-source projects: universal code runners, AI models, web applications, and Telegram bots serving thousands of users."
+og:image: "assets/og-image.png"
+og:type: "website"
+---
+
 # Projects
 
 A showcase of my open-source contributions and personal projects spanning systems programming, machine learning, and full-stack development.
@@ -333,7 +344,7 @@ I regularly contribute to open-source projects and maintain several packages use
 
 ---
 
-## 🎯 Hobby Projects Hub
+##  Hobby Projects Hub
 
 All of the above projects (except client work) are **free and public hobby projects** created by [@esubalew](https://github.com/Esubaalew).
 

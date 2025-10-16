@@ -2,7 +2,13 @@
 title: "Hosting Telegram Bots with Python for Free: Exploring Platforms and Their Quirks"
 date: "2025-01-17"
 description: "A comprehensive guide to hosting Telegram bots on free platforms, comparing webhooks vs long polling, and exploring the quirks of PythonAnywhere, Railway, Vercel, and more."
+keywords: "Telegram bot hosting, free hosting, Python Telegram bot, webhooks vs long polling, PythonAnywhere, Railway, Vercel, Render, python-telegram-bot, free bot hosting, serverless Telegram bot, bot deployment"
+author: "Esubalew Chekol"
 tags: ["Python", "Telegram Bots", "Hosting", "Web Development", "Tutorial"]
+og:title: "Free Hosting for Python Telegram Bots - Platform Comparison"
+og:description: "Compare free hosting platforms for Telegram bots. Webhooks vs polling, PythonAnywhere, Railway, Vercel and more."
+og:image: "assets/og-blog.png"
+og:type: "article"
 ---
 
 Telegram bots are a fun and powerful way to build interactive tools, automate tasks, and even engage users with games or utilities. Hosting your Telegram bot, however, requires choosing the right platform—and if you're on a budget, free hosting is a great starting point. But before diving into the platforms, let's break down two essential concepts: **webhooks** and **long polling**.

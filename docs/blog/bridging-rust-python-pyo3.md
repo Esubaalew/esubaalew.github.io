@@ -1,8 +1,14 @@
 ---
 title: "Bridging Rust and Python: Building Python Extensions with PyO3"
 date: "2025-09-24"
-description: "Learn how to use Rust inside Python by creating Python extensions with PyO3 and maturin. We’ll walk through setup, code examples, and practical use cases."
+description: "Learn how to use Rust inside Python by creating Python extensions with PyO3 and maturin. We'll walk through setup, code examples, and practical use cases."
+keywords: "PyO3, Rust Python bindings, maturin, Python extensions in Rust, Rust Python integration, speed up Python with Rust, cdylib, Rust tutorial, Python performance, Rust Python FFI"
+author: "Esubalew Chekol"
 tags: ["Rust", "Python", "PyO3", "maturin", "Tutorial"]
+og:title: "Build Fast Python Extensions with Rust and PyO3"
+og:description: "Complete guide to creating high-performance Python modules using Rust, PyO3, and maturin."
+og:image: "assets/og-blog.png"
+og:type: "article"
 ---
 
 Rust and Python are a match made in heaven:  

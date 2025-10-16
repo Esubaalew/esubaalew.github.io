@@ -2,7 +2,13 @@
 title: "Hosting a Django Website on cPanel: A Step-by-Step Guide"
 date: "2025-09-26"
 description: "Learn how to deploy a Django application on cPanel with Passenger WSGI, static and media file setup, database configuration, and HTTPS."
+keywords: "Django cPanel hosting, deploy Django cPanel, Passenger WSGI, Django deployment, cPanel Python app, Django static files, Django media files, Django HTTPS, Django production, Django tutorial, Django MySQL"
+author: "Esubalew Chekol"
 tags: ["Django", "cPanel", "Hosting", "Deployment", "Tutorial"]
+og:title: "Complete Guide to Hosting Django on cPanel"
+og:description: "Step-by-step tutorial for deploying Django applications with Passenger WSGI, databases, and SSL."
+og:image: "assets/og-blog.png"
+og:type: "article"
 ---
 
 Deploying a Django application on cPanel can seem daunting, but with the right steps, it can be straightforward. This guide will walk you through the process, from creating a cPanel account to configuring your Django settings.

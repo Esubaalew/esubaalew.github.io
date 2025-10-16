@@ -2,7 +2,13 @@
 title: "Using Run-Kit to Seamlessly Mix Multiple Languages in a Single Rust Codebase"
 date: "2025-10-11"
 description: "Learn how to use Run-Kit to execute Python, R, JavaScript, and more—all from within a single Rust application. Build powerful polyglot pipelines without leaving your Rust project!"
+keywords: "run-kit, Rust, polyglot programming, REPL, multi-language runner, Python Rust integration, R statistics, JavaScript Rust, polyglot analytics, Rust tutorial, cargo crate, universal code runner"
+author: "Esubalew Chekol"
 tags: ["Rust", "Polyglot", "REPL", "Run-Kit", "Tutorial", "Programming"]
+og:title: "Run-Kit: Build Polyglot Applications in Rust"
+og:description: "Execute Python, R, JavaScript and 25+ languages from Rust. Build powerful analytics pipelines seamlessly."
+og:image: "assets/og-blog.png"
+og:type: "article"
 ---
 
 

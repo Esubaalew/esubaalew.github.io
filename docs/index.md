@@ -1,3 +1,14 @@
+---
+title: "Esubalew Chekol - Software Engineer & MSc AI Student"
+description: "Software Engineer specializing in Rust, Python, and C#. MSc AI student at Addis Ababa University. Building systems programming tools, machine learning applications, and scalable web solutions."
+keywords: "Esubalew Chekol, Software Engineer, MSc AI, Rust Developer, Python Developer, Machine Learning, Systems Programming, Addis Ababa University, Full Stack Developer, Ethiopian Software Engineer"
+author: "Esubalew Chekol"
+og:title: "Esubalew Chekol - Software Engineer & AI Researcher"
+og:description: "Passionate about mathematics, artificial intelligence, and systems programming. Building production systems in Rust, Python, and C#."
+og:image: "assets/og-image.png"
+og:type: "website"
+---
+
 # Esubalew Chekol
 
 <p style="font-size: 1.2em; color: var(--md-primary-fg-color);">

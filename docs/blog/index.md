@@ -1,3 +1,14 @@
+---
+title: "Blog - Esubalew Chekol | Software Engineering & AI Insights"
+description: "Technical blog about Rust, Python, PyO3, machine learning, Django deployment, Telegram bots, systems programming, and the mathematical foundations of computing."
+keywords: "software engineering blog, Rust tutorials, Python tutorials, PyO3, machine learning blog, Django hosting, Telegram bots, systems programming, AI blog, programming tutorials, technical writing"
+author: "Esubalew Chekol"
+og:title: "Technical Blog - Software Engineering & Machine Learning"
+og:description: "Deep dives into Rust, Python, AI, and practical software engineering solutions."
+og:image: "assets/og-blog.png"
+og:type: "website"
+---
+
 # Blog
 
 Thoughts on software engineering, machine learning, and the mathematical foundations of computing.

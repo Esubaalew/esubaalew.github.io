@@ -2,9 +2,9 @@
 
 {% block extrahead %}
   <!-- SEO Meta Tags -->
-  <meta name="description" content="{{ config.site_description }}">
-  <meta name="keywords" content="Esubalew Chekol, Software Engineer, AI, Machine Learning, Rust, Python, Ethiopia, Full Stack Developer, Systems Programming">
-  <meta name="author" content="{{ config.site_author }}">
+  <meta name="description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}">
+  <meta name="keywords" content="{% if page.meta and page.meta.keywords %}{{ page.meta.keywords }}{% else %}Esubalew Chekol, Software Engineer, AI, Machine Learning, Rust, Python, Ethiopia, Full Stack Developer, Systems Programming{% endif %}">
+  <meta name="author" content="{% if page.meta and page.meta.author %}{{ page.meta.author }}{% else %}{{ config.site_author }}{% endif %}">
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
   <meta name="language" content="English">
@@ -18,21 +18,32 @@
   {% set og_image = config.site_url ~ "/assets/og-image.png" %}
   {% set og_description = config.site_description %}
   {% set og_type = "website" %}
+  {% set og_title = config.site_name %}
   
   {% if page and page.file and page.file.src_path %}
-    {% if page.file.src_path.startswith('blog/') and page.file.src_path != 'blog/index.md' %}
+    {# Get page-specific OG metadata from frontmatter #}
+    {% if page.meta and page.meta['og:type'] %}
+      {% set og_type = page.meta['og:type'] %}
+    {% elif page.file.src_path.startswith('blog/') and page.file.src_path != 'blog/index.md' %}
       {% set og_type = "article" %}
-      {% if page.meta and page.meta.description %}
-        {% set og_description = page.meta.description %}
-      {% endif %}
-      {% if page.meta and page.meta.image %}
-        {% set og_image = config.site_url ~ "/" ~ page.meta.image %}
-      {% else %}
-        {% set og_image = config.site_url ~ "/assets/og-blog.png" %}
-      {% endif %}
-    {% elif page.file.src_path == 'blog/index.md' %}
+    {% endif %}
+    
+    {% if page.meta and page.meta['og:title'] %}
+      {% set og_title = page.meta['og:title'] %}
+    {% elif page.title %}
+      {% set og_title = page.title ~ " - " ~ config.site_name %}
+    {% endif %}
+    
+    {% if page.meta and page.meta['og:description'] %}
+      {% set og_description = page.meta['og:description'] %}
+    {% elif page.meta and page.meta.description %}
+      {% set og_description = page.meta.description %}
+    {% endif %}
+    
+    {% if page.meta and page.meta['og:image'] %}
+      {% set og_image = config.site_url ~ "/" ~ page.meta['og:image'] %}
+    {% elif page.file.src_path.startswith('blog/') %}
       {% set og_image = config.site_url ~ "/assets/og-blog.png" %}
-      {% set og_description = "Thoughts on software engineering, machine learning, and the mathematical foundations of computing." %}
     {% endif %}
   {% endif %}
   
@@ -40,12 +51,12 @@
   <meta property="og:type" content="{{ og_type }}">
   <meta property="og:url" content="{{ page.canonical_url }}">
   <meta property="og:site_name" content="{{ config.site_name }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}">
+  <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:image" content="{{ og_image }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="{{ config.site_name }} - Software Engineer & AI Student">
+  <meta property="og:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ config.site_name }}{% endif %} - Software Engineer & AI Student">
   <meta property="og:locale" content="en_US">
   
   {% if og_type == "article" %}
@@ -65,10 +76,16 @@
   <meta name="twitter:site" content="@esubaalew">
   <meta name="twitter:creator" content="@esubaalew">
   <meta name="twitter:url" content="{{ page.canonical_url }}">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}">
+  <meta name="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ og_description }}">
   <meta name="twitter:image" content="{{ og_image }}">
-  <meta name="twitter:image:alt" content="{{ config.site_name }} - Software Engineer & AI Student">
+  <meta name="twitter:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ config.site_name }}{% endif %} - Software Engineer & AI Student">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="{% if page.meta and page.meta.author %}{{ page.meta.author }}{% else %}{{ config.site_author }}{% endif %}">
+  {% if page.meta and page.meta.date %}
+  <meta name="twitter:label2" content="Published on">
+  <meta name="twitter:data2" content="{{ page.meta.date }}">
+  {% endif %}
   
   <!-- LinkedIn -->
   <meta property="og:image:secure_url" content="{{ og_image }}">
@@ -132,5 +149,88 @@
     }
   }
   </script>
+  
+  {% if og_type == "article" and page and page.file and page.file.src_path.startswith('blog/') %}
+  <!-- Schema.org JSON-LD for BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{% if page.title %}{{ page.title }}{% endif %}",
+    "description": "{% if page.meta and page.meta.description %}{{ page.meta.description }}{% endif %}",
+    "image": "{{ og_image }}",
+    "author": {
+      "@type": "Person",
+      "name": "{% if page.meta and page.meta.author %}{{ page.meta.author }}{% else %}{{ config.site_author }}{% endif %}",
+      "url": "{{ config.site_url }}",
+      "sameAs": [
+        "https://github.com/Esubaalew",
+        "https://linkedin.com/in/esubaalew",
+        "https://x.com/esubaalew"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "{{ config.site_author }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ config.site_url }}/assets/logo.png"
+      }
+    },
+    "datePublished": "{% if page.meta and page.meta.date %}{{ page.meta.date }}{% endif %}",
+    "dateModified": "{% if page.meta and page.meta.date %}{{ page.meta.date }}{% endif %}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.canonical_url }}"
+    },
+    "url": "{{ page.canonical_url }}"{% if page.meta and page.meta.keywords %},
+    "keywords": "{{ page.meta.keywords }}"{% endif %}{% if page.meta and page.meta.tags %},
+    "articleSection": "{{ page.meta.tags | join(', ') }}"{% endif %}
+  }
+  </script>
+  {% endif %}
+  
+  {% if page and page.file and page.file.src_path == 'projects.md' %}
+  <!-- Schema.org JSON-LD for ItemList (Projects) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Software Projects by Esubalew Chekol",
+    "description": "Portfolio of open-source projects and software development work",
+    "url": "{{ page.canonical_url }}",
+    "numberOfItems": 30,
+    "itemListElement": [
+      {
+        "@type": "SoftwareSourceCode",
+        "position": 1,
+        "name": "run-kit",
+        "description": "Universal multi-language runner and smart REPL written in Rust",
+        "url": "https://github.com/Esubaalew/run",
+        "codeRepository": "https://github.com/Esubaalew/run",
+        "programmingLanguage": "Rust"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "position": 2,
+        "name": "Star Growth",
+        "description": "Generate shareable scroll animations of GitHub stargazers",
+        "url": "https://github.com/esubaalew/star-growth",
+        "codeRepository": "https://github.com/esubaalew/star-growth",
+        "programmingLanguage": "Python"
+      },
+      {
+        "@type": "WebApplication",
+        "position": 3,
+        "name": "Cadastral Information System",
+        "description": "Mission-critical land administration platform",
+        "url": "https://intaps.et",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web"
+      }
+    ]
+  }
+  </script>
+  {% endif %}
 {% endblock %}
 
