@@ -53,6 +53,15 @@ A comprehensive guide to hosting Telegram bots on free platforms, comparing webh
 
 ---
 
+### [Skills vs Grades: The Reality of University Education in Information Systems](skills-vs-grades-university-education.md)
+**February 19, 2023**
+
+A candid reflection on the gap between academic grades and practical skills in Information Systems education at Addis Ababa University, and why real-world experience matters more than marks.
+
+**Tags:** Education, Career, Skills, University, Personal Experience
+
+---
+
 <div style="text-align: center; margin-top: 3rem;">
   <p>Subscribe to my <a href="https://github.com/Esubaalew">GitHub</a> to get notified of new posts.</p>
 </div>
