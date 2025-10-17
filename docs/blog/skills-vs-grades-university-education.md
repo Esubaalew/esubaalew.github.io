@@ -7,7 +7,7 @@ author: "Esubalew Chekol"
 tags: ["Education", "Career", "Skills", "University", "Personal Experience"]
 og:title: "Skills vs Grades: What Really Matters in Tech Education"
 og:description: "Why practical skills trump academic grades in the real world of software development and IT careers."
-og:image: "assets/og-blog.png"
+og:image: "blog/og-skills-grades.png"
 og:type: "article"
 ---
 

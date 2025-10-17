@@ -7,7 +7,7 @@ author: "Esubalew Chekol"
 tags: ["Rust", "Polyglot", "REPL", "Run-Kit", "Tutorial", "Programming"]
 og:title: "Run-Kit: Build Polyglot Applications in Rust"
 og:description: "Execute Python, R, JavaScript and 25+ languages from Rust. Build powerful analytics pipelines seamlessly."
-og:image: "assets/og-blog.png"
+og:image: "blog/og-run-kit.png"
 og:type: "article"
 ---
 

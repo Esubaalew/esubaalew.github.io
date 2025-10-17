@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="djangoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#092E20;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0C4B33;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#djangoGrad)"/>
+  
+  <!-- Server rack visual -->
+  <g transform="translate(200, 200)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#44B78B" opacity="0.8"/>
+    <circle cx="30" cy="30" r="8" fill="#4CAF50"/>
+    <text x="60" y="38" fill="#FFF" font-family="monospace" font-size="20" font-weight="bold">Django App</text>
+  </g>
+  
+  <g transform="translate(500, 250)">
+    <text x="0" y="0" fill="#FFF" font-size="60" font-weight="bold">→</text>
+  </g>
+  
+  <g transform="translate(700, 200)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#FF6F00" opacity="0.8"/>
+    <circle cx="30" cy="30" r="8" fill="#4CAF50"/>
+    <text x="60" y="38" fill="#FFF" font-family="monospace" font-size="20" font-weight="bold">cPanel</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="100" fill="#FFF" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle">DJANGO ON CPANEL</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="420" fill="#A5D6A7" font-family="Arial, sans-serif" font-size="26" text-anchor="middle">Complete Deployment Guide</text>
+  <text x="600" y="460" fill="#81C784" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">Passenger WSGI • Static Files • Database • SSL</text>
+  
+  <!-- Checklist -->
+  <g transform="translate(350, 500)">
+    <text x="0" y="0" fill="#4CAF50" font-size="24">✓</text>
+    <text x="30" y="0" fill="#FFF" font-size="20">Setup</text>
+    
+    <text x="140" y="0" fill="#4CAF50" font-size="24">✓</text>
+    <text x="170" y="0" fill="#FFF" font-size="20">Deploy</text>
+    
+    <text x="280" y="0" fill="#4CAF50" font-size="24">✓</text>
+    <text x="310" y="0" fill="#FFF" font-size="20">Configure</text>
+    
+    <text x="450" y="0" fill="#4CAF50" font-size="24">✓</text>
+    <text x="480" y="0" fill="#FFF" font-size="20">Secure</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="590" fill="#C8E6C9" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">Esubalew Chekol • esubalew.et/blog</text>
+</svg>
+

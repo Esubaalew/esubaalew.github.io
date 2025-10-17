@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pyo3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CE412B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3776AB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6F00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#pyo3Grad)"/>
+  
+  <!-- Main container -->
+  <rect x="150" y="150" width="900" height="330" rx="20" fill="#fff" fill-opacity="0.15"/>
+  
+  <!-- Rust logo area -->
+  <circle cx="300" cy="315" r="80" fill="#CE412B"/>
+  <text x="300" y="340" fill="#FFF" font-family="monospace" font-size="60" font-weight="bold" text-anchor="middle">Rs</text>
+  
+  <!-- Bridge -->
+  <line x1="380" y1="315" x2="580" y2="315" stroke="#FFF" stroke-width="8" stroke-dasharray="20,10"/>
+  <text x="480" y="280" fill="#FFD54F" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle">PyO3</text>
+  
+  <!-- Python logo area -->
+  <circle cx="900" cy="315" r="80" fill="#3776AB"/>
+  <text x="900" y="340" fill="#FFF" font-family="monospace" font-size="60" font-weight="bold" text-anchor="middle">Py</text>
+  
+  <!-- Title -->
+  <text x="600" y="100" fill="#FFF" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle">BRIDGING RUST &amp; PYTHON</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="540" fill="#FFF" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Building Fast Python Extensions with PyO3</text>
+  
+  <!-- Footer -->
+  <text x="600" y="590" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">Esubalew Chekol • esubalew.et/blog</text>
+</svg>
+

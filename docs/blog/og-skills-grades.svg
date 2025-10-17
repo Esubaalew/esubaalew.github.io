@@ -1,0 +1,41 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="eduGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6A1B9A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A148C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#eduGrad)"/>
+  
+  <!-- Balance scale -->
+  <g transform="translate(600, 280)">
+    <!-- Center pole -->
+    <rect x="-10" y="-80" width="20" height="160" fill="#FFF"/>
+    <circle cx="0" cy="-80" r="20" fill="#FFD54F"/>
+    
+    <!-- Left side - Grades -->
+    <line x1="0" y1="-60" x2="-180" y2="-60" stroke="#FFF" stroke-width="6"/>
+    <rect x="-230" y="-60" width="100" height="80" rx="8" fill="#FF5252" opacity="0.8"/>
+    <text x="-180" y="-10" fill="#FFF" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle">A+</text>
+    
+    <!-- Right side - Skills -->
+    <line x1="0" y1="-60" x2="180" y2="-40" stroke="#FFF" stroke-width="6"/>
+    <rect x="130" y="-40" width="120" height="100" rx="8" fill="#4CAF50" opacity="0.9"/>
+    <text x="190" y="20" fill="#FFF" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">SKILLS</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="100" fill="#FFF" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle">SKILLS vs GRADES</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="470" fill="#CE93D8" font-family="Arial, sans-serif" font-size="26" text-anchor="middle">The Reality of University Education</text>
+  <text x="600" y="510" fill="#BA68C8" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">Addis Ababa University • Information Systems</text>
+  
+  <!-- Key points -->
+  <text x="600" y="560" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">What Really Matters in Tech Careers</text>
+  
+  <!-- Footer -->
+  <text x="600" y="600" fill="#F3E5F5" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Esubalew Chekol • esubalew.et/blog</text>
+</svg>
+
