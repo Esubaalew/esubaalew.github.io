@@ -8,7 +8,7 @@ Software Engineer & MSc AI Student. Building systems that think, learn, and scal
 
 ## Live Site
 
-Visit: [https://esubalew.et](https://esubalew.et)
+Visit: [https://esubalew.dev](https://esubalew.dev)
 
 ## Local Development
 

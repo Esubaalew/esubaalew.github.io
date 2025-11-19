@@ -31,6 +31,6 @@
   <text x="600" y="540" fill="#FFF" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Building Fast Python Extensions with PyO3</text>
   
   <!-- Footer -->
-  <text x="600" y="590" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">Esubalew Chekol • esubalew.et/blog</text>
+  <text x="600" y="590" fill="#E1BEE7" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">Esubalew Chekol • esubalew.dev/blog</text>
 </svg>
 

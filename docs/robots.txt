@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://esubalew.et/sitemap.xml
+Sitemap: https://esubalew.dev/sitemap.xml
 

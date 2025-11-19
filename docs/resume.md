@@ -16,7 +16,7 @@ og:type: "profile"
 **Software Engineer & MSc AI Student**  
 Addis Ababa, Ethiopia  
 [esubalewchekol6@gmail.com](mailto:esubalewchekol6@gmail.com) | +251910945592  
-[GitHub](https://github.com/Esubaalew) | [LinkedIn](https://linkedin.com/in/esubaalew) | [Website](https://esubalew.et)
+[GitHub](https://github.com/Esubaalew) | [LinkedIn](https://linkedin.com/in/esubaalew) | [Website](https://esubalew.dev)
 
 ---
 
@@ -129,7 +129,7 @@ C# desktop search engine using web scraping for retrieving specific results.
 Telegram bot for Addis Ababa University students.  
 **Tech Stack:** Python, Telegram API
 
-### [Modern Dictionary](https://d.esubalew.et/)
+### [Modern Dictionary](https://d.esubalew.dev/)
 Modern dashboard bringing Britannica and Merriam-Webster dictionaries in single place.  
 **Tech Stack:** Next.js, ASP.NET Core
 
@@ -137,11 +137,11 @@ Modern dashboard bringing Britannica and Merriam-Webster dictionaries in single 
 Python script to download liturgical music files from Ethiopian Orthodox Church website.  
 **Tech Stack:** Python, BeautifulSoup
 
-### [Ethiopian Dictionary](https://ethiopia.esubalew.et/)
+### [Ethiopian Dictionary](https://ethiopia.esubalew.dev/)
 App that helps translate between Ethiopian languages using Gemini API.  
 **Tech Stack:** Gemini API, Next.js
 
-### [Guade](https://guade.esubalew.et)
+### [Guade](https://guade.esubalew.dev)
 Website to master any subject with AI-powered practice questions.  
 **Tech Stack:** Gemini API, Next.js, PostgreSQL
 
