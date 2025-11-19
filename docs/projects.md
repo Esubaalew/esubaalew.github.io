@@ -91,7 +91,7 @@ Full-stack website for an Ethiopian NGO focused on women's empowerment, featurin
 
 ---
 
-### [Modern Dictionary](https://d.esubalew.et/)
+### [Modern Dictionary](https://d.esubalew.dev/)
 **Unified dictionary dashboard**
 
 Modern web application bringing Britannica and Merriam-Webster dictionaries together in a single, elegant interface.
@@ -101,7 +101,7 @@ Modern web application bringing Britannica and Merriam-Webster dictionaries toge
 
 ---
 
-### [Ethiopian Dictionary](https://ethiopia.esubalew.et/)
+### [Ethiopian Dictionary](https://ethiopia.esubalew.dev/)
 **AI-powered Ethiopian language translator**
 
 Translation app for Ethiopian languages powered by Google's Gemini API, supporting multiple language pairs.
@@ -111,7 +111,7 @@ Translation app for Ethiopian languages powered by Google's Gemini API, supporti
 
 ---
 
-### [Guade](https://guade.esubalew.et)
+### [Guade](https://guade.esubalew.dev)
 **AI-powered practice platform**
 
 Master any subject with AI-generated practice questions and adaptive learning paths.
@@ -121,7 +121,7 @@ Master any subject with AI-generated practice questions and adaptive learning pa
 
 ---
 
-### [Wereb Collection](https://wereb.esubalew.et)
+### [Wereb Collection](https://wereb.esubalew.dev)
 **Ethiopian Orthodox Church Music Collection**
 
 Traditional hymns and spiritual music from the Ethiopian Orthodox Church. Comprehensive collection of liturgical music.
@@ -131,7 +131,7 @@ Traditional hymns and spiritual music from the Ethiopian Orthodox Church. Compre
 
 ---
 
-### [WikiRandom](https://wiki.esubalew.et)
+### [WikiRandom](https://wiki.esubalew.dev)
 **Random Wikipedia explorer**
 
 Explore random Wikipedia articles and expand your horizons with each click. Discover something new every time.
@@ -141,7 +141,7 @@ Explore random Wikipedia articles and expand your horizons with each click. Disc
 
 ---
 
-### [Telegram Analysis](https://telegram.esubalew.et)
+### [Telegram Analysis](https://telegram.esubalew.dev)
 **Telegram chat analyzer**
 
 Telegram chat analysis tool for insights into your conversations and messaging patterns. Understand your communication habits.
@@ -151,7 +151,7 @@ Telegram chat analysis tool for insights into your conversations and messaging p
 
 ---
 
-### [Geez Blog](https://geez.esubalew.et)
+### [Geez Blog](https://geez.esubalew.dev)
 **Traditional Ethiopian literature**
 
 Geez blogs collection featuring traditional Ethiopian literature and spiritual writings in the ancient Ge'ez language.
@@ -161,7 +161,7 @@ Geez blogs collection featuring traditional Ethiopian literature and spiritual w
 
 ---
 
-### [Chewata Quest](https://chewata.esubalew.et)
+### [Chewata Quest](https://chewata.esubalew.dev)
 **Patience-testing game collection**
 
 Epic journey through five challenging games testing your problem-solving skills and patience. Can you complete them all?
@@ -235,12 +235,12 @@ Desktop search engine using web scraping to aggregate results from multiple webs
 AI-powered translation between Amharic, Ge'ez, Tigrinya, Oromo, and English with cultural context understanding. The flagship bot for Ethiopian language learning.
 
 **Technologies:** Python, Telegram API, AI  
-**Demo:** [t.me/HagerieRobot](https://t.me/HagerieRobot) | [Web Version](https://ethiopia.esubalew.et)  
+**Demo:** [t.me/HagerieRobot](https://t.me/HagerieRobot) | [Web Version](https://ethiopia.esubalew.dev)
 **Status:** Active
 
 ---
 
-### [AAU Robot](https://aau-robot.esubalew.et)
+### [AAU Robot](https://aau-robot.esubalew.dev)
 **Addis Ababa University student bot**
 
 Telegram bot for viewing grade reports for AAU students. Simple but effective tool serving the university community.
@@ -251,7 +251,7 @@ Telegram bot for viewing grade reports for AAU students. Simple but effective to
 
 ---
 
-### [Meaning Robot](https://d.esubalew.et)
+### [Meaning Robot](https://d.esubalew.dev)
 **Dictionary telegram bot**
 
 Telegram version of the modern dictionary, bringing Britannica and Merriam-Webster dictionaries together for quick word lookups.
@@ -317,13 +317,13 @@ Simple sentiment analysis bot for analyzing text sentiment and emotional tone in
 
 ---
 
-### [Wereb Bot](https://wereb.esubalew.et)
+### [Wereb Bot](https://wereb.esubalew.dev)
 **Ethiopian Orthodox Church music bot**
 
 Telegram bot version of the Ethiopian Orthodox Church music collection. Access traditional hymns and spiritual music.
 
 **Technologies:** Python, Telegram API  
-**Demo:** [t.me/werebBot](https://t.me/werebBot) | [Web Version](https://wereb.esubalew.et)  
+**Demo:** [t.me/werebBot](https://t.me/werebBot) | [Web Version](https://wereb.esubalew.dev)
 **Status:** Active
 
 ---
@@ -348,7 +348,7 @@ I regularly contribute to open-source projects and maintain several packages use
 
 All of the above projects (except client work) are **free and public hobby projects** created by [@esubalew](https://github.com/Esubaalew).
 
-**Visit [hagerie.esubalew.et](https://hagerie.esubalew.et)** - A comprehensive showcase of all my Telegram bots and web applications in one place.
+**Visit [hagerie.esubalew.dev](https://hagerie.esubalew.dev)** - A comprehensive showcase of all my Telegram bots and web applications in one place.
 
 ---
 
