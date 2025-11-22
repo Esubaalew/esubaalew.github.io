@@ -1,6 +1,10 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block extrahead %}
   <!-- SEO Meta Tags -->
   <meta name="description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}">
   <meta name="keywords" content="{% if page.meta and page.meta.keywords %}{{ page.meta.keywords }}{% else %}Esubalew Chekol, Software Engineer, AI, Machine Learning, Rust, Python, Ethiopia, Full Stack Developer, Systems Programming{% endif %}">
@@ -232,5 +236,39 @@
   }
   </script>
   {% endif %}
-{% endblock %}
 
+</head>
+<body>
+    <nav>
+        <ul>
+            {% for nav_item in nav %}
+                {% if nav_item.children %}
+                    <li>
+                        {{ nav_item.title }}
+                        <ul>
+                            {% for child in nav_item.children %}
+                                <li><a href="{{ child.url | url }}">{{ child.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% else %}
+                    <li><a href="{{ nav_item.url | url }}">{{ nav_item.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <main>
+        {{ page.content }}
+    </main>
+
+    <footer>
+        <p>{{ config.copyright }}</p>
+        <p>
+        {% for social in config.extra.social %}
+            <a href="{{ social.link }}">{{ social.name }}</a>{% if not loop.last %} | {% endif %}
+        {% endfor %}
+        </p>
+    </footer>
+</body>
+</html>
