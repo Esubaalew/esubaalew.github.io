@@ -1,21 +1,21 @@
-# Python virtual environment
-venv/
-env/
-.venv/
-
-# MkDocs build output
+# Build output
+dist/
 site/
 
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+venv/
+ENV/
+env/
+.venv/
 
 # IDE
-.vscode/
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
@@ -24,3 +24,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log

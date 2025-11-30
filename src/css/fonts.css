@@ -1,0 +1,57 @@
+/* Ethiopian Font Definitions */
+@font-face {
+    font-family: 'EthiopicLeTewahedo';
+    src: url('/assets/EthiopicLeTewahedo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EthiopicLeTewahedo';
+    src: url('/assets/EthiopicLeTewahedo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EthiopicLeTewahedo';
+    src: url('/assets/EthiopicLeTewahedo-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EthiopicLeTewahedo';
+    src: url('/assets/EthiopicLeTewahedo-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DestaUnicode';
+    src: url('/assets/DestaUnicode.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AddisAbebaUnicode';
+    src: url('/assets/AddisAbebaUnicode.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TesfaUnicode';
+    src: url('/assets/TesfaUnicode.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
