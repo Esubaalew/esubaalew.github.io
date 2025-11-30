@@ -58,25 +58,29 @@ body {
 a {
     color: var(--color-text);
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: all 0.15s ease;
 }
 
 a:hover {
-    color: var(--color-link-hover);
+    color: var(--color-text-secondary);
 }
 
-/* Content links (in markdown) */
+/* Content links (in markdown) - rauchg style */
 main a:not(.site-name):not(nav a) {
-    color: var(--color-accent);
+    color: var(--color-text);
     text-decoration: underline;
-    text-decoration-color: var(--color-accent);
+    text-decoration-color: var(--color-text-tertiary);
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
+    padding: 0.1em 0.2em;
+    margin: -0.1em -0.2em;
+    border-radius: 4px;
 }
 
 main a:not(.site-name):not(nav a):hover {
-    color: var(--color-link-hover);
-    text-decoration-color: var(--color-link-hover);
+    color: var(--color-text);
+    background: var(--color-border);
+    text-decoration-color: var(--color-text-secondary);
 }
 
 .container {
@@ -189,11 +193,15 @@ main {
     color: var(--color-text);
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.15s ease;
+    transition: all 0.15s ease;
+    padding: 0.2em 0.4em;
+    margin: -0.2em -0.4em;
+    border-radius: 4px;
 }
 
 .post-list .title a:hover {
-    color: var(--color-link-hover);
+    background: var(--color-border);
+    color: var(--color-text);
 }
 
 /* Section Headers */
@@ -245,12 +253,20 @@ main {
 
 /* Projects page content */
 .projects-content a {
-    color: var(--color-accent);
+    color: var(--color-text);
     font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-tertiary);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    padding: 0.1em 0.3em;
+    margin: -0.1em -0.3em;
+    border-radius: 4px;
 }
 
 .projects-content a:hover {
-    color: var(--color-link-hover);
+    background: var(--color-border);
+    text-decoration-color: var(--color-text-secondary);
 }
 
 .projects-content ul {
