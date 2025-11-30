@@ -348,7 +348,7 @@ I regularly contribute to open-source projects and maintain several packages use
 
 All of the above projects (except client work) are **free and public hobby projects** created by [@esubalew](https://github.com/Esubaalew).
 
-**Visit [hagerie.esubalew.dev](https://hagerie.esubalew.dev)** - A comprehensive showcase of all my Telegram bots and web applications in one place.
+**Visit [hagerie.esubalew.et](https://hagerie.esubalew.et)** - A comprehensive showcase of all my Telegram bots and web applications in one place.
 
 ---
 
