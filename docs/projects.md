@@ -353,6 +353,6 @@ All of the above projects (except client work) are **free and public hobby proje
 ---
 
 <div style="text-align: center; margin-top: 3rem;">
-  <p>Want to collaborate on a project? <a href="mailto:esubalewchekol6@gmail.com">Get in touch!</a></p>
+  <p>Want to collaborate on a project? <a href="mailto:hi@esubalew.et">Get in touch!</a></p>
 </div>
 

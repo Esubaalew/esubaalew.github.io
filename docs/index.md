@@ -85,7 +85,7 @@ Mission-critical land administration platform serving major Ethiopian cities. Bu
 
 Interested in collaborating or discussing technology? Feel free to reach out!
 
-[Email Me](mailto:esubalewchekol6@gmail.com){ .md-button }
+[Email Me](mailto:hi@esubalew.et){ .md-button }
 [View Resume](resume.md){ .md-button }
 [Read My Blog](blog/index.md){ .md-button }
 

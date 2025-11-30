@@ -15,7 +15,7 @@ og:type: "profile"
 
 **Software Engineer & MSc AI Student**  
 Addis Ababa, Ethiopia  
-[esubalewchekol6@gmail.com](mailto:esubalewchekol6@gmail.com) | +251910945592  
+[hi@esubalew.et](mailto:hi@esubalew.et)  
 [GitHub](https://github.com/Esubaalew) | [LinkedIn](https://linkedin.com/in/esubaalew) | [Website](https://esubalew.dev)
 
 ---
@@ -176,6 +176,6 @@ Ranked 1st place in a 12-hour university hackathon, developing the best project 
 ---
 
 <div style="text-align: center; margin-top: 2rem;">
-  <p><a href="mailto:esubalewchekol6@gmail.com">Download PDF Resume</a> | <a href="/">Back to Home</a></p>
+  <p><a href="mailto:hi@esubalew.et">Download PDF Resume</a> | <a href="/">Back to Home</a></p>
 </div>
 

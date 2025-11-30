@@ -84,4 +84,4 @@ Mathematical foundations of CS · Systems programming · Machine learning · Ope
 
 ---
 
-[esubalewchekol6@gmail.com](mailto:esubalewchekol6@gmail.com) · [GitHub](https://github.com/Esubaalew) · [LinkedIn](https://linkedin.com/in/esubaalew) · +251910945592
+[hi@esubalew.et](mailto:hi@esubalew.et) · [GitHub](https://github.com/Esubaalew) · [LinkedIn](https://linkedin.com/in/esubaalew)
