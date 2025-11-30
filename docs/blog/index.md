@@ -17,6 +17,15 @@ Thoughts on software engineering, machine learning, and the mathematical foundat
 
 ## Latest Posts
 
+### [The Vibe Check: When AI Builds the House, Who Knows Where the Plumbing Is?](the-vibe-check-when-ai-builds-the-house-who-knows-where-the-plumbing-is.md)
+**November 28, 2025**
+
+AI can write thousands of lines of code in seconds, but if nobody on the team truly understands the architecture, we're just accumulating the mother of all technical debt. A reflection on vibe coding, the left-pad incident, and why owning your blueprints matters more than ever.
+
+**Tags:** AI, Software Engineering, Technical Debt, Architecture, Opinion
+
+---
+
 ### [Using Run-Kit to Seamlessly Mix Multiple Languages in a Single Rust Codebase](using-run-kit-multi-language-rust.md)
 **October 11, 2025**
 

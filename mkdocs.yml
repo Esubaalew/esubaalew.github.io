@@ -12,7 +12,7 @@ copyright: Copyright &copy; 2025 Esubalew Chekol
 theme:
   name: material
   custom_dir: overrides
-  # logo: assets/logo.png
+  logo: assets/logo.png
   favicon: assets/favicon.png
   
   palette:
@@ -130,6 +130,7 @@ nav:
   - Projects: projects.md
   - Blog:
     - blog/index.md
+    - blog/the-vibe-check-when-ai-builds-the-house-who-knows-where-the-plumbing-is.md
     - blog/using-run-kit-multi-language-rust.md
     - blog/bridging-rust-python-pyo3.md
     - blog/hosting-django-app-on-cpanel-tutorial.md
