@@ -10,7 +10,7 @@ og:description: "Speed is intoxicating, but handing the blueprints entirely to a
 og:image: "og-vibe-check.png"
 og:type: "article"
 ---
-I still remember the day the internet broke because of 11 lines of code.
+You might have heard about the day the internet broke because of 11 lines of code.
 
 In March 2016, a developer named Azer Koçulu unpublished his tiny npm package called **left-pad** after a dispute with npm and Kik. That single package — a 11-line function that adds padding to the left of a string — was a dependency for Babel, React, Webpack… basically everything. Within hours, builds at Facebook, Netflix, PayPal, and thousands of other companies started failing with errors like `Cannot find module 'left-pad'`.
 
