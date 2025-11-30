@@ -417,9 +417,27 @@ def generate_sitemap(posts: list[dict]):
     print("✓ Generated sitemap.xml")
 
 
+def generate_og_images():
+    """Try to generate OG images for blog posts without them."""
+    try:
+        import sys
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from generate_og_images import main as og_main
+        print("🖼️  Generating OG images...")
+        og_main()
+    except ImportError as e:
+        print(f"⚠️  OG generation skipped (missing dependency: {e})")
+    except Exception as e:
+        print(f"⚠️  OG generation failed: {e}")
+
+
 def main():
     """Build the site."""
     print("\n🔨 Building site...\n")
+    
+    # Try to generate OG images first
+    generate_og_images()
+    print()
     
     # Clean output directory
     if OUTPUT.exists():

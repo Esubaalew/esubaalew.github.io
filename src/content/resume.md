@@ -10,11 +10,13 @@ og_type: "profile"
 ## Education
 
 ### Master of Science in Artificial Intelligence
+
 **Addis Ababa University** · Nov 2024 - Present
 
 Focusing on machine learning, deep learning, and computer vision applications.
 
 ### Bachelor of Science in Information Systems
+
 **Addis Ababa University** · July 2024 · **GPA: 3.9/4.0**
 
 Strong foundation in software engineering, database systems, and information technology.
@@ -24,6 +26,7 @@ Strong foundation in software engineering, database systems, and information tec
 ## Experience
 
 ### Software Engineer
+
 **INTAPS** · Addis Ababa · June 2025 - Present
 
 - Lead development of mission-critical **Cadastre Information System (CIS)** serving major Ethiopian cities
@@ -31,6 +34,7 @@ Strong foundation in software engineering, database systems, and information tec
 - Work on critical software systems for land administration
 
 ### Fullstack Python Developer
+
 **Helder Technologies** · Addis Ababa · Sep 2024 - Dec 2024
 
 - Built robust **Telegram bots** for various business applications
@@ -38,12 +42,14 @@ Strong foundation in software engineering, database systems, and information tec
 - Created Telegram mini applications with **JavaScript**
 
 ### Software Engineer (Freelance)
+
 **CDIWork** · Remote · Jan 2024 - Present
 
 - Freelance Python development for international clients
 - Full-stack solutions and automation tools
 
 ### JavaScript Developer
+
 **Crossroads Tech Solutions** · Addis Ababa · Mar 2024 - Jun 2024
 
 - Built Telegram bots using **Node.js**
@@ -79,4 +85,3 @@ Mathematical foundations of CS · Systems programming · Machine learning · Ope
 ---
 
 [esubalewchekol6@gmail.com](mailto:esubalewchekol6@gmail.com) · [GitHub](https://github.com/Esubaalew) · [LinkedIn](https://linkedin.com/in/esubaalew) · +251910945592
-

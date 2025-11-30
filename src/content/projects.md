@@ -60,4 +60,3 @@ og_type: "website"
 ---
 
 All projects (except client work) are **free and public hobby projects**. Visit [hagerie.esubalew.dev](https://hagerie.esubalew.dev) for a showcase of all my bots and apps.
-
