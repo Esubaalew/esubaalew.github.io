@@ -129,7 +129,7 @@ C# desktop search engine using web scraping for retrieving specific results.
 Telegram bot for Addis Ababa University students.  
 **Tech Stack:** Python, Telegram API
 
-### [Modern Dictionary](https://d.esubalew.dev/)
+### [Modern Dictionary](https://d.esubalew.et/)
 Modern dashboard bringing Britannica and Merriam-Webster dictionaries in single place.  
 **Tech Stack:** Next.js, ASP.NET Core
 
@@ -137,11 +137,11 @@ Modern dashboard bringing Britannica and Merriam-Webster dictionaries in single 
 Python script to download liturgical music files from Ethiopian Orthodox Church website.  
 **Tech Stack:** Python, BeautifulSoup
 
-### [Ethiopian Dictionary](https://ethiopia.esubalew.dev/)
+### [Ethiopian Dictionary](https://ethiopia.esubalew.et/)
 App that helps translate between Ethiopian languages using Gemini API.  
 **Tech Stack:** Gemini API, Next.js
 
-### [Guade](https://guade.esubalew.dev)
+### [Guade](https://guade.esubalew.et)
 Website to master any subject with AI-powered practice questions.  
 **Tech Stack:** Gemini API, Next.js, PostgreSQL
 

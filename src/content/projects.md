@@ -25,15 +25,15 @@ og_type: "website"
 
 ## Web Applications
 
-- [Modern Dictionary](https://d.esubalew.dev) - Unified dashboard for Britannica and Merriam-Webster dictionaries. `Next.js` `ASP.NET Core`
+- [Modern Dictionary](https://d.esubalew.et) - Unified dashboard for Britannica and Merriam-Webster dictionaries. `Next.js` `ASP.NET Core`
 
-- [Ethiopian Dictionary](https://ethiopia.esubalew.dev) - AI-powered Ethiopian language translator using Gemini API. `Next.js` `Gemini`
+- [Ethiopian Dictionary](https://ethiopia.esubalew.et) - AI-powered Ethiopian language translator using Gemini API. `Next.js` `Gemini`
 
-- [Guade](https://guade.esubalew.dev) - Master any subject with AI-powered practice questions. `Next.js` `PostgreSQL`
+- [Guade](https://guade.esubalew.et) - Master any subject with AI-powered practice questions. `Next.js` `PostgreSQL`
 
-- [Wereb Collection](https://wereb.esubalew.dev) - Ethiopian Orthodox Church liturgical music collection. `Next.js`
+- [Wereb Collection](https://wereb.esubalew.et) - Ethiopian Orthodox Church liturgical music collection. `Next.js`
 
-- [WikiRandom](https://wiki.esubalew.dev) - Explore random Wikipedia articles. `Next.js`
+- [WikiRandom](https://wiki.esubalew.et) - Explore random Wikipedia articles. `Next.js`
 
 ## Python Packages
 
