@@ -368,8 +368,11 @@ def copy_static():
         shutil.copytree(ASSETS, assets_out, dirs_exist_ok=True)
         print("✓ Copied assets")
     
-    # Note: No CNAME file - GitHub Pages serves as backup at esubaalew.github.io
-    # Primary domain esubalew.dev is on Vercel
+    # Copy CNAME
+    cname = ROOT / "CNAME"
+    if cname.exists():
+        shutil.copy(cname, OUTPUT / "CNAME")
+        print("✓ Copied CNAME")
     
     # Copy robots.txt
     robots = ROOT / "docs" / "robots.txt"
