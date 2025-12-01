@@ -589,3 +589,37 @@ footer a:hover {
     }
 }
 
+/* 404 Page */
+.error-page {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.error-page h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-ethiopic);
+    font-weight: 700;
+}
+
+.error-page p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+.error-page a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-tertiary);
+    text-underline-offset: 3px;
+    padding: 0.2em 0.4em;
+    margin: -0.2em -0.4em;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.error-page a:hover {
+    background: var(--color-border);
+    text-decoration-color: var(--color-text-secondary);
+}
+

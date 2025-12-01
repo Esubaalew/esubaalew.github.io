@@ -328,10 +328,10 @@ def build_resume():
 def build_404():
     """Build the 404 page."""
     content_html = '''
-        <section style="text-align: center; padding: 4rem 0;">
-            <h1 style="font-size: 4rem; margin-bottom: 1rem;">404</h1>
-            <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">Page not found</p>
-            <a href="/" style="color: var(--color-accent);">← Back to home</a>
+        <section class="error-page">
+            <h1>404</h1>
+            <p>Page not found</p>
+            <a href="/">← Back to home</a>
         </section>
     '''
     
