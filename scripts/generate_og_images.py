@@ -113,52 +113,35 @@ def escape_xml(text: str) -> str:
 
 
 def generate_svg(title: str, theme: dict) -> str:
-    """Generate SVG content for the OG image."""
-    lines = wrap_text(title, 30)
-    
-    # Build gradient stops
-    gradient_stops = "\n".join(
-        f'      <stop offset="{pct}%" style="stop-color:{color};stop-opacity:1" />'
-        for color, pct in theme["gradient"]
-    )
+    """Generate minimal SVG content for the OG image."""
+    lines = wrap_text(title, 40)
     
     # Calculate title positioning
-    line_height = 60
+    line_height = 70
     total_height = len(lines) * line_height
-    start_y = (OUTPUT_HEIGHT // 2) - (total_height // 2) + 20
+    start_y = (OUTPUT_HEIGHT // 2) - (total_height // 2) + 30
     
     title_lines = "\n".join(
         f'  <text x="{OUTPUT_WIDTH // 2}" y="{start_y + i * line_height}" '
-        f'fill="{theme["text"]}" font-family="Arial, sans-serif" font-size="48" '
-        f'font-weight="bold" text-anchor="middle">{escape_xml(line)}</text>'
+        f'fill="#ededed" font-family="Arial, sans-serif" font-size="52" '
+        f'font-weight="bold" text-anchor="middle" letter-spacing="0.01em">{escape_xml(line)}</text>'
         for i, line in enumerate(lines)
     )
     
+    # Calculate underline position
+    underline_y = start_y + len(lines) * line_height + 20
+    
     svg = f'''<svg width="{OUTPUT_WIDTH}" height="{OUTPUT_HEIGHT}" viewBox="0 0 {OUTPUT_WIDTH} {OUTPUT_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-{gradient_stops}
-    </linearGradient>
-  </defs>
-  
-  <rect width="{OUTPUT_WIDTH}" height="{OUTPUT_HEIGHT}" fill="url(#bgGrad)"/>
-  
-  <!-- Decorative elements -->
-  <circle cx="100" cy="100" r="150" fill="{theme["accent"]}" fill-opacity="0.1"/>
-  <circle cx="1100" cy="530" r="200" fill="{theme["accent"]}" fill-opacity="0.08"/>
-  
-  <!-- Accent bar -->
-  <rect x="100" y="80" width="80" height="6" rx="3" fill="{theme["accent"]}"/>
-  
-  <!-- Blog label -->
-  <text x="100" y="130" fill="{theme["subtitle"]}" font-family="Arial, sans-serif" font-size="22" font-weight="500">BLOG POST</text>
+  <rect width="{OUTPUT_WIDTH}" height="{OUTPUT_HEIGHT}" fill="#0a0a0a"/>
   
   <!-- Title -->
 {title_lines}
   
+  <!-- Subtle underline -->
+  <line x1="300" y1="{underline_y}" x2="900" y2="{underline_y}" stroke="#666" stroke-width="1" stroke-opacity="0.3"/>
+  
   <!-- Footer -->
-  <line x1="100" y1="540" x2="1100" y2="540" stroke="{theme["footer"]}" stroke-opacity="0.3" stroke-width="1"/>
-  <text x="{OUTPUT_WIDTH // 2}" y="580" fill="{theme["footer"]}" font-family="Arial, sans-serif" font-size="20" text-anchor="middle">Esubalew Chekol • esubalew.dev</text>
+  <text x="{OUTPUT_WIDTH // 2}" y="580" fill="#666" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">esubalew.dev</text>
 </svg>'''
     
     return svg
