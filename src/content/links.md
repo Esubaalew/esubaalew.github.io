@@ -15,3 +15,29 @@ og_type: "website"
 - [ዋዜማ፡ሥርዐት](http://www.gzamargna.net/html/wazemasrat.html) - Wazéma System - Ethiopian Computer Writing System
 
 - [ቀለም ቀንድ](http://www.gzamargna.net/html/qelemqend.html) - Ethiopian literature and resources
+
+- [ሥልጡን ሕዝብ](http://www.slttunhzb.net/) - ሥልጡን ሕዝብ
+
+- [ዐውደ፡ቀለም](http://www.awde-qelem.net/) - AwdeQelem - Ethiopian text processor
+
+- [ስነ ምርምር](https://www.senamirmir.org/) - ስነ ምርምር
+
+- [ስነ ምርምር - OSM](https://www.senamirmir.org/osm.html) - ስነ ምርምር OSM
+
+- [ሰሌዳ](https://www.seleda.com/) - ሰሌዳ
+
+- [ዳንኤል ያዕቆብ መኮነን ወረቀቶች](http://yacob.org/papers/) - Daniel Yacob's Papers
+
+- [Ethiopic Entity Names](https://www.geez.org/Entities/index.html) - Ge'ez entity names
+
+- [Ethiopic Numerals](https://www.geez.org/Numerals/index.html) - Ge'ez numerals
+
+- [Entity Meanings](https://www.geez.org/Entities/Meanings.html) - Meanings of Ethiopic syllables
+
+- [Ethiopic Numerology](https://www.geez.org/Numerals/Numerology.html) - Ge'ez numerology and Gematria
+
+- [መርምሩ](https://mermru.com/geez/en) - Mermru - Ge'ez dictionary and resources
+
+- [Legends of Ethiopic Computing](http://abyssiniagateway.net/fidel/legends/) - History of Ethiopic computing pioneers
+
+- [ፊደል](http://abyssiniagateway.net/fidel/) - Fidel - Ethiopic computing resources
