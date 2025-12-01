@@ -79,10 +79,4 @@ Strong foundation in software engineering, database systems, and information tec
 
 ---
 
-## Interests
-
-Mathematical foundations of CS · Systems programming · Machine learning · Open source · Algorithm design
-
----
-
 [hi@esubalew.et](mailto:hi@esubalew.et) · [GitHub](https://github.com/Esubaalew) · [LinkedIn](https://linkedin.com/in/esubaalew)

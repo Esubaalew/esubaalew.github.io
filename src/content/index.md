@@ -12,4 +12,4 @@ I'm a software engineer passionate about the mathematical foundations of compute
 
 Currently pursuing my **MSc in Artificial Intelligence** at Addis Ababa University while building production systems at **INTAPS**.
 
-When I'm not coding, you'll find me exploring algorithms, contributing to open source, or reading research papers.
+When I'm not coding, you'll find me enjoying sunsets, moving to ጫካ, visiting ጋራ ሸንተረር, reading Ethiopic literature and ልቦለድ, ግጥም, writing ግጥም, ወግ, ድርሰት, or exploring Ethiopic sites like [ቀለም ቀንድ](http://gzamargna.net/html/qelemqend_gttm_tegegnteamru.html).
