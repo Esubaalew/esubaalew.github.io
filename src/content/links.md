@@ -41,3 +41,7 @@ og_type: "website"
 - [Legends of Ethiopic Computing](http://abyssiniagateway.net/fidel/legends/) - History of Ethiopic computing pioneers
 
 - [ፊደል](http://abyssiniagateway.net/fidel/) - Fidel - Ethiopic computing resources
+
+## Church & Faith
+
+- [የኢትጵያ ኦርቶዶክስ ተዋህዶ ቤተክርስቲያን እምነት እና ስርዓት](https://www.ethiopianorthodox.org/) - Ethiopian Orthodox Tewahedo Church - Faith and System
