@@ -277,7 +277,7 @@ def build_projects():
         keywords=meta.get("keywords", ""),
         og_title=meta.get("og_title", "Projects"),
         og_description=meta.get("og_description", ""),
-        og_image=meta.get("og_image", "/assets/og-projects.png"),
+        og_image=f"{SITE_URL}{meta.get('og_image', '/assets/og-projects.png')}",
         og_type="website",
         canonical_url=f"{SITE_URL}/projects",
         content=content_html,
