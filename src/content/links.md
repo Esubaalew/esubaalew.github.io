@@ -4,7 +4,7 @@ description: "Links to resources I love - poems, Ethiopia, Ge'ez, and Ethiopian 
 keywords: "Ethiopian links, Ge'ez resources, Amharic poetry, Ethiopian literature, Wazema system, Ethiopian fonts"
 og_title: "Links - Esubalew Chekol"
 og_description: "Curated links to Ethiopian literature, Ge'ez resources, and poetry."
-og_image: "/assets/og-image.png"
+og_image: "/assets/og-links.png"
 og_type: "website"
 ---
 
