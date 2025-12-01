@@ -313,7 +313,7 @@ def build_resume():
         keywords=meta.get("keywords", ""),
         og_title=meta.get("og_title", "Resume"),
         og_description=meta.get("og_description", ""),
-        og_image=meta.get("og_image", "/assets/og-resume.png"),
+        og_image=f"{SITE_URL}{meta.get('og_image', '/assets/og-resume.png')}",
         og_type="profile",
         canonical_url=f"{SITE_URL}/resume",
         content=content_html,
@@ -323,6 +323,42 @@ def build_resume():
     resume_dir.mkdir(exist_ok=True)
     (resume_dir / "index.html").write_text(html, encoding="utf-8")
     print("✓ Built resume/index.html")
+
+
+def build_links():
+    """Build the links page."""
+    content = (CONTENT / "links.md").read_text(encoding="utf-8")
+    meta, body = parse_frontmatter(content)
+    
+    body_html = render_markdown(body)
+    
+    content_html = f'''
+        <section>
+            <h1 class="section-header">Links</h1>
+            <div class="links-content">
+                {body_html}
+            </div>
+        </section>
+    '''
+    
+    template = read_template("base.html")
+    html = render_template(
+        template,
+        title=meta.get("title", "Links"),
+        description=meta.get("description", ""),
+        keywords=meta.get("keywords", ""),
+        og_title=meta.get("og_title", "Links"),
+        og_description=meta.get("og_description", ""),
+        og_image=f"{SITE_URL}{meta.get('og_image', '/assets/og-image.png')}",
+        og_type="website",
+        canonical_url=f"{SITE_URL}/links",
+        content=content_html,
+    )
+    
+    links_dir = OUTPUT / "links"
+    links_dir.mkdir(exist_ok=True)
+    (links_dir / "index.html").write_text(html, encoding="utf-8")
+    print("✓ Built links/index.html")
 
 
 def build_404():
@@ -397,6 +433,7 @@ def generate_sitemap(posts: list[dict]):
         (f"{SITE_URL}/projects", "0.8"),
         (f"{SITE_URL}/blog", "0.9"),
         (f"{SITE_URL}/resume", "0.7"),
+        (f"{SITE_URL}/links", "0.6"),
     ]
     
     for post in posts:
@@ -454,6 +491,7 @@ def main():
     build_blog_posts(posts)
     build_projects()
     build_resume()
+    build_links()
     build_404()
     
     # Copy static files

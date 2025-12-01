@@ -260,6 +260,57 @@ main {
     color: var(--color-link-hover);
 }
 
+/* Links page content */
+.links-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-content ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+    line-height: 1.6;
+}
+
+.links-content ul li:last-child {
+    border-bottom: none;
+}
+
+.links-content h2 {
+    font-family: var(--font-desta);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1rem;
+    color: var(--color-text);
+}
+
+.links-content h2:first-child {
+    margin-top: 0;
+}
+
+.links-content a {
+    font-family: var(--font-ethiopic);
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-tertiary);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    padding: 0.1em 0.3em;
+    margin: -0.1em -0.3em;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.links-content a:hover {
+    background: var(--color-border);
+    text-decoration-color: var(--color-text-secondary);
+}
+
+.links-content li {
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+}
+
 /* Projects page content */
 .projects-content a {
     color: var(--color-text);
