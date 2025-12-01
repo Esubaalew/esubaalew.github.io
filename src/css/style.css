@@ -514,52 +514,101 @@ main {
 }
 
 /* Resume */
-.resume-section {
-    margin-bottom: 3rem;
+.resume-content {
+    font-family: var(--font-body);
+    line-height: 1.8;
 }
 
-.resume-section h2 {
+.resume-content h2 {
     font-family: var(--font-tesfa);
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-tertiary);
-    margin-bottom: 1.5rem;
+    margin: 3.5rem 0 2rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--color-border);
+    font-weight: 400;
 }
 
-.resume-item {
-    margin-bottom: 2rem;
+.resume-content h2:first-child {
+    margin-top: 0;
 }
 
-.resume-item h3 {
+.resume-content h3 {
     font-family: var(--font-desta);
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    color: var(--color-text);
+    margin: 2.25rem 0 0.75rem;
+    line-height: 1.4;
 }
 
-.resume-item .meta {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.75rem;
+.resume-content h3:first-of-type {
+    margin-top: 0;
 }
 
-.resume-item p,
-.resume-item ul {
+.resume-content p {
+    font-family: var(--font-body);
     color: var(--color-text-secondary);
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.75;
+    margin: 0.5rem 0 1rem;
 }
 
-.resume-item ul {
-    padding-left: 1.25rem;
-    margin-top: 0.5rem;
+.resume-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 1.75rem;
 }
 
-.resume-item li {
-    margin-bottom: 0.35rem;
+.resume-content ul li {
+    font-family: var(--font-body);
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+}
+
+.resume-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: var(--color-text-tertiary);
+    font-size: 1.2em;
+}
+
+.resume-content strong {
+    font-family: var(--font-desta);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.resume-content hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 3rem 0;
+    display: none; /* Hide HR separators, use section spacing instead */
+}
+
+.resume-content a {
+    font-family: var(--font-ethiopic);
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-tertiary);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    padding: 0.1em 0.2em;
+    margin: -0.1em -0.2em;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.resume-content a:hover {
+    background: var(--color-border);
+    text-decoration-color: var(--color-text-secondary);
 }
 
 /* Footer */
