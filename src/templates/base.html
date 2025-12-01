@@ -7,6 +7,8 @@
     <meta name="description" content="{{description}}" />
     <meta name="author" content="Esubalew Chekol" />
     <meta name="keywords" content="{{keywords}}" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="{{og_title}}" />
@@ -18,6 +20,38 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@esubaalew" />
+    <meta name="twitter:creator" content="@esubaalew" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Esubalew Chekol",
+      "url": "https://esubalew.dev",
+      "sameAs": [
+        "https://github.com/Esubaalew",
+        "https://x.com/esubaalew",
+        "https://linkedin.com/in/esubaalew",
+        "https://t.me/esubbalew"
+      ],
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "INTAPS"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Addis Ababa University"
+      },
+      "email": "hi@esubalew.et",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Addis Ababa",
+        "addressCountry": "ET"
+      }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />

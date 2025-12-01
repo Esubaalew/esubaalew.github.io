@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 description: "Open source projects and software I've built - from Rust tools to machine learning models and Telegram bots."
+keywords: "Rust projects, Python projects, open source, run-kit, Telegram bots, machine learning, web development, systems programming, PyO3, Django, FastAPI, Next.js, Ethiopian developer, software portfolio"
 og_title: "Projects - Esubalew Chekol"
 og_description: "Explore my open-source projects: universal code runners, AI models, web applications, and Telegram bots."
 og_image: "/assets/og-projects.png"

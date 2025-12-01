@@ -20,6 +20,34 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@esubaalew" />
+    <meta name="twitter:creator" content="@esubaalew" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{title}}",
+      "description": "{{description}}",
+      "image": "{{og_image}}",
+      "url": "{{canonical_url}}",
+      "datePublished": "{{date}}",
+      "author": {
+        "@type": "Person",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{canonical_url}}"
+      }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />

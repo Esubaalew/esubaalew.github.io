@@ -1,6 +1,7 @@
 ---
 title: "Resume"
 description: "Esubalew Chekol's resume - Software Engineer at INTAPS, MSc AI student at Addis Ababa University. Expert in Rust, Python, C#, and machine learning."
+keywords: "Esubalew Chekol resume, software engineer resume, AI researcher, Rust developer, Python developer, C# developer, ASP.NET Core, machine learning engineer, full stack developer, Addis Ababa University, INTAPS, hire software engineer"
 og_title: "Resume - Esubalew Chekol"
 og_description: "Software Engineer with expertise in Rust, Python, C#, and AI. Building mission-critical systems and machine learning applications."
 og_image: "/assets/og-resume.png"
