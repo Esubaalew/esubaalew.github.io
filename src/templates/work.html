@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="am">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} - Esubalew Chekol</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="author" content="Esubalew Chekol" />
+    <meta name="keywords" content="{{keywords}}" />
+    <meta name="language" content="am" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{og_title}}" />
+    <meta property="og:description" content="{{og_description}}" />
+    <meta property="og:image" content="{{og_image}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{canonical_url}}" />
+    <meta property="og:locale" content="am_ET" />
+    <meta property="article:author" content="Esubalew Chekol" />
+    <meta property="article:published_time" content="{{date}}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@esubaalew" />
+    <meta name="twitter:creator" content="@esubaalew" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "headline": "{{title}}",
+      "description": "{{description}}",
+      "image": "{{og_image}}",
+      "url": "{{canonical_url}}",
+      "datePublished": "{{date}}",
+      "author": {
+        "@type": "Person",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev"
+      },
+      "inLanguage": "am",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{canonical_url}}"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{canonical_url}}" />
+
+    <!-- Console Easter Egg - Ethiopian Flag -->
+    <script>
+      console.log(
+        "%c ",
+        "background: linear-gradient(180deg, #078930 33%, #FCDD09 33% 66%, #DA121A 66%); padding: 30px 60px; border-radius: 4px;"
+      );
+      console.log("%c ", "padding: 5px;");
+      console.log(
+        "%cHey, you know that my mother Emenesh built me.",
+        "color: #078930; font-size: 16px; font-weight: bold; font-family: system-ui;"
+      );
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <a href="/" class="site-name">Esubalew Chekol</a>
+        </div>
+        <nav>
+          <a href="/projects">Projects</a>
+          <a href="/blog">Blog</a>
+          <a href="/resume">Resume</a>
+          <a href="/links">Links</a>
+        </nav>
+      </header>
+
+      <main class="post work-content">
+        <article>
+          <header class="post-header">
+            <time datetime="{{date}}">{{date_formatted}}</time>
+            <h1 class="ethiopic-text">{{title}}</h1>
+          </header>
+          <div class="post-content ethiopic-text">{{content}}</div>
+        </article>
+
+        <nav class="post-nav">
+          <a href="/links">← Back to Links</a>
+        </nav>
+      </main>
+
+      <footer>
+        <div class="footer-left">
+          <span>Esubalew Chekol</span>
+          <span class="separator">·</span>
+          <span>Addis Ababa, Ethiopia</span>
+        </div>
+        <div class="footer-right">
+          <a href="https://github.com/Esubaalew" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a href="https://x.com/esubaalew" target="_blank" rel="noopener">X</a>
+          <a href="https://t.me/esubbalew" target="_blank" rel="noopener"
+            >Telegram</a
+          >
+          <a
+            href="https://linkedin.com/in/esubaalew"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="mailto:hi@esubalew.et">Email</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

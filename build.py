@@ -361,6 +361,128 @@ def build_links():
     print("✓ Built links/index.html")
 
 
+def build_wegoch():
+    """Build all weg pages."""
+    wegoch_dir = CONTENT / "wegoch"
+    if not wegoch_dir.exists():
+        return []
+    
+    works = []
+    template = read_template("work.html")
+    output_base = OUTPUT / "wegoch"
+    output_base.mkdir(exist_ok=True)
+    
+    for md_file in wegoch_dir.glob("*.md"):
+        content = md_file.read_text(encoding="utf-8")
+        meta, body = parse_frontmatter(content)
+        
+        # Extract date
+        date_str = meta.get("date", "")
+        if not date_str:
+            date_str = datetime.now().strftime("%Y-%m-%d")
+        
+        try:
+            date = datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            date = datetime.now()
+        
+        slug = md_file.stem
+        url = f"/wegoch/{slug}"
+        
+        content_html = render_markdown(body)
+        
+        html = render_template(
+            template,
+            title=meta.get("title", slug.replace("-", " ").title()),
+            description=meta.get("description", ""),
+            keywords=meta.get("keywords", ""),
+            og_title=meta.get("og_title", meta.get("title", "")),
+            og_description=meta.get("og_description", meta.get("description", "")),
+            og_image=f"{SITE_URL}{meta.get('og_image', '/assets/og-image.png')}",
+            og_type="article",
+            canonical_url=f"{SITE_URL}{url}",
+            date=date_str,
+            date_formatted=date.strftime("%B %d, %Y"),
+            content=content_html,
+        )
+        
+        work_dir = output_base / slug
+        work_dir.mkdir(exist_ok=True)
+        (work_dir / "index.html").write_text(html, encoding="utf-8")
+        
+        works.append({
+            "title": meta.get("title", slug.replace("-", " ").title()),
+            "url": url,
+            "slug": slug,
+            "type": "weg",
+        })
+    
+    if works:
+        print(f"✓ Built {len(works)} weg pages")
+    return works
+
+
+def build_getem():
+    """Build all poem pages."""
+    getem_dir = CONTENT / "getem"
+    if not getem_dir.exists():
+        return []
+    
+    works = []
+    template = read_template("work.html")
+    output_base = OUTPUT / "getem"
+    output_base.mkdir(exist_ok=True)
+    
+    for md_file in getem_dir.glob("*.md"):
+        content = md_file.read_text(encoding="utf-8")
+        meta, body = parse_frontmatter(content)
+        
+        # Extract date
+        date_str = meta.get("date", "")
+        if not date_str:
+            date_str = datetime.now().strftime("%Y-%m-%d")
+        
+        try:
+            date = datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            date = datetime.now()
+        
+        slug = md_file.stem
+        url = f"/getem/{slug}"
+        
+        content_html = render_markdown(body)
+        
+        html = render_template(
+            template,
+            title=meta.get("title", slug.replace("-", " ").title()),
+            description=meta.get("description", ""),
+            keywords=meta.get("keywords", ""),
+            og_title=meta.get("og_title", meta.get("title", "")),
+            og_description=meta.get("og_description", meta.get("description", "")),
+            og_image=f"{SITE_URL}{meta.get('og_image', '/assets/og-image.png')}",
+            og_type="article",
+            canonical_url=f"{SITE_URL}{url}",
+            date=date_str,
+            date_formatted=date.strftime("%B %d, %Y"),
+            content=content_html,
+        )
+        
+        work_dir = output_base / slug
+        work_dir.mkdir(exist_ok=True)
+        (work_dir / "index.html").write_text(html, encoding="utf-8")
+        
+        works.append({
+            "title": meta.get("title", slug.replace("-", " ").title()),
+            "url": url,
+            "slug": slug,
+            "type": "poem",
+        })
+    
+    if works:
+        print(f"✓ Built {len(works)} poem pages")
+    return works
+
+
 def build_404():
     """Build the 404 page."""
     content_html = '''
@@ -426,7 +548,7 @@ def copy_static():
     print("✓ Copied blog OG images")
 
 
-def generate_sitemap(posts: list[dict]):
+def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict]):
     """Generate sitemap.xml."""
     urls = [
         (SITE_URL, "1.0"),
@@ -438,6 +560,12 @@ def generate_sitemap(posts: list[dict]):
     
     for post in posts:
         urls.append((f"{SITE_URL}{post['url']}", "0.6"))
+    
+    for weg in wegs:
+        urls.append((f"{SITE_URL}{weg['url']}", "0.6"))
+    
+    for poem in poems:
+        urls.append((f"{SITE_URL}{poem['url']}", "0.6"))
     
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -492,6 +620,8 @@ def main():
     build_projects()
     build_resume()
     build_links()
+    wegs = build_wegoch()
+    poems = build_getem()
     build_404()
     
     # Copy static files
@@ -499,7 +629,7 @@ def main():
     copy_static()
     
     # Generate sitemap
-    generate_sitemap(posts)
+    generate_sitemap(posts, wegs, poems)
     
     print("\n✨ Site built successfully!")
     print(f"   Output: {OUTPUT}\n")

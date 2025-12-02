@@ -549,7 +549,7 @@ main {
 }
 
 .resume-content p {
-    font-family: var(--font-body);
+    font-family: var(--font-addis), var(--font-body);
     color: var(--color-text-secondary);
     font-size: 0.95rem;
     line-height: 1.75;
@@ -563,7 +563,7 @@ main {
 }
 
 .resume-content ul li {
-    font-family: var(--font-body);
+    font-family: var(--font-addis), var(--font-body);
     color: var(--color-text-secondary);
     font-size: 0.95rem;
     line-height: 1.75;
@@ -688,6 +688,42 @@ footer a:hover {
         flex-wrap: wrap;
         gap: 1rem;
     }
+}
+
+/* Work Content (Wegs & Poems) */
+.work-content {
+    font-family: var(--font-addis), var(--font-body);
+}
+
+.work-content .post-header h1 {
+    font-family: var(--font-tesfa), var(--font-ethiopic);
+    font-weight: 600;
+}
+
+.work-content .post-content {
+    font-family: var(--font-addis), var(--font-body);
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.work-content .post-content p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+.work-content .post-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ethiopic text class */
+.ethiopic-text {
+    font-family: var(--font-addis), var(--font-ethiopic);
+}
+
+.ethiopic-text h1,
+.ethiopic-text h2,
+.ethiopic-text h3 {
+    font-family: var(--font-tesfa), var(--font-ethiopic);
 }
 
 /* 404 Page */
