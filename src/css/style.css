@@ -464,14 +464,21 @@ main {
 }
 
 .work-content .post-content blockquote {
-    font-family: var(--font-addis), var(--font-body);
+    font-family: var(--font-desta), var(--font-ethiopic);
     font-style: italic;
     border-left: 3px solid var(--color-accent);
     padding-left: 1.5rem;
     margin: 2rem 0 2.5rem;
     color: var(--color-text-secondary);
-    line-height: 1.9;
-    font-size: 1.05rem;
+    line-height: 2;
+    font-size: 1.1rem;
+    letter-spacing: 0.01em;
+}
+
+.work-content .post-content blockquote p {
+    font-family: var(--font-desta), var(--font-ethiopic);
+    font-style: italic;
+    color: var(--color-text-secondary);
 }
 
 .post-content code {

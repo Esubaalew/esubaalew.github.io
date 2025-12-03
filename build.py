@@ -402,7 +402,7 @@ def build_wegoch():
             og_type="article",
             canonical_url=f"{SITE_URL}{url}",
             date=date_str,
-            date_formatted=date.strftime("%B %d, %Y"),
+            date_formatted=date.strftime("%B {0}, %Y").format(date.day),
             content=content_html,
         )
         
@@ -463,7 +463,7 @@ def build_getem():
             og_type="article",
             canonical_url=f"{SITE_URL}{url}",
             date=date_str,
-            date_formatted=date.strftime("%B %d, %Y"),
+            date_formatted=date.strftime("%B {0}, %Y").format(date.day),
             content=content_html,
         )
         
