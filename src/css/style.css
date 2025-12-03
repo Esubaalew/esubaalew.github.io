@@ -453,12 +453,25 @@ main {
 }
 
 .post-content blockquote {
-    font-family: var(--font-desta);
+    font-family: var(--font-addis), var(--font-body);
     font-style: italic;
     border-left: 3px solid var(--color-accent);
     padding-left: 1.5rem;
-    margin: 2rem 0;
+    margin: 2rem 0 2.5rem;
     color: var(--color-text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.work-content .post-content blockquote {
+    font-family: var(--font-addis), var(--font-body);
+    font-style: italic;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1.5rem;
+    margin: 2rem 0 2.5rem;
+    color: var(--color-text-secondary);
+    line-height: 1.9;
+    font-size: 1.05rem;
 }
 
 .post-content code {
