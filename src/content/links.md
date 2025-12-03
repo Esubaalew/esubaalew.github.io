@@ -42,6 +42,8 @@ og_type: "website"
 
 - [ፊደል](http://abyssiniagateway.net/fidel/) - Fidel - Ethiopic computing resources
 
+- [ግዕዝ - አማርኛ ትምህርት](https://stteklehaimanotottawa.org/geez-amharic-lessons/) - St. Teklehaimanot Ottawa - Ge'ez and Amharic lessons
+
 ## Church & Faith
 
 - [የኢትጵያ ኦርቶዶክስ ተዋህዶ ቤተክርስቲያን እምነት እና ስርዓት](https://www.ethiopianorthodox.org/) - Ethiopian Orthodox Tewahedo Church - Faith and System
