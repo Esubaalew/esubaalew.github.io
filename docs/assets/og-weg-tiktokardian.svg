@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  
+  <!-- Title -->
+  <text x="600" y="310" fill="#ededed" font-family="Arial, sans-serif" font-size="52" font-weight="bold" text-anchor="middle" letter-spacing="0.01em">ቲክቶካርዲያን</text>
+  
+  <!-- Subtle underline -->
+  <line x1="300" y1="400" x2="900" y2="400" stroke="#666" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- Footer -->
+  <text x="600" y="580" fill="#666" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">esubalew.dev</text>
+</svg>

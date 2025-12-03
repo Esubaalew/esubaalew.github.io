@@ -4,7 +4,7 @@ description: "ቲክቶካርዲያን - የቲክቶክ ተቃውሞ እና የ
 keywords: "ወግ, አማርኛ ጽሑፍ, ኢትዮጵያ, ቲክቶክ, ራብ አድማ, ተቃውሞ"
 og_title: "ቲክቶካርዲያን - Esubalew Chekol"
 og_description: "የቲክቶክ ተቃውሞ እና የራብ አድማ ታሪክ"
-og_image: "/assets/og-image.png"
+og_image: "/assets/og-weg-tiktokardian.png"
 og_type: "article"
 date: "2022-01-24"
 ---
