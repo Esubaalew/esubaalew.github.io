@@ -741,6 +741,14 @@ footer a:hover {
     height: auto;
     margin: 2.5rem auto;
     border-radius: 12px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+
+/* Post/blog images */
+.post-content img {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
 }
 
 /* Ethiopic text class */
