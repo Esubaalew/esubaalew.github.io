@@ -546,6 +546,26 @@ def copy_static():
     for og_file in BLOG.glob("og-*.svg"):
         shutil.copy(og_file, blog_out / og_file.name)
     print("✓ Copied blog OG images")
+    
+    # Copy wegoch images (misloch)
+    wegoch_misloch = CONTENT / "wegoch" / "misloch"
+    if wegoch_misloch.exists():
+        wegoch_out = OUTPUT / "wegoch" / "misloch"
+        wegoch_out.mkdir(parents=True, exist_ok=True)
+        for img_file in wegoch_misloch.glob("*"):
+            if img_file.is_file():
+                shutil.copy(img_file, wegoch_out / img_file.name)
+        print("✓ Copied wegoch images")
+    
+    # Copy getem images (misloch)
+    getem_misloch = CONTENT / "getem" / "misloch"
+    if getem_misloch.exists():
+        getem_out = OUTPUT / "getem" / "misloch"
+        getem_out.mkdir(parents=True, exist_ok=True)
+        for img_file in getem_misloch.glob("*"):
+            if img_file.is_file():
+                shutil.copy(img_file, getem_out / img_file.name)
+        print("✓ Copied getem images")
 
 
 def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict]):

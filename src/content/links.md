@@ -57,3 +57,5 @@ og_type: "website"
 ### ወጎች
 
 - [የካፌ ወግ](/wegoch/yekafe-weg) - አንድ የዕለታዊ ሕይወት ታሪክ እና የጓደኝነት ታሪክ
+
+- [ቲክቶካርዲያን](/wegoch/tiktokardian) - የቲክቶክ ተቃውሞ እና የራብ አድማ ታሪክ
