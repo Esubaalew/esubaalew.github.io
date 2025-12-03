@@ -59,3 +59,7 @@ og_type: "website"
 - [የካፌ ወግ](/wegoch/yekafe-weg) - አንድ የዕለታዊ ሕይወት ታሪክ እና የጓደኝነት ታሪክ
 
 - [ቲክቶካርዲያን](/wegoch/tiktokardian) - የቲክቶክ ተቃውሞ እና የራብ አድማ ታሪክ
+
+### ግጥሞች
+
+- [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል

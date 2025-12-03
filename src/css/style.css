@@ -796,3 +796,43 @@ footer a:hover {
     text-decoration-color: var(--color-text-secondary);
 }
 
+/* Poem styling */
+.poem {
+    font-family: var(--font-desta), var(--font-ethiopic);
+    font-size: 1.15rem;
+    line-height: 2.2;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.poem .indent {
+    display: block;
+    padding-left: 8rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.poem .large {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.poem-signature {
+    font-family: var(--font-addis), var(--font-ethiopic);
+    font-style: italic;
+    color: var(--color-text-secondary);
+    text-align: right;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+    .poem .indent {
+        padding-left: 3rem;
+    }
+}
+
