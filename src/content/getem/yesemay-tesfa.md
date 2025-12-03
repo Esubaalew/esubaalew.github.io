@@ -18,17 +18,20 @@ date: "2021-12-15"
 <span class="indent">ከጎናችን አለን፤</span>
 
 ሰርቆ የከበረ የደላው ሲበዛ
+
 ሰው ጤፉ የሆነ ይሉኝታውን ሸጦ
 <span class="indent">ንብረቱን የገዛ</span>
 
 ግሩም ፍጥረት በዝቷል እሱን እናውቃለን ፤
-ምን አማራጭ አለን?
+
+<span class="spaced">ምን አማራጭ አለን?</span>
 
 አቤቱ ጌታችን ማረን እንላለን ፤
+
 የመሬትን ንቀን
+
 <span class="large">የሰማይን ተስፋ እንጠብቃለን ።</span>
 
 </div>
 
 <p class="poem-signature">እሱባለው ቸኮል / ህዳር 2014</p>
-

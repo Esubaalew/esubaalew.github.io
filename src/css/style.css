@@ -816,6 +816,11 @@ footer a:hover {
     font-size: 1.3rem;
     font-weight: 600;
     display: block;
+    margin-top: 1.5rem;
+}
+
+.poem .spaced {
+    display: block;
     margin-top: 0.5rem;
 }
 
