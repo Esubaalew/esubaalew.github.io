@@ -283,7 +283,7 @@ def update_og_image_in_md(md_file: Path, og_image_path: str):
     """Update the og_image field in markdown frontmatter."""
     content = md_file.read_text(encoding="utf-8")
     
-    # Replace any existing og_image with the new one
+    
     new_content = re.sub(
         r'og_image:\s*"[^"]*"',
         f'og_image: "{og_image_path}"',

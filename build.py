@@ -45,7 +45,14 @@ def parse_frontmatter(content: str) -> tuple[dict, str]:
     
     frontmatter = {}
     for line in parts[1].strip().split("\n"):
-        if ":" in line:
+        # Split on ': ' to handle keys with colons like 'og:image'
+        if ": " in line:
+            idx = line.index(": ")
+            key = line[:idx].strip()
+            value = line[idx+2:].strip().strip('"').strip("'")
+            frontmatter[key] = value
+        elif ":" in line:
+            # Fallback for simple key: value
             key, value = line.split(":", 1)
             value = value.strip().strip('"').strip("'")
             frontmatter[key.strip()] = value
