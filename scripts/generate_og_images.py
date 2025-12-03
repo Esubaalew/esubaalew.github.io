@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 Auto-generate OG images for blog posts, wegs, and poems based on their titles.
+Supports Amharic/Ethiopic text using embedded Ethiopian fonts.
 """
 
-import os
+import base64
 import re
 import subprocess
-import hashlib
 from pathlib import Path
 
 # Configuration
@@ -14,8 +14,39 @@ BLOG_DIR = Path("docs/blog")
 WEGOCH_DIR = Path("src/content/wegoch")
 GETEM_DIR = Path("src/content/getem")
 ASSETS_DIR = Path("docs/assets")
+FONT_DIR = Path("docs/assets")
 OUTPUT_WIDTH = 1200
 OUTPUT_HEIGHT = 630
+
+# Ethiopian font for Amharic text
+ETHIOPIC_FONT_PATH = FONT_DIR / "AddisAbebaUnicode.ttf"
+ETHIOPIC_FONT_BOLD_PATH = FONT_DIR / "EthiopicLeTewahedo-Bold.ttf"
+
+# Cache for embedded font
+_font_cache = {}
+
+
+def has_ethiopic(text: str) -> bool:
+    """Check if text contains Ethiopic characters."""
+    for char in text:
+        # Ethiopic Unicode range: U+1200 to U+137F
+        if '\u1200' <= char <= '\u137F':
+            return True
+    return False
+
+
+def get_embedded_font(font_path: Path) -> str:
+    """Get base64-encoded font for embedding in SVG."""
+    if str(font_path) in _font_cache:
+        return _font_cache[str(font_path)]
+    
+    if not font_path.exists():
+        return ""
+    
+    font_data = font_path.read_bytes()
+    encoded = base64.b64encode(font_data).decode('ascii')
+    _font_cache[str(font_path)] = encoded
+    return encoded
 
 
 def extract_title_from_md(filepath: Path) -> str | None:
@@ -70,8 +101,23 @@ def escape_xml(text: str) -> str:
 
 
 def generate_svg(title: str) -> str:
-    """Generate minimal SVG content for the OG image."""
+    """Generate minimal SVG content for the OG image with font support."""
     lines = wrap_text(title, 40)
+    uses_ethiopic = has_ethiopic(title)
+    
+    # Font settings
+    if uses_ethiopic:
+        # Use Ethiopian font for Amharic titles
+        font_path = ETHIOPIC_FONT_BOLD_PATH if ETHIOPIC_FONT_BOLD_PATH.exists() else ETHIOPIC_FONT_PATH
+        font_base64 = get_embedded_font(font_path)
+        font_family = "EthiopicFont, Arial, sans-serif"
+        font_size = 48  # Slightly smaller for Ethiopic
+        max_chars = 25  # Fewer chars per line for Ethiopic
+        lines = wrap_text(title, max_chars)
+    else:
+        font_base64 = ""
+        font_family = "Arial, sans-serif"
+        font_size = 52
     
     # Calculate title positioning
     line_height = 70
@@ -80,7 +126,7 @@ def generate_svg(title: str) -> str:
     
     title_lines = "\n".join(
         f'  <text x="{OUTPUT_WIDTH // 2}" y="{start_y + i * line_height}" '
-        f'fill="#ededed" font-family="Arial, sans-serif" font-size="52" '
+        f'fill="#ededed" font-family="{font_family}" font-size="{font_size}" '
         f'font-weight="bold" text-anchor="middle" letter-spacing="0.01em">{escape_xml(line)}</text>'
         for i, line in enumerate(lines)
     )
@@ -88,7 +134,23 @@ def generate_svg(title: str) -> str:
     # Calculate underline position
     underline_y = start_y + len(lines) * line_height + 20
     
+    # Font embedding style
+    font_style = ""
+    if font_base64:
+        font_style = f'''
+  <defs>
+    <style type="text/css">
+      @font-face {{
+        font-family: 'EthiopicFont';
+        src: url('data:font/truetype;charset=utf-8;base64,{font_base64}') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+      }}
+    </style>
+  </defs>'''
+    
     svg = f'''<svg width="{OUTPUT_WIDTH}" height="{OUTPUT_HEIGHT}" viewBox="0 0 {OUTPUT_WIDTH} {OUTPUT_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+{font_style}
   <rect width="{OUTPUT_WIDTH}" height="{OUTPUT_HEIGHT}" fill="#0a0a0a"/>
   
   <!-- Title -->
@@ -173,7 +235,7 @@ def process_blog_posts():
     return generated, skipped
 
 
-def process_works(content_dir: Path, work_type: str):
+def process_works(content_dir: Path, work_type: str, force_regenerate: bool = False):
     """Process wegs or poems directory."""
     if not content_dir.exists():
         return 0, 0
@@ -193,7 +255,7 @@ def process_works(content_dir: Path, work_type: str):
         og_png = ASSETS_DIR / f"{og_base}.png"
         og_svg = ASSETS_DIR / f"{og_base}.svg"
         
-        if og_png.exists() or og_svg.exists():
+        if not force_regenerate and (og_png.exists() or og_svg.exists()):
             print(f"⏭️  Skipping {md_file.name} - OG image exists")
             skipped += 1
             continue
@@ -221,27 +283,36 @@ def update_og_image_in_md(md_file: Path, og_image_path: str):
     """Update the og_image field in markdown frontmatter."""
     content = md_file.read_text(encoding="utf-8")
     
-    # Check if og_image already has a custom value (not the default)
-    if 'og_image: "/assets/og-image.png"' in content:
-        # Replace with the new OG image path
-        content = content.replace(
-            'og_image: "/assets/og-image.png"',
-            f'og_image: "{og_image_path}"'
-        )
-        md_file.write_text(content, encoding="utf-8")
+    # Replace any existing og_image with the new one
+    new_content = re.sub(
+        r'og_image:\s*"[^"]*"',
+        f'og_image: "{og_image_path}"',
+        content
+    )
+    
+    if new_content != content:
+        md_file.write_text(new_content, encoding="utf-8")
         print(f"📝 Updated {md_file.name} with new OG image")
 
 
 def main():
     """Main function to generate missing OG images."""
+    import sys
+    
+    # Check for --force flag to regenerate all
+    force = "--force" in sys.argv
+    
+    if force:
+        print("🔄 Force regenerating all OG images...\n")
+    
     print("📚 Processing blog posts...")
     blog_gen, blog_skip = process_blog_posts()
     
     print("\n📖 Processing wegs...")
-    weg_gen, weg_skip = process_works(WEGOCH_DIR, "weg")
+    weg_gen, weg_skip = process_works(WEGOCH_DIR, "weg", force_regenerate=force)
     
     print("\n📜 Processing poems...")
-    poem_gen, poem_skip = process_works(GETEM_DIR, "getem")
+    poem_gen, poem_skip = process_works(GETEM_DIR, "getem", force_regenerate=force)
     
     total_gen = blog_gen + weg_gen + poem_gen
     total_skip = blog_skip + weg_skip + poem_skip
