@@ -7,7 +7,7 @@ author: "Esubalew Chekol"
 tags: ["Rust", "Python", "PyO3", "maturin", "Tutorial"]
 og:title: "Build Fast Python Extensions with Rust and PyO3"
 og:description: "Complete guide to creating high-performance Python modules using Rust, PyO3, and maturin."
-og:image: "blog/og-pyo3.png"
+og:image: "/blog/og-bridging-rust-python-pyo3.png"
 og:type: "article"
 ---
 

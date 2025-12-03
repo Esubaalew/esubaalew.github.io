@@ -7,7 +7,7 @@ author: "Esubalew Chekol"
 tags: ["Python", "Telegram Bots", "Hosting", "Web Development", "Tutorial"]
 og:title: "Free Hosting for Python Telegram Bots - Platform Comparison"
 og:description: "Compare free hosting platforms for Telegram bots. Webhooks vs polling, PythonAnywhere, Railway, Vercel and more."
-og:image: "blog/og-telegram-bots.png"
+og:image: "/blog/og-hosting-telegram-bots-python.png"
 og:type: "article"
 ---
 

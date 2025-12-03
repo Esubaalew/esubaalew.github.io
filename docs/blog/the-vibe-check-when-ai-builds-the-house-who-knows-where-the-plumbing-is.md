@@ -7,7 +7,7 @@ author: "Esubalew Chekol"
 tags: ["AI", "Software Engineering", "Technical Debt", "Architecture", "Opinion"]
 og:title: "The Vibe Check: When AI Builds the House, Who Knows Where the Plumbing Is?"
 og:description: "Speed is intoxicating, but handing the blueprints entirely to an AI is how you end up with a beautiful mansion that collapses the first time it rains."
-og:image: "og-vibe-check.png"
+og:image: "/blog/og-the-vibe-check-when.png"
 og:type: "article"
 ---
 You might have heard about the day the internet broke because of 11 lines of code.

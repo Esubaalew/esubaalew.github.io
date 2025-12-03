@@ -7,7 +7,7 @@ author: "Esubalew Chekol"
 tags: ["Django", "cPanel", "Hosting", "Deployment", "Tutorial"]
 og:title: "Complete Guide to Hosting Django on cPanel"
 og:description: "Step-by-step tutorial for deploying Django applications with Passenger WSGI, databases, and SSL."
-og:image: "blog/og-django-cpanel.png"
+og:image: "/blog/og-hosting-django-app-on.png"
 og:type: "article"
 ---
 
