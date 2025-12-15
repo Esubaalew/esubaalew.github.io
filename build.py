@@ -591,6 +591,7 @@ def build_geez():
         
         works.append({
             "title": meta.get("title", slug.replace("-", " ").title()),
+            "title_transliterated": meta.get("title_transliterated", ""),
             "url": url,
             "slug": slug,
             "type": "geez",
@@ -599,6 +600,50 @@ def build_geez():
     if works:
         print(f"✓ Built {len(works)} Ge'ez pages")
     return works
+
+
+def build_works_index(works: list[dict], section: str, config: dict):
+    """Build index page for a works section (geez, getem, wegoch)."""
+    if not works:
+        return
+    
+    template = read_template("works-index.html")
+    output_dir = OUTPUT / section
+    output_dir.mkdir(exist_ok=True)
+    
+    # Build the list HTML
+    list_html = '<ul class="works-list">\n'
+    for work in works:
+        title = work.get("title", work["slug"])
+        transliterated = work.get("title_transliterated", "")
+        trans_html = f'<span class="work-transliterated">{transliterated}</span>' if transliterated else ""
+        
+        list_html += f'''  <li>
+    <a href="{work["url"]}">
+      <span class="work-title">{title}</span>
+      {trans_html}
+    </a>
+  </li>\n'''
+    list_html += '</ul>\n'
+    list_html += f'<p class="works-count">{len(works)} {config["count_label"]}</p>'
+    
+    html = render_template(
+        template,
+        lang=config.get("lang", "am"),
+        title=config["title"],
+        title_ethiopic=config["title_ethiopic"],
+        subtitle=config["subtitle"],
+        description=config["description"],
+        keywords=config["keywords"],
+        og_title=config["og_title"],
+        og_description=config["og_description"],
+        og_image=f"{SITE_URL}/assets/og-{section}.png",
+        canonical_url=f"{SITE_URL}/{section}",
+        content=list_html,
+    )
+    
+    (output_dir / "index.html").write_text(html, encoding="utf-8")
+    print(f"✓ Built {section}/index.html")
 
 
 def build_404():
@@ -696,6 +741,14 @@ def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], gee
         (f"{SITE_URL}/links", "0.6"),
     ]
     
+    # Add index pages for works sections
+    if wegs:
+        urls.append((f"{SITE_URL}/wegoch", "0.7"))
+    if poems:
+        urls.append((f"{SITE_URL}/getem", "0.7"))
+    if geez_pages:
+        urls.append((f"{SITE_URL}/geez", "0.8"))
+    
     for post in posts:
         urls.append((f"{SITE_URL}{post['url']}", "0.6"))
     
@@ -765,6 +818,44 @@ def main():
     wegs = build_wegoch()
     poems = build_getem()
     geez_pages = build_geez()
+    
+    # Build index pages for works sections
+    build_works_index(wegs, "wegoch", {
+        "lang": "am",
+        "title": "ወጎች - Wegs",
+        "title_ethiopic": "ወጎች",
+        "subtitle": "Short stories and reflections in Amharic",
+        "description": "Collection of Ethiopian short stories (ወግ) and reflections written in Amharic by Esubalew Chekol.",
+        "keywords": "ወግ, ወጎች, Amharic stories, Ethiopian literature, short stories, Esubalew Chekol",
+        "og_title": "ወጎች - Ethiopian Short Stories",
+        "og_description": "Amharic short stories and reflections",
+        "count_label": "ወጎች",
+    })
+    
+    build_works_index(poems, "getem", {
+        "lang": "am",
+        "title": "ግጥሞች - Poems",
+        "title_ethiopic": "ግጥሞች",
+        "subtitle": "Poetry in Amharic",
+        "description": "Collection of Ethiopian poems (ግጥም) written in Amharic by Esubalew Chekol.",
+        "keywords": "ግጥም, ግጥሞች, Amharic poetry, Ethiopian poetry, poems, Esubalew Chekol",
+        "og_title": "ግጥሞች - Ethiopian Poetry",
+        "og_description": "Amharic poems and verses",
+        "count_label": "ግጥሞች",
+    })
+    
+    build_works_index(geez_pages, "geez", {
+        "lang": "gez",
+        "title": "ግእዝ - Ge'ez",
+        "title_ethiopic": "ግእዝ",
+        "subtitle": "Sacred texts and qine in Ge'ez",
+        "description": "Collection of Ethiopian Orthodox Ge'ez sacred texts, qine (poetry), and liturgical verses with Amharic translations.",
+        "keywords": "ግእዝ, Ge'ez, ቅኔ, qine, Ethiopian Orthodox, sacred texts, liturgy, Ethiopic",
+        "og_title": "ግእዝ - Ethiopian Sacred Texts",
+        "og_description": "Ge'ez qine and sacred verses with translations",
+        "count_label": "ቅኔዎች",
+    })
+    
     build_404()
     
     # Copy static files
