@@ -13,6 +13,7 @@ from pathlib import Path
 BLOG_DIR = Path("docs/blog")
 WEGOCH_DIR = Path("src/content/wegoch")
 GETEM_DIR = Path("src/content/getem")
+GEEZ_DIR = Path("src/content/geez")
 ASSETS_DIR = Path("docs/assets")
 FONT_DIR = Path("docs/assets")
 OUTPUT_WIDTH = 1200
@@ -314,8 +315,11 @@ def main():
     print("\n📜 Processing poems...")
     poem_gen, poem_skip = process_works(GETEM_DIR, "getem", force_regenerate=force)
     
-    total_gen = blog_gen + weg_gen + poem_gen
-    total_skip = blog_skip + weg_skip + poem_skip
+    print("\n📿 Processing Ge'ez...")
+    geez_gen, geez_skip = process_works(GEEZ_DIR, "geez", force_regenerate=force)
+    
+    total_gen = blog_gen + weg_gen + poem_gen + geez_gen
+    total_skip = blog_skip + weg_skip + poem_skip + geez_skip
     
     print(f"\n📊 Summary: {total_gen} generated, {total_skip} skipped")
 

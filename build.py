@@ -490,6 +490,117 @@ def build_getem():
     return works
 
 
+def parse_geez_content(content: str) -> dict:
+    """Parse Ge'ez content sections (geez:, meaning:, reference:)."""
+    result = {"geez": "", "meaning": "", "reference": ""}
+    current_section = None
+    
+    for line in content.split("\n"):
+        line_stripped = line.strip()
+        if line_stripped.startswith("geez:"):
+            current_section = "geez"
+            # Get content after geez: if on same line
+            after = line_stripped[5:].strip()
+            if after:
+                result["geez"] = after
+        elif line_stripped.startswith("meaning:"):
+            current_section = "meaning"
+            after = line_stripped[8:].strip()
+            if after:
+                result["meaning"] = after
+        elif line_stripped.startswith("reference:"):
+            current_section = "reference"
+            after = line_stripped[10:].strip()
+            if after:
+                result["reference"] = after
+        elif current_section and line_stripped:
+            if result[current_section]:
+                result[current_section] += "\n" + line_stripped
+            else:
+                result[current_section] = line_stripped
+    
+    return result
+
+
+def build_geez():
+    """Build all Ge'ez qine pages (hidden SEO pages)."""
+    geez_dir = CONTENT / "geez"
+    if not geez_dir.exists():
+        return []
+    
+    works = []
+    template = read_template("geez.html")
+    output_base = OUTPUT / "geez"
+    output_base.mkdir(exist_ok=True)
+    
+    for md_file in geez_dir.glob("*.md"):
+        content = md_file.read_text(encoding="utf-8")
+        meta, body = parse_frontmatter(content)
+        
+        # Parse the special Ge'ez content format
+        geez_content = parse_geez_content(body)
+        
+        slug = md_file.stem
+        url = f"/geez/{slug}"
+        
+        # Format Ge'ez text with line breaks
+        geez_text_html = ""
+        for line in geez_content["geez"].split("\n"):
+            if line.strip():
+                geez_text_html += f'<span class="line">{line.strip()}</span>\n'
+        
+        # Format meaning section with line breaks
+        meaning_section = ""
+        if geez_content["meaning"]:
+            meaning_lines = ""
+            for line in geez_content["meaning"].split("\n"):
+                if line.strip():
+                    meaning_lines += f'<span class="line">{line.strip()}</span>\n'
+            meaning_section = f'''
+            <div class="geez-separator"></div>
+            <div class="geez-meaning">
+              {meaning_lines}
+            </div>'''
+        
+        # Format reference section
+        reference_section = ""
+        if geez_content["reference"]:
+            reference_section = f'''
+            <div class="geez-reference">
+              {geez_content["reference"]}
+            </div>'''
+        
+        html = render_template(
+            template,
+            title=meta.get("title", slug.replace("-", " ").title()),
+            title_transliterated=meta.get("title_transliterated", ""),
+            description=meta.get("description", ""),
+            keywords=meta.get("keywords", ""),
+            og_title=meta.get("og:title", meta.get("title", "")),
+            og_description=meta.get("og:description", meta.get("description", "")),
+            og_image=f"{SITE_URL}{meta.get('og:image', '/assets/og-image.png')}",
+            canonical_url=f"{SITE_URL}{url}",
+            geez_text=geez_text_html,
+            meaning_section=meaning_section,
+            reference_section=reference_section,
+        )
+        
+        work_dir = output_base / slug
+        work_dir.mkdir(exist_ok=True)
+        (work_dir / "index.html").write_text(html, encoding="utf-8")
+        
+        works.append({
+            "title": meta.get("title", slug.replace("-", " ").title()),
+            "url": url,
+            "slug": slug,
+            "type": "geez",
+        })
+    
+    if works:
+        print(f"✓ Built {len(works)} Ge'ez pages")
+    return works
+
+
 def build_404():
     """Build the 404 page."""
     content_html = '''
@@ -575,7 +686,7 @@ def copy_static():
         print("✓ Copied getem images")
 
 
-def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict]):
+def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], geez_pages: list[dict]):
     """Generate sitemap.xml."""
     urls = [
         (SITE_URL, "1.0"),
@@ -593,6 +704,10 @@ def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict]):
     
     for poem in poems:
         urls.append((f"{SITE_URL}{poem['url']}", "0.6"))
+    
+    # Ge'ez pages are SEO-focused so give them higher priority
+    for geez in geez_pages:
+        urls.append((f"{SITE_URL}{geez['url']}", "0.8"))
     
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -649,6 +764,7 @@ def main():
     build_links()
     wegs = build_wegoch()
     poems = build_getem()
+    geez_pages = build_geez()
     build_404()
     
     # Copy static files
@@ -656,7 +772,7 @@ def main():
     copy_static()
     
     # Generate sitemap
-    generate_sitemap(posts, wegs, poems)
+    generate_sitemap(posts, wegs, poems, geez_pages)
     
     print("\n✨ Site built successfully!")
     print(f"   Output: {OUTPUT}\n")

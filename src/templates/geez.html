@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="gez">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} - ግእዝ | Esubalew Chekol</title>
+    <meta name="description" content="{{description}}" />
+    <meta name="author" content="Esubalew Chekol" />
+    <meta name="keywords" content="{{keywords}}, ግእዝ, Ge'ez, ቅኔ, qine, Ethiopian poetry, Ethiopian Orthodox, Ethiopic literature" />
+    <meta name="language" content="gez" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{og_title}}" />
+    <meta property="og:description" content="{{og_description}}" />
+    <meta property="og:image" content="{{og_image}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{canonical_url}}" />
+    <meta property="og:locale" content="am_ET" />
+    <meta property="og:site_name" content="Esubalew Chekol - ግእዝ" />
+    <meta property="article:author" content="Esubalew Chekol" />
+    <meta property="article:section" content="ግእዝ" />
+    <meta property="article:tag" content="ግእዝ" />
+    <meta property="article:tag" content="ቅኔ" />
+    <meta property="article:tag" content="Ethiopian Orthodox" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@esubaalew" />
+    <meta name="twitter:creator" content="@esubaalew" />
+    <meta name="twitter:title" content="{{og_title}}" />
+    <meta name="twitter:description" content="{{og_description}}" />
+    <meta name="twitter:image" content="{{og_image}}" />
+    
+    <!-- Rich Structured Data for Poetry/Religious Text -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["CreativeWork", "Article"],
+      "headline": "{{title}}",
+      "alternativeHeadline": "{{title_transliterated}}",
+      "description": "{{description}}",
+      "image": "{{og_image}}",
+      "url": "{{canonical_url}}",
+      "author": {
+        "@type": "Person",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://esubalew.dev/assets/logo.png"
+        }
+      },
+      "inLanguage": ["gez", "am"],
+      "genre": ["Poetry", "Religious text", "ቅኔ", "ግእዝ"],
+      "about": {
+        "@type": "Thing",
+        "name": "Ethiopian Orthodox Literature",
+        "sameAs": "https://en.wikipedia.org/wiki/Ethiopian_Orthodox_Tewahedo_Church"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{canonical_url}}"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Esubalew Chekol",
+        "url": "https://esubalew.dev"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://esubalew.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ግእዝ",
+          "item": "https://esubalew.dev/geez"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{title}}",
+          "item": "{{canonical_url}}"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{canonical_url}}" />
+
+    <!-- Console Easter Egg - Ethiopian Flag -->
+    <script>
+      console.log(
+        "%c ",
+        "background: linear-gradient(180deg, #078930 33%, #FCDD09 33% 66%, #DA121A 66%); padding: 30px 60px; border-radius: 4px;"
+      );
+      console.log("%c ", "padding: 5px;");
+      console.log(
+        "%cHey, you know that my mother Emenesh built me.",
+        "color: #078930; font-size: 16px; font-weight: bold; font-family: system-ui;"
+      );
+    </script>
+
+    <style>
+      /* Geez Page Unique Styles */
+      .geez-content {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .geez-verse {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .geez-primary {
+        font-family: var(--font-ethiopic), serif;
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        line-height: 2.2;
+        letter-spacing: 0.02em;
+        color: var(--color-text);
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .geez-primary .line {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Separator between verses */
+      .geez-separator {
+        display: block;
+        margin: 2rem auto;
+        width: 60px;
+        height: 1px;
+        background: var(--color-border);
+      }
+
+      /* Amharic translation/meaning */
+      .geez-meaning {
+        font-family: var(--font-desta), var(--font-body);
+        font-size: clamp(1rem, 2.5vw, 1.3rem);
+        line-height: 2;
+        color: var(--color-text-secondary);
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .geez-meaning .line {
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      /* Bible reference */
+      .geez-reference {
+        font-family: var(--font-addis), var(--font-body);
+        font-size: 1rem;
+        color: var(--color-text-tertiary);
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+      }
+
+      .geez-reference a {
+        color: var(--color-text-secondary);
+        text-decoration: none;
+      }
+
+      .geez-reference a:hover {
+        text-decoration: underline;
+      }
+
+      /* Title styling */
+      .geez-title {
+        font-family: var(--font-tesfa), var(--font-ethiopic);
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        color: var(--color-text);
+        margin-bottom: 3rem;
+        text-align: center;
+        letter-spacing: 0.03em;
+      }
+
+      /* Decorative elements */
+      .geez-ornament {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        color: var(--color-text-tertiary);
+        font-size: 1.5rem;
+        font-family: var(--font-ethiopic);
+      }
+
+      .geez-ornament::before,
+      .geez-ornament::after {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background: var(--color-border);
+      }
+
+      /* Container with subtle background */
+      .geez-container {
+        background: var(--color-bg-elevated);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 3rem 2.5rem;
+        margin: 2rem 0;
+      }
+
+      @media (max-width: 640px) {
+        .geez-container {
+          padding: 2rem 1.5rem;
+          margin: 1rem 0;
+        }
+        
+        .geez-primary {
+          font-size: 1.3rem;
+          line-height: 2;
+        }
+        
+        .geez-meaning {
+          font-size: 1rem;
+        }
+      }
+
+      /* Back link hidden - these pages are SEO-only */
+      .geez-back {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.85rem;
+        color: var(--color-text-tertiary);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 20px;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+
+      .geez-back:hover {
+        opacity: 1;
+        color: var(--color-text-secondary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <a href="/" class="site-name">Esubalew Chekol</a>
+        </div>
+        <nav>
+          <a href="/projects">Projects</a>
+          <a href="/blog">Blog</a>
+          <a href="/resume">Resume</a>
+          <a href="/links">Links</a>
+        </nav>
+      </header>
+
+      <main class="geez-content">
+        <h1 class="geez-title">{{title}}</h1>
+        
+        <div class="geez-ornament">፨</div>
+        
+        <div class="geez-container">
+          <div class="geez-verse">
+            <div class="geez-primary">
+              {{geez_text}}
+            </div>
+            {{meaning_section}}
+            {{reference_section}}
+          </div>
+        </div>
+        
+        <div class="geez-ornament">፨</div>
+      </main>
+
+      <a href="/" class="geez-back">← esubalew.dev</a>
+
+      <footer>
+        <div class="footer-left">
+          <span>Esubalew Chekol</span>
+          <span class="separator">·</span>
+          <span>Addis Ababa, Ethiopia</span>
+        </div>
+        <div class="footer-right">
+          <a href="https://github.com/Esubaalew" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://x.com/esubaalew" target="_blank" rel="noopener">X</a>
+          <a href="https://t.me/esubbalew" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://linkedin.com/in/esubaalew" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hi@esubalew.et">Email</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
