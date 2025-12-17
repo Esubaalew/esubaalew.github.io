@@ -90,4 +90,6 @@ og_type: "website"
 
 - [አትወጅኝም አትበል](/getem/atwejegnem-atbel) - ግጥም በእሱባለው ቸኮል
 
+- [ዘመን](/getem/zemen) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል

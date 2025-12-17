@@ -836,6 +836,17 @@ footer a:hover {
     font-size: 0.95rem;
 }
 
+.poem-dedication {
+    font-family: var(--font-desta), var(--font-ethiopic);
+    font-style: italic;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
 .poem-break {
     text-align: center;
     color: var(--color-text-tertiary);
