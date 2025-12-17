@@ -13,7 +13,7 @@
   <rect width="1200" height="630" fill="#0a0a0a"/>
   
   <!-- Title -->
-  <text x="600" y="310" fill="#ededed" font-family="EthiopicFont, Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" letter-spacing="0.01em">የሰማይ አዳኝ</text>
+  <text x="600" y="310" fill="#ededed" font-family="EthiopicFont, Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" letter-spacing="0.01em">የተነሳሽነት ልመና በዘመነ ኮሮና</text>
   
   <!-- Subtle underline -->
   <line x1="300" y1="400" x2="900" y2="400" stroke="#666" stroke-width="1" stroke-opacity="0.3"/>

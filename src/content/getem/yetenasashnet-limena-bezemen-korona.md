@@ -1,10 +1,10 @@
 ---
-title: "የሰማይ አዳኝ"
-description: "የሰማይ አዳኝ - ግጥም በእሱባለው ቸኮል"
-keywords: "ግጥም, አማርኛ ግጥም, ኢትዮጵያ, ተስፋ, እምነት, Esubalew Chekol"
-og_title: "የሰማይ አዳኝ - Esubalew Chekol"
+title: "የተነሳሽነት ልመና በዘመነ ኮሮና"
+description: "የተነሳሽነት ልመና በዘመነ ኮሮና - ግጥም በእሱባለው ቸኮል"
+keywords: "ግጥም, አማርኛ ግጥም, ኢትዮጵያ, ተስፋ, እምነት, ኮሮና, Esubalew Chekol"
+og_title: "የተነሳሽነት ልመና በዘመነ ኮሮና - Esubalew Chekol"
 og_description: "ግጥም በእሱባለው ቸኮል"
-og_image: "/assets/og-getem-yesemay-adagn.png"
+og_image: "/assets/og-getem-yetenasashnet-limena-bezemen-korona.png"
 og_type: "article"
 date: "2020-10-22"
 ---
@@ -41,4 +41,3 @@ date: "2020-10-22"
 </div>
 
 <div class="poem-signature">እሱባለው ቸኮል</div>
-
