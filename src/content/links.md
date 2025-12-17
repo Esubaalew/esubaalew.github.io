@@ -58,6 +58,8 @@ og_type: "website"
 
 ### ወጎች
 
+- [የሁለት ዓለም ሰዎች](/wegoch/yehulet-alem-sewoch) - የባህል፣ የአለባበስ እና የሰው ልጅ ግንኙነት ታሪክ
+
 - [የካፌ ወግ](/wegoch/yekafe-weg) - አንድ የዕለታዊ ሕይወት ታሪክ እና የጓደኝነት ታሪክ
 
 - [ቲክቶካርዲያን](/wegoch/tiktokardian) - የቲክቶክ ተቃውሞ እና የራብ አድማ ታሪክ
