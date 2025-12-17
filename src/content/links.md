@@ -70,4 +70,6 @@ og_type: "website"
 
 - [የፈረሰ የፍቅር ቃልኪዳን](/getem/yeferese-yefiker-kalkidan) - ግጥም በእሱባለው ቸኮል
 
+- [ፍቅሬ በኮሮና](/getem/fikre-bekorona) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
