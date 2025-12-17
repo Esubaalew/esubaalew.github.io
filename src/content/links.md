@@ -66,6 +66,8 @@ og_type: "website"
 
 - [የልደታ ማርያም የህንጻ ኮሌጅ ትዝታዎቼ](/wegoch/yeldeta-mariam-tizitawoche) - በትንሽ ነገር ሰው ማዳን ይቻላል
 
+- [እንካ ስላንትያ](/wegoch/enka-slantya) - የኢትዮጵያ ጨዋታ
+
 ### ግጥሞች
 
 - [ሰው ጥቀመኛ ነው](/getem/sew-tikumegna) - ግጥም በእሱባለው ቸኮል
