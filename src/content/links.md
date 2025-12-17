@@ -96,4 +96,6 @@ og_type: "website"
 
 - [ዘመን](/getem/zemen) - ግጥም በእሱባለው ቸኮል
 
+- [ሃይባይ](/getem/haybay) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
