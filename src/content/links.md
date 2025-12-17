@@ -74,4 +74,6 @@ og_type: "website"
 
 - [የተነሳሽነት ልመና በዘመነ ኮሮና](/getem/yetenasashnet-limena-bezemen-korona) - ግጥም በእሱባለው ቸኮል
 
+- [ድሮው](/getem/drow) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
