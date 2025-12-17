@@ -72,4 +72,6 @@ og_type: "website"
 
 - [ፍቅሬ በኮሮና](/getem/fikre-bekorona) - ግጥም በእሱባለው ቸኮል
 
+- [የሰማይ አዳኝ](/getem/yesemay-adagn) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል

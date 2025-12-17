@@ -836,6 +836,14 @@ footer a:hover {
     font-size: 0.95rem;
 }
 
+.poem-break {
+    text-align: center;
+    color: var(--color-text-tertiary);
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    letter-spacing: 0.5em;
+}
+
 @media (max-width: 640px) {
     .poem .indent {
         padding-left: 3rem;
