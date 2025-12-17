@@ -630,9 +630,8 @@ def build_cs():
         slug = md_file.stem
         url = f"/cs/{slug}"
         
-        # For CS articles, we keep HTML as-is (for terminal styling)
-        # but also process any markdown parts
-        content_html = body
+        # For CS articles, render markdown (which preserves HTML blocks)
+        content_html = render_markdown(body)
         
         html = render_template(
             template,
