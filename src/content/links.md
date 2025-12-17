@@ -68,6 +68,8 @@ og_type: "website"
 
 - [እንካ ስላንትያ](/wegoch/enka-slantya) - የኢትዮጵያ ጨዋታ
 
+- [የዘመኑ ፍቅር](/wegoch/yezemenu-fiker) - ስለ ዘመኑ ፍቅር እና ህልም
+
 ### ግጥሞች
 
 - [ሰው ጥቀመኛ ነው](/getem/sew-tikumegna) - ግጥም በእሱባለው ቸኮል
