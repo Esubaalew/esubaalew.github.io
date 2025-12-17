@@ -66,4 +66,6 @@ og_type: "website"
 
 ### ግጥሞች
 
+- [ሰው ጥቀመኛ ነው](/getem/sew-tikumegna) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
