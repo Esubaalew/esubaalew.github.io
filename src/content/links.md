@@ -84,4 +84,6 @@ og_type: "website"
 
 - [ቢሆን እንበልና](/getem/bihon-enbelna) - ግጥም በእሱባለው ቸኮል
 
+- [ሞት ይፍረድብኝ](/getem/mot-yifredebgn) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
