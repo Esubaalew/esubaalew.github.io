@@ -28,34 +28,34 @@
     <meta name="twitter:title" content="{{og_title}}" />
     <meta name="twitter:description" content="{{og_description}}" />
     <meta name="twitter:image" content="{{og_image}}" />
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "{{title}}",
-      "description": "{{description}}",
-      "image": "{{og_image}}",
-      "url": "{{canonical_url}}",
-      "datePublished": "{{date}}",
-      "author": {
-        "@type": "Person",
-        "name": "Esubalew Chekol",
-        "url": "https://esubalew.dev"
-      },
-      "publisher": {
-        "@type": "Person",
-        "name": "Esubalew Chekol",
-        "url": "https://esubalew.dev"
-      },
-      "inLanguage": "en",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{canonical_url}}"
-      },
-      "proficiencyLevel": "Beginner"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "{{title}}",
+        "description": "{{description}}",
+        "image": "{{og_image}}",
+        "url": "{{canonical_url}}",
+        "datePublished": "{{date}}",
+        "author": {
+          "@type": "Person",
+          "name": "Esubalew Chekol",
+          "url": "https://esubalew.dev"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Esubalew Chekol",
+          "url": "https://esubalew.dev"
+        },
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{canonical_url}}"
+        },
+        "proficiencyLevel": "Beginner"
+      }
     </script>
 
     <!-- Favicon -->
@@ -226,9 +226,15 @@
         border-radius: 50%;
       }
 
-      .cs-article .terminal-dot.red { background: #ff5f56; }
-      .cs-article .terminal-dot.yellow { background: #ffbd2e; }
-      .cs-article .terminal-dot.green { background: #27c93f; }
+      .cs-article .terminal-dot.red {
+        background: #ff5f56;
+      }
+      .cs-article .terminal-dot.yellow {
+        background: #ffbd2e;
+      }
+      .cs-article .terminal-dot.green {
+        background: #27c93f;
+      }
 
       .cs-article .terminal-body {
         padding: 1rem 1.25rem;
@@ -281,7 +287,8 @@
       }
 
       /* Lists */
-      .cs-article ul, .cs-article ol {
+      .cs-article ul,
+      .cs-article ol {
         margin: 1rem 0 1.5rem 1.5rem;
         color: var(--color-text-secondary);
       }
@@ -408,10 +415,8 @@
           <div class="meta">
             <time datetime="{{date}}">{{date_formatted}}</time>
           </div>
-          
-          <div class="content">
-            {{content}}
-          </div>
+
+          <div class="content">{{content}}</div>
         </article>
 
         <nav class="cs-nav">
@@ -426,14 +431,22 @@
           <span>Addis Ababa, Ethiopia</span>
         </div>
         <div class="footer-right">
-          <a href="https://github.com/Esubaalew" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/Esubaalew" target="_blank" rel="noopener"
+            >GitHub</a
+          >
           <a href="https://x.com/esubaalew" target="_blank" rel="noopener">X</a>
-          <a href="https://t.me/esubbalew" target="_blank" rel="noopener">Telegram</a>
-          <a href="https://linkedin.com/in/esubaalew" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://t.me/esubbalew" target="_blank" rel="noopener"
+            >Telegram</a
+          >
+          <a
+            href="https://linkedin.com/in/esubaalew"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
           <a href="mailto:hi@esubalew.et">Email</a>
         </div>
       </footer>
     </div>
   </body>
 </html>
-

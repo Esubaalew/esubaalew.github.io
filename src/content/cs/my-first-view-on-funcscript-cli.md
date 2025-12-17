@@ -233,7 +233,7 @@ Wrapping this in quotes solved the issue:
 </div>
 
 <div class="note">
-<strong>💡 Takeaway</strong>
+<strong>Takeaway</strong>
 So as my title suggests, don't do things unquoted. Or make sure you know which behavior results in the action you executed.
 </div>
 
