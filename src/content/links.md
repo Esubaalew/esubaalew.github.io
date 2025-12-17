@@ -88,4 +88,6 @@ og_type: "website"
 
 - [ያንቺ ነገር](/getem/yanchi-neger) - ግጥም በእሱባለው ቸኮል
 
+- [አትወጅኝም አትበል](/getem/atwejegnem-atbel) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
