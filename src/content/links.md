@@ -64,6 +64,8 @@ og_type: "website"
 
 - [ቲክቶካርዲያን](/wegoch/tiktokardian) - የቲክቶክ ተቃውሞ እና የራብ አድማ ታሪክ
 
+- [የልደታ ማርያም የህንጻ ኮሌጅ ትዝታዎቼ](/wegoch/yeldeta-mariam-tizitawoche) - በትንሽ ነገር ሰው ማዳን ይቻላል
+
 ### ግጥሞች
 
 - [ሰው ጥቀመኛ ነው](/getem/sew-tikumegna) - ግጥም በእሱባለው ቸኮል
