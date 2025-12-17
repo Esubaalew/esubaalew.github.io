@@ -78,4 +78,8 @@ og_type: "website"
 
 - [እመነኝ አትበይኝ](/getem/emenegn-atbeyegn) - ግጥም በእሱባለው ቸኮል
 
+- [ተጓዥ](/getem/tegwazh) - ግጥም በእሱባለው ቸኮል
+
+- [አልማዟ](/getem/almaza) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
