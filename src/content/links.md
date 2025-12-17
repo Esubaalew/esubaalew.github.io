@@ -68,4 +68,6 @@ og_type: "website"
 
 - [ሰው ጥቀመኛ ነው](/getem/sew-tikumegna) - ግጥም በእሱባለው ቸኮል
 
+- [የፈረሰ የፍቅር ቃልኪዳን](/getem/yeferese-yefiker-kalkidan) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
