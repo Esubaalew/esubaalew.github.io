@@ -82,4 +82,6 @@ og_type: "website"
 
 - [አልማዟ](/getem/almaza) - ግጥም በእሱባለው ቸኮል
 
+- [ቢሆን እንበልና](/getem/bihon-enbelna) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
