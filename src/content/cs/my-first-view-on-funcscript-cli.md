@@ -17,7 +17,7 @@ date: 2025-06-17
 
 This article documents my first experience with `fs-cli`. Note that these observations were made on a specific version of the tool and may not apply to future updates. Think of this as field notes from a curious explorer.
 
-## *What is the lesson I took*
+## _What is the lesson I took_
 
 Well most of the issues seem to have a workaround: using `""` is the preferred way of doing FuncScript. Instead of:
 
@@ -58,7 +58,7 @@ And also:
 </div>
 </div>
 
-## *I should not be confused with things in quotes*
+## _I should not be confused with things in quotes_
 
 When we come to most programming languages, if not all, things in `""` means they are string literals. But here fs-cli expects one argument and if we have more than that, either that is going to be rejected or fs-cli panics.
 
@@ -162,7 +162,7 @@ python>>></code></pre>
 </div>
 </div>
 
-## *Fs-cli is a one argument tool*
+## _Fs-cli is a one argument tool_
 
 fs-cli expects one argument. If we don't respect that, results are going to be unexpected. As I mentioned in the section above, it is recommended that we use quotes when passing that argument.
 
@@ -199,6 +199,7 @@ It first looks like we can ignore quotes if we are passing a valid data type, an
 <span class="type-label">Type: KeyValueCollection</span>
 <span class="type-label">Value:</span>
 <span class="value-label">{}</span></code></pre>
+
 </div>
 </div>
 
@@ -237,7 +238,7 @@ Wrapping this in quotes solved the issue:
 So as my title suggests, don't do things unquoted. Or make sure you know which behavior results in the action you executed.
 </div>
 
-## *Data type String is wronged* <span class="ethiopic">(ተበድሏል)</span>
+## _Data type String is wronged_ <span class="ethiopic">(ተበድሏል)</span>
 
 Because of the fact that things are naturally expected to be defined in `""`, strings are hard to appear.
 
@@ -283,4 +284,3 @@ But the output is a bit scary. The escape character comes in the output.
 <p><sup>1</sup> A read–eval–print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">Read–eval–print loop</a></p>
 <p><sup>2</sup> run is a universal multi-language runner and smart REPL (Read-Eval-Print Loop) written in Rust. <a href="https://github.com/sigoden/runmulti" target="_blank">run</a></p>
 </div>
-
