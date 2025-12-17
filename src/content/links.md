@@ -86,4 +86,6 @@ og_type: "website"
 
 - [ሞት ይፍረድብኝ](/getem/mot-yifredebgn) - ግጥም በእሱባለው ቸኮል
 
+- [ያንቺ ነገር](/getem/yanchi-neger) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
