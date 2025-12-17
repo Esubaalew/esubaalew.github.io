@@ -62,7 +62,7 @@ And also:
 
 When we come to most programming languages, if not all, things in `""` means they are string literals. But here fs-cli expects one argument and if we have more than that, either that is going to be rejected or fs-cli panics.
 
-So if we have `npx fs-cli "4 + 3"`, the `"4 + 3"` is not a string—it's the expression `4 + 3`. Here `" "` is being used to define the expression. It's like entering in Python REPL<sup>1</sup> and executing `4 + 4`:
+So if we have `npx fs-cli "4 + 3"`, the `"4 + 3"` is not a string. It is the expression `4 + 3`. Here `" "` is being used to define the expression. It is like entering in Python REPL<sup>1</sup> and executing `4 + 4`:
 
 <div class="terminal">
 <div class="terminal-header">
@@ -95,7 +95,7 @@ As for other languages like Python, string concatenation works naturally:
 </div>
 </div>
 
-We can do this in fs-cli but a little bit differently—instead of separately treating the operands, we quote everything in `""`:
+We can do this in fs-cli but a little bit differently. Instead of separately treating the operands, we quote everything in `""`:
 
 <div class="terminal">
 <div class="terminal-header">
@@ -275,7 +275,7 @@ I can even do:
 </div>
 </div>
 
-But the output is a bit scary—the escape character comes in the output.
+But the output is a bit scary. The escape character comes in the output.
 
 ---
 
