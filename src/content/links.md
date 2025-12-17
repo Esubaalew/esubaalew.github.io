@@ -100,4 +100,6 @@ og_type: "website"
 
 - [ዘመነ አዳር](/getem/zemene-adar) - ግጥም በእሱባለው ቸኮል
 
+- [ድረሽልኝ ማርያም](/getem/dreshlgn-mariam) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
