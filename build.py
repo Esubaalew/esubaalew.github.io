@@ -602,6 +602,73 @@ def build_geez():
     return works
 
 
+def build_cs():
+    """Build all CS (Computer Science) articles."""
+    cs_dir = CONTENT / "cs"
+    if not cs_dir.exists():
+        return []
+    
+    articles = []
+    template = read_template("cs.html")
+    output_base = OUTPUT / "cs"
+    output_base.mkdir(exist_ok=True)
+    
+    for md_file in cs_dir.glob("*.md"):
+        content = md_file.read_text(encoding="utf-8")
+        meta, body = parse_frontmatter(content)
+        
+        # Extract date
+        date_str = meta.get("date", "")
+        if not date_str:
+            date_str = datetime.now().strftime("%Y-%m-%d")
+        
+        try:
+            date = datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            date = datetime.now()
+        
+        slug = md_file.stem
+        url = f"/cs/{slug}"
+        
+        # For CS articles, we keep HTML as-is (for terminal styling)
+        # but also process any markdown parts
+        content_html = body
+        
+        html = render_template(
+            template,
+            title=meta.get("title", slug.replace("-", " ").title()),
+            description=meta.get("description", ""),
+            keywords=meta.get("keywords", ""),
+            og_title=meta.get("og_title", meta.get("title", "")),
+            og_description=meta.get("og_description", meta.get("description", "")),
+            og_image=f"{SITE_URL}{meta.get('og_image', '/assets/og-image.png')}",
+            canonical_url=f"{SITE_URL}{url}",
+            date=date_str,
+            date_formatted=date.strftime("%B {0}, %Y").format(date.day),
+            content=content_html,
+        )
+        
+        article_dir = output_base / slug
+        article_dir.mkdir(exist_ok=True)
+        (article_dir / "index.html").write_text(html, encoding="utf-8")
+        
+        articles.append({
+            "title": meta.get("title", slug.replace("-", " ").title()),
+            "url": url,
+            "slug": slug,
+            "date": date,
+            "description": meta.get("description", ""),
+            "type": "cs",
+        })
+    
+    # Sort by date descending
+    articles.sort(key=lambda x: x["date"], reverse=True)
+    
+    if articles:
+        print(f"✓ Built {len(articles)} CS articles")
+    return articles
+
+
 def build_works_index(works: list[dict], section: str, config: dict):
     """Build index page for a works section (geez, getem, wegoch)."""
     if not works:
@@ -731,7 +798,7 @@ def copy_static():
         print("✓ Copied getem images")
 
 
-def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], geez_pages: list[dict]):
+def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], geez_pages: list[dict], cs_articles: list[dict]):
     """Generate sitemap.xml."""
     urls = [
         (SITE_URL, "1.0"),
@@ -748,6 +815,8 @@ def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], gee
         urls.append((f"{SITE_URL}/getem", "0.7"))
     if geez_pages:
         urls.append((f"{SITE_URL}/geez", "0.8"))
+    if cs_articles:
+        urls.append((f"{SITE_URL}/cs", "0.8"))
     
     for post in posts:
         urls.append((f"{SITE_URL}{post['url']}", "0.6"))
@@ -761,6 +830,10 @@ def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], gee
     # Ge'ez pages are SEO-focused so give them higher priority
     for geez in geez_pages:
         urls.append((f"{SITE_URL}{geez['url']}", "0.8"))
+    
+    # CS articles
+    for article in cs_articles:
+        urls.append((f"{SITE_URL}{article['url']}", "0.7"))
     
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -818,6 +891,7 @@ def main():
     wegs = build_wegoch()
     poems = build_getem()
     geez_pages = build_geez()
+    cs_articles = build_cs()
     
     # Build index pages for works sections
     build_works_index(wegs, "wegoch", {
@@ -856,6 +930,18 @@ def main():
         "count_label": "ቅኔዎች",
     })
     
+    build_works_index(cs_articles, "cs", {
+        "lang": "en",
+        "title": "CS - Computer Science",
+        "title_ethiopic": "CS",
+        "subtitle": "Technical articles, reviews, and explorations",
+        "description": "Computer Science articles, software reviews, and technical explorations by Esubalew Chekol.",
+        "keywords": "Computer Science, programming, software engineering, technical articles, code review, Esubalew Chekol",
+        "og_title": "CS - Computer Science Articles",
+        "og_description": "Technical articles and software explorations",
+        "count_label": "articles",
+    })
+    
     build_404()
     
     # Copy static files
@@ -863,7 +949,7 @@ def main():
     copy_static()
     
     # Generate sitemap
-    generate_sitemap(posts, wegs, poems, geez_pages)
+    generate_sitemap(posts, wegs, poems, geez_pages, cs_articles)
     
     print("\n✨ Site built successfully!")
     print(f"   Output: {OUTPUT}\n")
