@@ -98,4 +98,6 @@ og_type: "website"
 
 - [ሃይባይ](/getem/haybay) - ግጥም በእሱባለው ቸኮል
 
+- [ዘመነ አዳር](/getem/zemene-adar) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
