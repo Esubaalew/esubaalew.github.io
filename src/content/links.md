@@ -76,4 +76,6 @@ og_type: "website"
 
 - [ድሮው](/getem/drow) - ግጥም በእሱባለው ቸኮል
 
+- [እመነኝ አትበይኝ](/getem/emenegn-atbeyegn) - ግጥም በእሱባለው ቸኮል
+
 - [የሰማይ ተስፋ](/getem/yesemay-tesfa) - ግጥም በእሱባለው ቸኮል
