@@ -411,6 +411,8 @@ def build_wegoch():
             date=date_str,
             date_formatted=date.strftime("%B {0}, %Y").format(date.day),
             content=content_html,
+            back_url="/wegoch",
+            back_label="Back to Wegoch",
         )
         
         work_dir = output_base / slug
@@ -472,6 +474,8 @@ def build_getem():
             date=date_str,
             date_formatted=date.strftime("%B {0}, %Y").format(date.day),
             content=content_html,
+            back_url="/getem",
+            back_label="Back to Getem",
         )
         
         work_dir = output_base / slug

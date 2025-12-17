@@ -839,5 +839,32 @@ footer a:hover {
     .poem .indent {
         padding-left: 3rem;
     }
+
+    /* Work Content Mobile Styles */
+    .work-content .post-header h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .work-content .post-content {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .work-content .post-content p {
+        margin-bottom: 1.25rem;
+    }
+
+    .work-content .post-content blockquote {
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .work-content .post-content img {
+        max-width: 200px;
+        margin: 2rem auto;
+    }
 }
 
