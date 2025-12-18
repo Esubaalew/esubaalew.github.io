@@ -1,9 +1,9 @@
 ---
 title: My First View on FuncScript CLI
-description: A beginner's exploration of fs-cli, the FuncScript command line interface. Lessons learned about quoting, argument handling, and string types when working with this JSON-with-superpowers expression language.
-keywords: FuncScript, fs-cli, CLI, command line, JSON, expression language, JavaScript, programming, REPL, npm, npx
+description: A beginner's exploration of fs-cli, the FuncScript command line interface. Lessons learned about quoting, argument handling, string types, and number limits when working with this JSON-with-superpowers expression language.
+keywords: FuncScript, fs-cli, CLI, command line, JSON, expression language, JavaScript, programming, REPL, npm, npx, BigInteger, number limits
 og_title: My First View on FuncScript CLI
-og_description: Lessons learned from exploring fs-cli - quoting rules, argument handling, and string type quirks
+og_description: Lessons learned from exploring fs-cli - quoting rules, argument handling, string type quirks, and number limits
 og_image: /assets/og-cs-funcscript-cli.png
 date: 2025-06-17
 ---
@@ -277,6 +277,123 @@ I can even do:
 </div>
 
 But the output is a bit scary. The escape character comes in the output.
+
+## _Numbers are limited so take care_
+
+If I try an extremely large number it will break or maybe panic. This means if we are not careful, mathematical operations may lead to the FuncScript limit and cause hidden bugs.
+
+It is true that unlike the reality of the world which says numbers are unlimited (since the term infinity), they are limited when it comes to the programming world. We have two types of limits about how large the number we can write in a computer: **physical limit** and **implementation limit**. The former is the limit of our machine's RAM and the latter is the limit set by the implementation of the underlying programming languages we use.
+
+Programming languages like JavaScript have this limit. In Python, on the other hand, types like `BigInteger` are said to have "unlimited" numbers we can write—but that doesn't really mean we should write extremely large ones, as arithmetic might become slow and something wrong might happen.
+
+So this section is not really about fs-cli specifically. FuncScript itself shouldn't have these limits as it's a limit on the underlying runtime. But I'm afraid it hits the limit earlier than it should.
+
+<div class="terminal">
+<div class="terminal-header">
+<span class="terminal-dot red"></span>
+<span class="terminal-dot yellow"></span>
+<span class="terminal-dot green"></span>
+</div>
+<div class="terminal-body">
+<pre><code><span class="prompt">run py "print(1000000000000000000 * 1000)"</span>
+<span class="output">1000000000000000000000</span></code></pre>
+</div>
+</div>
+
+As we can see, Python is happy with this. It's a very large number but Python handles it fine. Let's compare:
+
+<div class="terminal">
+<div class="terminal-header">
+<span class="terminal-dot red"></span>
+<span class="terminal-dot yellow"></span>
+<span class="terminal-dot green"></span>
+</div>
+<div class="terminal-body">
+<pre><code><span class="prompt">npx fs-cli "1000000000000000000 * 1000"</span>
+<span class="type-label">Type: BigInteger</span>
+<span class="type-label">Value:</span>
+<span class="value-label">"1000000000000000000000"</span>
+
+<span class="prompt">npx fs-cli "1000000000000000000 \* 1000000"</span>
+<span class="type-label">Type: BigInteger</span>
+<span class="type-label">Value:</span>
+<span class="value-label">"1000000000000000000000000"</span>
+
+<span class="prompt">npx fs-cli "1000000000000000000 \* 1000000000000"</span>
+<span class="type-label">Type: BigInteger</span>
+<span class="type-label">Value:</span>
+<span class="value-label">"1000000000000000000000000000000"</span></code></pre>
+
+</div>
+</div>
+
+So far so good. But then:
+
+<div class="terminal">
+<div class="terminal-header">
+<span class="terminal-dot red"></span>
+<span class="terminal-dot yellow"></span>
+<span class="terminal-dot green"></span>
+</div>
+<div class="terminal-body">
+<pre><code><span class="prompt">npx fs-cli "1000000000000000000 * 10000000000000000000000000"</span>
+<span class="output">Failed to parse expression</span>
+
+<span class="prompt">run py "print(1000000000000000000 \* 1000000000000000000000000000000)"</span>
+<span class="output">1000000000000000000000000000000000000000000000000</span></code></pre>
+
+</div>
+</div>
+
+Python handles it fine while fs-cli fails. This seems normal to be honest because we're at least computing as much as we really do in real life. But compared to other languages, it hits the limit too early.
+
+### Range limits
+
+The highest limit of using `Range` is around `Range(0, 10000000)`. To be more specific, it's `Range(0, 10000000*5)`:
+
+<div class="terminal">
+<div class="terminal-header">
+<span class="terminal-dot red"></span>
+<span class="terminal-dot yellow"></span>
+<span class="terminal-dot green"></span>
+</div>
+<div class="terminal-body">
+<pre><code><span class="prompt">npx fs-cli 'Range(0, 10000000)'</span>
+<span class="output">[works fine]</span>
+
+<span class="prompt">npx fs-cli 'Range(0, 100000000)'</span>
+<span class="output">[memory allocation fails]</span></code></pre>
+
+</div>
+</div>
+
+If we add a single zero, it will break and memory allocation fails. That means `Range(0, 10000000*6)` will error out.
+
+Memory allocation limits may seem machine-specific, but it's not the case here. It seems more like FuncScript is struggling to handle this better.
+
+### Number literal limits
+
+When it comes to just calling a number, this is the nearest highest limit:
+
+<div class="terminal">
+<div class="terminal-header">
+<span class="terminal-dot red"></span>
+<span class="terminal-dot yellow"></span>
+<span class="terminal-dot green"></span>
+</div>
+<div class="terminal-body">
+<pre><code><span class="prompt">npx fs-cli "1000000000000000000"</span>
+<span class="type-label">Type: BigInteger</span>
+<span class="type-label">Value:</span>
+<span class="value-label">"1000000000000000000"</span>
+
+<span class="prompt">npx fs-cli "10000000000000000000"</span>
+<span class="output">Failed to parse expression</span></code></pre>
+
+</div>
+</div>
+
+The error message is also misleading to be honest. "Failed to parse expression" doesn't tell you that you've hit a number limit.
 
 ---
 
