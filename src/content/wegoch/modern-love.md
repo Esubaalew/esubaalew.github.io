@@ -9,7 +9,7 @@ og_type: "article"
 date: "2023-01-19"
 ---
 
-Unlike others who do it just to pass the time, or as I've heard people in my neighborhood say, "just to take my share"—and not because I saw great wealth or beauty—I was suddenly struck by a plague-like spell called love, without any plan or intention. I, who used to boast, "How could I ever fall in love?", found myself unable to think or dream of anything but her.
+Unlike others who do it just to pass the time, or as I've heard people in my neighborhood say, "just to take my share" - and not because I saw great wealth or beauty - I was suddenly struck by a plague-like spell called love, without any plan or intention. I, who used to boast, "How could I ever fall in love?", found myself unable to think or dream of anything but her.
 
 Because I had no faith in "modern love," I had three strategies to keep it away from my life: **Prevention, Confrontation, and Acceptance.**
 
@@ -17,17 +17,17 @@ Because I had no faith in "modern love," I had three strategies to keep it away 
 
 **Confrontation** meant fighting the feeling as it tried to take hold and weakening it until I was free again. This involved searching for the woman's flaws or weaknesses in my mind to make the love wither away. I would focus on her style of dress, her friends, her past, or her hygiene to ensure I gave myself no chance to fall for her.
 
-The third, **Acceptance**, meant choosing to be in love but without deviating from my life's purpose—balancing love on one side and my education on the other.
+The third, **Acceptance**, meant choosing to be in love but without deviating from my life's purpose - balancing love on one side and my education on the other.
 
 I never thought the third option would actually happen to me. I was a man of firm principles. I used to say I would never surrender to a "modern woman" who gives away her dignity for a "Hi" text, who sells her culture and pure thoughts, or who wanders with men under the cover of darkness.
 
-But today, everything changed. A feeling I had never known—one that couldn't be classified as joy or sorrow—took over my spirit. Without knowing how, I bypassed my first strategy of prevention. Finding myself restless and captivated, I realized it was time to use the second strategy.
+But today, everything changed. A feeling I had never known - one that couldn't be classified as joy or sorrow - took over my spirit. Without knowing how, I bypassed my first strategy of prevention. Finding myself restless and captivated, I realized it was time to use the second strategy.
 
 I began looking for reasons to dislike her. I would walk past her secretly, I would write poems of praise while thinking of her, and I found myself drowned in the thought that she was "different."
 
 I started applying the second strategy: Confrontation. I scrutinized her clothes, her way of speaking, her daily routine, her mindset, and her friends. None of them were the type I usually liked, yet I couldn't stop. The world outside of her seemed dark. When the second strategy failed, I began to doubt myself so much that I went to Tsebel (holy water) at night for seven days to be blessed. No change came.
 
-Even though I didn't like "everything" about her, I loved her. Love had exiled my logic and moved into my character. I felt I had to tell her my feelings, because holding hot food in your mouth only leads to burns—eventually, you must swallow.
+Even though I didn't like "everything" about her, I loved her. Love had exiled my logic and moved into my character. I felt I had to tell her my feelings, because holding hot food in your mouth only leads to burns - eventually, you must swallow.
 
 To build up my courage and decide what to say, I stayed away from school for four days and skipped my classes for two.
 
@@ -47,15 +47,15 @@ Suddenly, I saw her. She was wearing a white dress, unlike her usual style. Her 
 
 "Uhh... umm..." I struggled to speak.
 
-I lacked the courage to look her in the eyes. The fact that I had strayed from my thoughts and my "laws of life" wrestled in my mind. In my life, I had never desired a woman for love. Until recently, I couldn't even stand to be near or be seen with a woman. I had never touched, hugged, or kissed a woman, nor had I ever dreamed of it. It pained me to see a woman stray from her goals, or give away her virginity—the symbol of her honor—to someone undeserving in the name of love, or wander like an animal in the mountains and fields.
+I lacked the courage to look her in the eyes. The fact that I had strayed from my thoughts and my "laws of life" wrestled in my mind. In my life, I had never desired a woman for love. Until recently, I couldn't even stand to be near or be seen with a woman. I had never touched, hugged, or kissed a woman, nor had I ever dreamed of it. It pained me to see a woman stray from her goals, or give away her virginity - the symbol of her honor - to someone undeserving in the name of love, or wander like an animal in the mountains and fields.
 
-I was a man who believed that if I ever had a girlfriend, I would protect her and care for her, and be happy just by looking into her eyes—not to use her for pleasure. But standing there in front of her, I felt as though I was about to become "defiled" like those I had judged. I felt as though I was about to act on fleshly lust. In my mind's eye, I saw my true self weeping at my own betrayal. I wasn't afraid of her; I was afraid of my own hypocrisy. I was afraid that I was about to do the very thing I had criticized others for.
+I was a man who believed that if I ever had a girlfriend, I would protect her and care for her, and be happy just by looking into her eyes - not to use her for pleasure. But standing there in front of her, I felt as though I was about to become "defiled" like those I had judged. I felt as though I was about to act on fleshly lust. In my mind's eye, I saw my true self weeping at my own betrayal. I wasn't afraid of her; I was afraid of my own hypocrisy. I was afraid that I was about to do the very thing I had criticized others for.
 
 Perhaps sensing my fear and my deep thoughts, she said, "Shall we go down over there and talk?" pointing to a spot.
 
 "Okay," I replied.
 
-As we started to go down the steps from the football field to the flat ground, something—I don't know what—tripped me. I was thrown forward and fell face-first.
+As we started to go down the steps from the football field to the flat ground, something - I don't know what - tripped me. I was thrown forward and fell face-first.
 
 > "Oh my god!"
 

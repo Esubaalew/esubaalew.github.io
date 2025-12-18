@@ -25,7 +25,7 @@ Most often, I go to the café with a friend whose name I shouldn't mention. This
 
 To anyone watching his love and greed for meat, it looks like he's tasting meat for the first time in his life.
 
-I don't know if I caught it from him, but I too have become secretly obsessed with waiting for 11:30/4:30. To tell the truth, before I entered university, I didn't even eat beef. Even with mutton, I would only eat it if it was fresh—I wouldn't touch it if it was a day old. Even after coming here, on days when they served meat stew, I used to skip the stew. But after a few days, I don't know what happened to me, but I became someone who longed for Zerfor day. I even started judging the servers by the amount of meat they gave me. If they didn't put enough meat, I would curse them in my heart.
+I don't know if I caught it from him, but I too have become secretly obsessed with waiting for 11:30/4:30. To tell the truth, before I entered university, I didn't even eat beef. Even with mutton, I would only eat it if it was fresh - I wouldn't touch it if it was a day old. Even after coming here, on days when they served meat stew, I used to skip the stew. But after a few days, I don't know what happened to me, but I became someone who longed for Zerfor day. I even started judging the servers by the amount of meat they gave me. If they didn't put enough meat, I would curse them in my heart.
 
 Even though I was embarrassed by it, on meat days, I would sneak out of the dorm or library and head to the café an hour before it opened.
 
@@ -33,7 +33,7 @@ Even though I was embarrassed by it, on meat days, I would sneak out of the dorm
 
 One Sunday afternoon, I went to the library at 12:00. By 4:00, I suddenly remembered the café food, and an unplanned hunger hit me. The annoying thing is that on Sundays, the café doesn't open for dinner until 5:00 PM. I tried to stay in the library until 4:30, but I couldn't. I stopped reading and tried to distract myself with a video on my phone, but it didn't work. Finally, I left the library and stood far enough from the café so people wouldn't judge me, scrolling through my phone while waiting for the exact moment to pounce.
 
-Minutes later, I saw that same friend who usually goes with me coming from the main gate. His walk was just short of a run. To an observer, he looked like someone who had just heard bad news or was rushing to save a life—not like someone rushing for his stomach.
+Minutes later, I saw that same friend who usually goes with me coming from the main gate. His walk was just short of a run. To an observer, he looked like someone who had just heard bad news or was rushing to save a life - not like someone rushing for his stomach.
 
 I knew exactly where he was headed. Since I was on the path to the café, he saw me and smiled.
 
@@ -51,7 +51,7 @@ It hit him like a thunderbolt. "Oh man, I totally forgot!" he said, and sat down
 
 One thing I admire about him is that he always prays before eating. I'm the same way; I wouldn't eat without saying: "Our Father who art in heaven, hallowed be thy name... lead us not into temptation..."
 
-We waited, the time came, and we entered the café. Since we were early, there weren't many students yet. I watched as my friend, who was ahead of me, was served massive chunks of meat. Not to exaggerate, but there was hardly any stew—just a mountain of meat.
+We waited, the time came, and we entered the café. Since we were early, there weren't many students yet. I watched as my friend, who was ahead of me, was served massive chunks of meat. Not to exaggerate, but there was hardly any stew - just a mountain of meat.
 
 I was behind him, so I didn't see the smile he gave the server. I realized he was dazed by the amount of meat when he walked toward our usual table without picking up a cup of water. I followed him with two cups of water and saw him make the sign of the cross as he walked. Since he had slowed his pace and lowered his head while walking, I was moving faster, so I passed him and sat down. He arrived immediately after, sat across from me, and started eating.
 
