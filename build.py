@@ -29,6 +29,36 @@ OUTPUT = ROOT / "dist"
 SITE_URL = "https://esubalew.dev"
 
 
+def humanize_date(date: datetime) -> str:
+    """Return a human-readable relative date string."""
+    now = datetime.now()
+    diff = now - date
+    
+    days = diff.days
+    
+    if days == 0:
+        return "today"
+    elif days == 1:
+        return "yesterday"
+    elif days < 7:
+        return f"{days} days ago"
+    elif days < 14:
+        return "1 week ago"
+    elif days < 30:
+        weeks = days // 7
+        return f"{weeks} weeks ago"
+    elif days < 60:
+        return "1 month ago"
+    elif days < 365:
+        months = days // 30
+        return f"{months} months ago"
+    elif days < 730:
+        return "1 year ago"
+    else:
+        years = days // 365
+        return f"{years} years ago"
+
+
 def read_template(name: str) -> str:
     """Read an HTML template."""
     return (TEMPLATES / name).read_text(encoding="utf-8")
@@ -424,7 +454,13 @@ def build_wegoch():
             "url": url,
             "slug": slug,
             "type": "weg",
+            "date": date,
+            "date_formatted": date.strftime("%B %d, %Y"),
+            "date_humanized": humanize_date(date),
         })
+    
+    # Sort by date descending
+    works.sort(key=lambda x: x["date"], reverse=True)
     
     if works:
         print(f"✓ Built {len(works)} weg pages")
@@ -487,7 +523,13 @@ def build_getem():
             "url": url,
             "slug": slug,
             "type": "poem",
+            "date": date,
+            "date_formatted": date.strftime("%B %d, %Y"),
+            "date_humanized": humanize_date(date),
         })
+    
+    # Sort by date descending
+    works.sort(key=lambda x: x["date"], reverse=True)
     
     if works:
         print(f"✓ Built {len(works)} poem pages")
@@ -660,6 +702,8 @@ def build_cs():
             "url": url,
             "slug": slug,
             "date": date,
+            "date_formatted": date.strftime("%B %d, %Y"),
+            "date_humanized": humanize_date(date),
             "description": meta.get("description", ""),
             "type": "cs",
         })
@@ -681,6 +725,9 @@ def build_works_index(works: list[dict], section: str, config: dict):
     output_dir = OUTPUT / section
     output_dir.mkdir(exist_ok=True)
     
+    # Check if this section should show dates
+    show_dates = config.get("show_dates", False)
+    
     # Build the list HTML
     list_html = '<ul class="works-list">\n'
     for work in works:
@@ -688,10 +735,20 @@ def build_works_index(works: list[dict], section: str, config: dict):
         transliterated = work.get("title_transliterated", "")
         trans_html = f'<span class="work-transliterated">{transliterated}</span>' if transliterated else ""
         
+        # Date display for sections that support it
+        date_html = ""
+        if show_dates and work.get("date"):
+            date_formatted = work.get("date_formatted", "")
+            date_humanized = work.get("date_humanized", "")
+            date_html = f'''
+      <span class="work-date">
+        <time datetime="{work["date"].strftime("%Y-%m-%d")}" title="{date_formatted}">{date_humanized}</time>
+      </span>'''
+        
         list_html += f'''  <li>
     <a href="{work["url"]}">
       <span class="work-title">{title}</span>
-      {trans_html}
+      {trans_html}{date_html}
     </a>
   </li>\n'''
     list_html += '</ul>\n'
@@ -907,6 +964,7 @@ def main():
         "og_title": "ወጎች - Ethiopian Short Stories",
         "og_description": "Amharic short stories and reflections",
         "count_label": "ወጎች",
+        "show_dates": True,
     })
     
     build_works_index(poems, "getem", {
@@ -919,6 +977,7 @@ def main():
         "og_title": "ግጥሞች - Ethiopian Poetry",
         "og_description": "Amharic poems and verses",
         "count_label": "ግጥሞች",
+        "show_dates": True,
     })
     
     build_works_index(geez_pages, "geez", {
@@ -943,6 +1002,7 @@ def main():
         "og_title": "CS - Computer Science Articles",
         "og_description": "Technical articles and software explorations",
         "count_label": "articles",
+        "show_dates": True,
     })
     
     build_404()

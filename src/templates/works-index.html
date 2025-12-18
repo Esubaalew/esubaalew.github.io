@@ -110,7 +110,6 @@
 
       .works-list a {
         text-decoration: none;
-        display: block;
       }
 
       .works-list .work-title {
@@ -130,6 +129,29 @@
         font-size: 0.9rem;
         color: var(--color-text-tertiary);
         font-style: italic;
+      }
+
+      .works-list .work-date {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--color-text-tertiary);
+        margin-left: auto;
+        white-space: nowrap;
+      }
+
+      .works-list a {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.5rem;
+      }
+
+      .works-list .work-title {
+        flex-shrink: 0;
+      }
+
+      .works-list .work-transliterated {
+        flex-shrink: 0;
       }
 
       .works-count {
