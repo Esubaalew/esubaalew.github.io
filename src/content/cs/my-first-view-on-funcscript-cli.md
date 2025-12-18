@@ -284,7 +284,7 @@ If I try an extremely large number it will break or maybe panic. This means if w
 
 It is true that unlike the reality of the world which says numbers are unlimited (since the term infinity), they are limited when it comes to the programming world. We have two types of limits about how large the number we can write in a computer: **physical limit** and **implementation limit**. The former is the limit of our machine's RAM and the latter is the limit set by the implementation of the underlying programming languages we use.
 
-Programming languages like JavaScript have this limit. In Python, on the other hand, types like `BigInteger` are said to have "unlimited" numbers we can write—but that doesn't really mean we should write extremely large ones, as arithmetic might become slow and something wrong might happen.
+Programming languages like JavaScript have this limit. In Python, on the other hand, types like `BigInteger` are said to have "unlimited" numbers we can write - but that doesn't really mean we should write extremely large ones, as arithmetic might become slow and something wrong might happen.
 
 So this section is not really about fs-cli specifically. FuncScript itself shouldn't have these limits as it's a limit on the underlying runtime. But I'm afraid it hits the limit earlier than it should.
 

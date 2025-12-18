@@ -537,8 +537,8 @@ def build_getem():
 
 
 def parse_geez_content(content: str) -> dict:
-    """Parse Ge'ez content sections (geez:, meaning:, reference:)."""
-    result = {"geez": "", "meaning": "", "reference": ""}
+    """Parse Ge'ez content sections (geez:, meaning:, reference:, ማስታወሻ:)."""
+    result = {"geez": "", "meaning": "", "reference": "", "memorial": ""}
     current_section = None
     
     for line in content.split("\n"):
@@ -559,6 +559,11 @@ def parse_geez_content(content: str) -> dict:
             after = line_stripped[10:].strip()
             if after:
                 result["reference"] = after
+        elif line_stripped.startswith("ማስታወሻ:"):
+            current_section = "memorial"
+            after = line_stripped[7:].strip()
+            if after:
+                result["memorial"] = after
         elif current_section and line_stripped:
             if result[current_section]:
                 result[current_section] += "\n" + line_stripped
@@ -616,6 +621,14 @@ def build_geez():
               {geez_content["reference"]}
             </div>'''
         
+        # Format memorial section (ማስታወሻ)
+        memorial_section = ""
+        if geez_content["memorial"]:
+            memorial_section = f'''
+            <div class="geez-memorial">
+              <span class="memorial-label">ማስታወሻ:</span> {geez_content["memorial"]}
+            </div>'''
+        
         html = render_template(
             template,
             title=meta.get("title", slug.replace("-", " ").title()),
@@ -629,6 +642,7 @@ def build_geez():
             geez_text=geez_text_html,
             meaning_section=meaning_section,
             reference_section=reference_section,
+            memorial_section=memorial_section,
         )
         
         work_dir = output_base / slug
