@@ -836,6 +836,28 @@ footer a:hover {
     font-size: 0.95rem;
 }
 
+.translation-link {
+    font-family: var(--font-addis), var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-tertiary);
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-elevated);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.translation-link a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.translation-link a:hover {
+    color: var(--color-text);
+}
+
 .poem-dedication {
     font-family: var(--font-desta), var(--font-ethiopic);
     font-style: italic;

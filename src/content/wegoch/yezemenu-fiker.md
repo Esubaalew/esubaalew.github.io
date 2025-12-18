@@ -85,3 +85,6 @@ date: "2023-01-19"
 
 <div class="poem-signature">እሱባለው ቸኮል</div>
 
+<div class="translation-link">
+በእንግሊዝኛ ያንብቡ: <a href="/wegoch/modern-love">Modern Love</a>
+</div>

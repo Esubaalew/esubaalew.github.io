@@ -104,3 +104,7 @@ date: "2023-09-24"
 ወስብሐት ለእግዚያብሔር!
 
 <div class="poem-signature">ጸሐፌ ወዘገብሄ እሱባለው መዐመር</div>
+
+<div class="translation-link">
+በእንግሊዝኛ ያንብቡ: <a href="/wegoch/people-of-two-worlds">People of Two Worlds</a>
+</div>
