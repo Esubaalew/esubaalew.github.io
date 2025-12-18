@@ -60,7 +60,11 @@ og_type: "website"
 
 - [የሁለት ዓለም ሰዎች](/wegoch/yehulet-alem-sewoch) - የባህል፣ የአለባበስ እና የሰው ልጅ ግንኙነት ታሪክ
 
+  - [People of Two Worlds](/wegoch/people-of-two-worlds) - English translation
+
 - [የካፌ ወግ](/wegoch/yekafe-weg) - አንድ የዕለታዊ ሕይወት ታሪክ እና የጓደኝነት ታሪክ
+
+  - [Café Talk](/wegoch/cafe-talk) - English translation
 
 - [ቲክቶካርዲያን](/wegoch/tiktokardian) - የቲክቶክ ተቃውሞ እና የራብ አድማ ታሪክ
 
@@ -69,6 +73,7 @@ og_type: "website"
 - [እንካ ስላንትያ](/wegoch/enka-slantya) - የኢትዮጵያ ጨዋታ
 
 - [የዘመኑ ፍቅር](/wegoch/yezemenu-fiker) - ስለ ዘመኑ ፍቅር እና ህልም
+  - [Modern Love](/wegoch/modern-love) - English translation
 
 ### ግጥሞች
 
