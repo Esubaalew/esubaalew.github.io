@@ -5,7 +5,7 @@ keywords: FuncScript, fs-cli, CLI, command line, JSON, expression language, Java
 og_title: My First View on FuncScript CLI
 og_description: Lessons learned from exploring fs-cli - quoting rules, argument handling, string type quirks, and number limits
 og_image: /assets/og-cs-funcscript-cli.png
-date: 2025-06-17
+date: 2025-12-17
 ---
 
 <div class="intro-box">
