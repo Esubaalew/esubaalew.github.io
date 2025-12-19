@@ -5,13 +5,13 @@ keywords: FuncScript, fs-cli, functions, lambda, JSON, expression language, func
 og_title: Do We Have Functions in FuncScript?
 og_description: Exploring functions and lambda expressions in FuncScript - from simple returns to complex transformations
 og_image: /assets/og-cs-do-we-have-functions-in-funcscript.png
-date: 2025-12-18
+date: 2025-12-19
 ---
 
 <div class="intro-box">
 <h2>What is FuncScript?</h2>
 <p>
-<a href="https://www.funcscript.org/" target="_blank">FuncScript</a> is a superset of JSON that lets you promote property values into expressions. Instead of static literals, <code>{ x: 1 + 2; }</code> is perfectly legal. The <a href="https://www.funcscript.org/developers/fs-cli/" target="_blank">fs-cli</a> is the command line interface for executing FuncScript, and <a href="https://www.funcscript.org/fsstudio/" target="_blank">FuncScript Studio</a> provides a web-based environment for experimentation.
+<a href="https://www.funcscript.org/" target="_blank">FuncScript</a> is a superset of JSON that lets you promote property values into expressions. Instead of static literals, <code>{ x: 1 + 2; }</code> is perfectly legal. You can execute FuncScript using <a href="https://www.funcscript.org/developers/fs-cli/" target="_blank">fs-cli</a> (the command line interface) or experiment in <a href="https://www.funcscript.org/fsstudio/" target="_blank">FuncScript Studio</a> (a web-based environment).
 </p>
 </div>
 
@@ -33,6 +33,8 @@ To be more specific, if we have a FuncScript code `{a: 10;}`, that means `a` is 
 
 Please note that in reality everything with `{}` is called `KeyValueCollection`, but we must pretend it's not for this exploration.
 
+Here's how we can run this in fs-cli:
+
 <div class="terminal">
 <div class="terminal-header">
 <span class="terminal-dot red"></span>
@@ -49,7 +51,9 @@ Please note that in reality everything with `{}` is called `KeyValueCollection`,
 </div>
 </div>
 
-Let's achieve this same thing in Rust to make a connection with traditional programming languages. I'll use `run` for simplicity:
+From here on, I'll show FuncScript code and output separately for clarity. You can run these in fs-cli or FuncScript Studio.
+
+Let's achieve this same thing in Rust to make a connection with traditional programming languages. I'll use `run`<sup>1</sup> for simplicity:
 
 <div class="terminal">
 <div class="terminal-header">
@@ -62,8 +66,7 @@ Let's achieve this same thing in Rust to make a connection with traditional prog
 <span class="output">run universal REPL. Type :help for commands.</span>
 rust>>> fn ten() -> i32 { 10 }
 rust>>> ten()
-10
-rust>>></code></pre>
+10</code></pre>
 </div>
 </div>
 
@@ -71,19 +74,18 @@ That's essentially what we just did in FuncScript - or even simpler!
 
 To make it cleaner and return only `10` instead of the whole `KeyValueCollection`, we use `eval`:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{a: 10; eval a;}'</span>
-<span class="type-label">Type: Integer</span>
-<span class="type-label">Value:</span>
-<span class="value-label">10</span></code></pre>
-</div>
-</div>
+```javascript
+{
+  a: 10;
+  eval a;
+}
+```
+
+Output:
+
+```funcscript
+10
+```
 
 So that's the most basic function in FuncScript.
 
@@ -91,7 +93,7 @@ So that's the most basic function in FuncScript.
 
 You might ask: where is the `()` - the parameter symbol that can either be empty or hold some parameters? Like we see in Rust: `fn ten() -> i32 { 10 }`.
 
-Let's first look at the simplest programming language for this - Python - to print a "hello world" function, then adapt it to FuncScript:
+Let's first look at Python - to create a simple "hello" function, then adapt it to FuncScript:
 
 <div class="terminal">
 <div class="terminal-header">
@@ -108,38 +110,36 @@ python>>> say_hello()
 
 Now let's adapt this in FuncScript - maybe in an even simpler way than Python:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{say_hello: () => "hello"; eval say_hello()}'</span>
-<span class="type-label">Type: String</span>
-<span class="type-label">Value:</span>
-<span class="value-label">"hello"</span></code></pre>
-</div>
-</div>
+```javascript
+{
+  say_hello: () => "hello";
+  eval say_hello();
+}
+```
+
+Output:
+
+```funcscript
+"hello"
+```
 
 If we want to make it a two-step process, we can remove the `eval` and see the full structure:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{say_hello: () => "hello"; result: say_hello();}'</span>
-<span class="type-label">Type: KeyValueCollection</span>
-<span class="type-label">Value:</span>
-<span class="value-label">{
+```javascript
+{
+  say_hello: () => "hello";
+  result: say_hello();
+}
+```
+
+Output:
+
+```funcscript
+{
   "say_hello": "[Function]",
   "result": "hello"
-}</span></code></pre>
-</div>
-</div>
+}
+```
 
 ## _Functions with parameters_
 
@@ -163,81 +163,79 @@ python>>> say_hello(name)
 
 Now let's do the exact same thing in FuncScript:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{name: "Esubalew"; say_hello: (name) => "Hello " + name; eval say_hello();}'</span>
-<span class="type-label">Type: String</span>
-<span class="type-label">Value:</span>
-<span class="value-label">"Hello Esubalew"</span></code></pre>
-</div>
-</div>
+```javascript
+{
+  name: "Esubalew";
+  say_hello: (name) => "Hello " + name;
+  eval say_hello();
+}
+```
+
+Output:
+
+```funcscript
+"Hello Esubalew"
+```
 
 Or if we don't have the argument ready and want to pass it at runtime:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{say_hello: (name) => "Hello " + name; eval say_hello("Augustus");}'</span>
-<span class="type-label">Type: String</span>
-<span class="type-label">Value:</span>
-<span class="value-label">"Hello Augustus"</span></code></pre>
-</div>
-</div>
+```javascript
+{
+  say_hello: (name) => "Hello " + name;
+  eval say_hello("Augustus");
+}
+```
+
+Output:
+
+```funcscript
+"Hello Augustus"
+```
 
 ## _Complex transformations with functions_
 
 FuncScript can handle deeper and more complex tasks. Let's assume we want to multiply a range of numbers with some rate and write a function that does that:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{
+```javascript
+{
   rate: 1/100;
   numbers: Range(1, 2);
-  multiply: (number) => {old: number; newer: number * rate;};
+  multiply: (number) => {
+    old: number;
+    newer: number * rate;
+  };
   multiplied: numbers map (number) => multiply(number);
   eval multiplied;
-}'</span>
-<span class="type-label">Type: List</span>
-<span class="type-label">Value:</span>
-<span class="value-label">[
+}
+```
+
+Output:
+
+```funcscript
+[
   { "old": 1, "newer": 0.01 },
   { "old": 2, "newer": 0.02 }
-]</span></code></pre>
-</div>
-</div>
+]
+```
 
 Remove `eval` and FuncScript shows the whole structure:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{
+```javascript
+{
   rate: 1/100;
   numbers: Range(1, 2);
-  multiply: (number) => {old: number; newer: number * rate;};
+  multiply: (number) => {
+    old: number;
+    newer: number * rate;
+  };
   multiplied: numbers map (number) => multiply(number);
-}'</span>
-<span class="type-label">Type: KeyValueCollection</span>
-<span class="type-label">Value:</span>
-<span class="value-label">{
+}
+```
+
+Output:
+
+```funcscript
+{
   "rate": 0.01,
   "numbers": [1, 2],
   "multiply": "[Function]",
@@ -245,97 +243,97 @@ Remove `eval` and FuncScript shows the whole structure:
     { "old": 1, "newer": 0.01 },
     { "old": 2, "newer": 0.02 }
   ]
-}</span></code></pre>
-</div>
-</div>
+}
+```
 
 The `eval` keyword can also help us extract specific values:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{
+```javascript
+{
   rate: 1/100;
   numbers: Range(1, 2);
-  multiply: (number) => {old: number; newer: number * rate;};
+  multiply: (number) => {
+    old: number;
+    newer: number * rate;
+  };
   multiplied: numbers map (number) => multiply(number);
   eval multiplied[0].newer;
-}'</span>
-<span class="type-label">Type: Float</span>
-<span class="type-label">Value:</span>
-<span class="value-label">0.01</span></code></pre>
-</div>
-</div>
+}
+```
+
+Output:
+
+```funcscript
+0.01
+```
 
 ## _Simplifying step by step_
 
 If we want to make the function more flexible, we can pass parameters instead of using external bindings:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{
-  multiply: (number, rate) => {old: number; newer: number * rate;};
-  multiplied: Range(1, 2) map (number) => multiply(number, 1/100);
+```javascript
+{
+  multiply: (number, rate) => {
+    old: number;
+    newer: number * rate;
+  };
+  multiplied: Range(1, 6) map (number) => multiply(number, 1/100);
   eval multiplied;
-}'</span>
-<span class="type-label">Type: List</span>
-<span class="type-label">Value:</span>
-<span class="value-label">[
+}
+```
+
+Output:
+
+```funcscript
+[
   { "old": 1, "newer": 0.01 },
-  { "old": 2, "newer": 0.02 }
-]</span></code></pre>
-</div>
-</div>
+  { "old": 2, "newer": 0.02 },
+  { "old": 3, "newer": 0.03 },
+  { "old": 4, "newer": 0.04 },
+  { "old": 5, "newer": 0.05 }
+]
+```
 
 Or even shorter with inline lambdas:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{
-  multiplied: Range(1, 2) map (n) => {old: n; newer: n / 100};
+```javascript
+{
+  multiplied: Range(1, 2) map (n) => {
+    old: n;
+    newer: n / 100;
+  };
   eval multiplied;
-}'</span>
-<span class="type-label">Type: List</span>
-<span class="type-label">Value:</span>
-<span class="value-label">[
+}
+```
+
+Output:
+
+```funcscript
+[
   { "old": 1, "newer": 0.01 },
   { "old": 2, "newer": 0.02 }
-]</span></code></pre>
-</div>
-</div>
+]
+```
 
 Or get rid of naming entirely and go fully inline:
 
-<div class="terminal">
-<div class="terminal-header">
-<span class="terminal-dot red"></span>
-<span class="terminal-dot yellow"></span>
-<span class="terminal-dot green"></span>
-</div>
-<div class="terminal-body">
-<pre><code><span class="prompt">fs-cli '{eval Range(1, 2) map (n) => {old: n; newer: n / 100};}'</span>
-<span class="type-label">Type: List</span>
-<span class="type-label">Value:</span>
-<span class="value-label">[
+```javascript
+{
+  eval Range(1, 2) map (n) => {
+    old: n;
+    newer: n / 100;
+  };
+}
+```
+
+Output:
+
+```funcscript
+[
   { "old": 1, "newer": 0.01 },
   { "old": 2, "newer": 0.02 }
-]</span></code></pre>
-</div>
-</div>
+]
+```
 
 ## _Conclusion_
 
@@ -350,4 +348,9 @@ FuncScript takes a different approach. Instead of defining functions as separate
 
 The beauty is in the simplicity: what starts as `{a: 10}` can evolve into complex transformations while maintaining that familiar JSON shape.
 
-<div class="poem-signature">Esubalew Chekol</div>
+---
+
+<div class="footnote">
+<p><sup>1</sup> run is a universal multi-language runner and smart REPL<sup>2</sup> (Read-Eval-Print Loop) written in Rust. <a href="https://github.com/sigoden/runmulti" target="_blank">run</a></p>
+<p><sup>2</sup> A read-eval-print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">Read-eval-print loop</a></p>
+</div>
