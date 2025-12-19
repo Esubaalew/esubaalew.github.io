@@ -25,7 +25,7 @@ This article assumes you have basic knowledge of FuncScript. If you're new to it
 
 ## What is eval?
 
-Even though FuncScript code is typically written inside `{}`, it doesn't mean we can't do anything outside braces. If we have a REPL<sup>4</sup>-type environment like Python, Node, or Lua, we can execute simple code without worrying about wrapping everything in a file structure. It's similar to using [run](https://run.esubalew.dev/)<sup>5</sup> to do `4 + 5` in C or C++ without the main function.
+Even though FuncScript code is typically written inside `{}`, it doesn't mean we can't do anything outside braces. Just like Python, Node, or Lua have their own REPL<sup>4</sup> environments, FuncScript has fs-cli - which lets us execute simple code without worrying about wrapping everything in a file structure. It's similar to using [run](https://run.esubalew.dev/)<sup>5</sup> to do `4 + 5` in C or C++ without the main function.
 
 So the following is also legal in FuncScript:
 
