@@ -14,6 +14,7 @@ BLOG_DIR = Path("docs/blog")
 WEGOCH_DIR = Path("src/content/wegoch")
 GETEM_DIR = Path("src/content/getem")
 GEEZ_DIR = Path("src/content/geez")
+CS_DIR = Path("src/content/cs")
 ASSETS_DIR = Path("docs/assets")
 FONT_DIR = Path("docs/assets")
 OUTPUT_WIDTH = 1200
@@ -318,8 +319,11 @@ def main():
     print("\n📿 Processing Ge'ez...")
     geez_gen, geez_skip = process_works(GEEZ_DIR, "geez", force_regenerate=force)
     
-    total_gen = blog_gen + weg_gen + poem_gen + geez_gen
-    total_skip = blog_skip + weg_skip + poem_skip + geez_skip
+    print("\n💻 Processing CS articles...")
+    cs_gen, cs_skip = process_works(CS_DIR, "cs", force_regenerate=force)
+    
+    total_gen = blog_gen + weg_gen + poem_gen + geez_gen + cs_gen
+    total_skip = blog_skip + weg_skip + poem_skip + geez_skip + cs_skip
     
     print(f"\n📊 Summary: {total_gen} generated, {total_skip} skipped")
 
