@@ -1,6 +1,6 @@
 ---
 title: "Eval in FuncScript"
-date: "2025-12-20"
+date: "2025-12-19"
 description: "Understanding the eval keyword in FuncScript - how it helps you focus on results, avoid intermediate variables, and write cleaner expressions both inside and outside braces."
 keywords: "FuncScript, fs-cli, eval, expression, JSON, functional programming, KeyValueCollection, Reduce, map, Range"
 author: "Esubalew Chekol"

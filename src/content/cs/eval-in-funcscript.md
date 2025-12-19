@@ -5,7 +5,7 @@ keywords: FuncScript, fs-cli, eval, expression, JSON, functional programming, Ke
 og_title: Eval in FuncScript
 og_description: Master the eval keyword in FuncScript to focus on results and write cleaner code
 og_image: /assets/og-cs-eval-in-funcscript.png
-date: 2025-12-20
+date: 2025-12-19
 ---
 
 <div class="intro-box">
