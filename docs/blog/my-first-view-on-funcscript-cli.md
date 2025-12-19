@@ -136,7 +136,7 @@ npx fs-cli "'38934'"
 
 ## Numbers are limited so take care
 
-If I try an extremely large number it will break or maybe panic. This means if we are not careful, mathematical operations may lead to the FuncScript limit and cause hidden bugs.
+If I try an extremely large number it will break or maybe panic. I'll use [run](https://run.esubalew.dev/)<sup>2</sup> to compare with Python. This means if we are not careful, mathematical operations may lead to the FuncScript limit and cause hidden bugs.
 
 It is true that unlike the reality of the world which says numbers are unlimited (since the term infinity), they are limited when it comes to the programming world. We have two types of limits about how large the number we can write in a computer: **physical limit** and **implementation limit**. The former is the limit of our machine's RAM and the latter is the limit set by the implementation of the underlying programming languages we use.
 

@@ -19,7 +19,7 @@ This article assumes you have basic knowledge of FuncScript. If you're new to it
 
 ## _What is eval?_
 
-Even though FuncScript code is typically written inside `{}`, it doesn't mean we can't do anything outside braces. If we have a REPL-type environment like Python, Node, or Lua, we can execute simple code without worrying about wrapping everything in a file structure. It's similar to using <a href="https://run.esubalew.dev/" target="_blank">run</a><a href="#fn4"><sup>4</sup></a> to do `4 + 5` in C or C++ without the main function.
+Even though FuncScript code is typically written inside `{}`, it doesn't mean we can't do anything outside braces. If we have a REPL<a href="#fn4"><sup>4</sup></a>-type environment like Python, Node, or Lua, we can execute simple code without worrying about wrapping everything in a file structure. It's similar to using <a href="https://run.esubalew.dev/" target="_blank">run</a><a href="#fn5"><sup>5</sup></a> to do `4 + 5` in C or C++ without the main function.
 
 So the following is also legal in FuncScript:
 
@@ -437,5 +437,6 @@ Want to read this in another format? <a href="/blog/eval-in-funcscript">Read on 
 <p id="fn1"><sup>1</sup> FuncScript is a superset of JSON that overlaps with much of JavaScript syntax yet introduces its own twists. <a href="https://www.funcscript.org/" target="_blank">FuncScript</a></p>
 <p id="fn2"><sup>2</sup> fs-cli is the command line interface for executing FuncScript expressions. <a href="https://www.funcscript.org/developers/fs-cli/" target="_blank">fs-cli</a></p>
 <p id="fn3"><sup>3</sup> FuncScript Studio is a web-based environment for experimenting with FuncScript. <a href="https://www.funcscript.org/fsstudio/" target="_blank">FuncScript Studio</a></p>
-<p id="fn4"><sup>4</sup> run is a universal multi-language runner and smart REPL written in Rust that lets you execute code in 25+ languages from the command line. <a href="https://run.esubalew.dev/" target="_blank">run</a></p>
+<p id="fn4"><sup>4</sup> A read–eval–print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">Read–eval–print loop</a></p>
+<p id="fn5"><sup>5</sup> run is a universal multi-language runner and smart REPL written in Rust that lets you execute code in 25+ languages from the command line. <a href="https://run.esubalew.dev/" target="_blank">run</a></p>
 </div>

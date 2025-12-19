@@ -25,7 +25,7 @@ This article assumes you have basic knowledge of FuncScript. If you're new to it
 
 ## What is eval?
 
-Even though FuncScript code is typically written inside `{}`, it doesn't mean we can't do anything outside braces. If we have a REPL-type environment like Python, Node, or Lua, we can execute simple code without worrying about wrapping everything in a file structure. It's similar to using [run](https://run.esubalew.dev/)<sup>4</sup> to do `4 + 5` in C or C++ without the main function.
+Even though FuncScript code is typically written inside `{}`, it doesn't mean we can't do anything outside braces. If we have a REPL<sup>4</sup>-type environment like Python, Node, or Lua, we can execute simple code without worrying about wrapping everything in a file structure. It's similar to using [run](https://run.esubalew.dev/)<sup>5</sup> to do `4 + 5` in C or C++ without the main function.
 
 So the following is also legal in FuncScript:
 
@@ -360,4 +360,6 @@ The `eval` keyword in FuncScript is a powerful tool for:
 
 <sup>3</sup> FuncScript Studio is a web-based environment for experimenting with FuncScript. [FuncScript Studio](https://www.funcscript.org/fsstudio/)
 
-<sup>4</sup> run is a universal multi-language runner and smart REPL written in Rust that lets you execute code in 25+ languages from the command line. [run](https://run.esubalew.dev/)
+<sup>4</sup> A read–eval–print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. [Read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
+
+<sup>5</sup> run is a universal multi-language runner and smart REPL written in Rust that lets you execute code in 25+ languages from the command line. [run](https://run.esubalew.dev/)
