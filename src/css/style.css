@@ -908,5 +908,155 @@ footer a:hover {
         max-width: 200px;
         margin: 2rem auto;
     }
+
+    /* Code blocks mobile styles */
+    .post-content pre {
+        font-size: 0.75rem;
+        padding: 0.875rem;
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        border-radius: 0;
+        max-width: 100vw;
+    }
+
+    .post-content code {
+        font-size: 0.8em;
+    }
+
+    /* Terminal blocks mobile styles */
+    .terminal {
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        border-radius: 0;
+    }
+
+    .terminal-body {
+        font-size: 0.7rem;
+        padding: 0.75rem;
+    }
+
+    .terminal-body pre {
+        font-size: 0.7rem;
+    }
+}
+
+/* Terminal Code Block Styles */
+.terminal {
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #2d2d2d;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27ca40; }
+
+.terminal-body {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.terminal-body pre {
+    margin: 0;
+    background: none;
+    padding: 0;
+}
+
+.terminal-body code {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #e5e5e5;
+    background: none;
+}
+
+.terminal-body .prompt {
+    color: #27ca40;
+}
+
+.terminal-body .output {
+    color: #a1a1a1;
+}
+
+.terminal-body .type-label {
+    color: #ffbd2e;
+    display: block;
+}
+
+.terminal-body .value-label {
+    color: #87ceeb;
+}
+
+/* Intro box styles */
+.intro-box {
+    background: var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.intro-box h2 {
+    font-family: var(--font-desta);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+}
+
+.intro-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.intro-box code {
+    font-size: 0.85em;
+    background: var(--color-bg);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+}
+
+/* Footnote styles */
+.footnote {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.footnote p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.footnote sup {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.footnote a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.footnote a:hover {
+    color: var(--color-text);
 }
 

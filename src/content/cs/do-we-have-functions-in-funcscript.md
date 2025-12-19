@@ -11,7 +11,7 @@ date: 2025-12-19
 <div class="intro-box">
 <h2>What is FuncScript?</h2>
 <p>
-<a href="https://www.funcscript.org/" target="_blank">FuncScript</a> is a superset of JSON that lets you promote property values into expressions. Instead of static literals, <code>{ x: 1 + 2; }</code> is perfectly legal. You can execute FuncScript using <a href="https://www.funcscript.org/developers/fs-cli/" target="_blank">fs-cli</a> (the command line interface) or experiment in <a href="https://www.funcscript.org/fsstudio/" target="_blank">FuncScript Studio</a> (a web-based environment).
+FuncScript<a href="#fn1"><sup>1</sup></a> is a superset of JSON that lets you promote property values into expressions. Instead of static literals, <code>{ x: 1 + 2; }</code> is perfectly legal. You can execute FuncScript using fs-cli<a href="#fn2"><sup>2</sup></a> (the command line interface) or experiment in FuncScript Studio<a href="#fn3"><sup>3</sup></a> (a web-based environment).
 </p>
 </div>
 
@@ -53,7 +53,7 @@ Here's how we can run this in fs-cli:
 
 From here on, I'll show FuncScript code and output separately for clarity. You can run these in fs-cli or FuncScript Studio.
 
-Let's achieve this same thing in Rust to make a connection with traditional programming languages. I'll use `run`<sup>1</sup> for simplicity:
+Let's achieve this same thing in Rust to make a connection with traditional programming languages. I'll use `run`<a href="#fn4"><sup>4</sup></a> for simplicity:
 
 <div class="terminal">
 <div class="terminal-header">
@@ -83,8 +83,8 @@ To make it cleaner and return only `10` instead of the whole `KeyValueCollection
 
 Output:
 
-```funcscript
-10
+```javascript
+10;
 ```
 
 So that's the most basic function in FuncScript.
@@ -119,8 +119,8 @@ Now let's adapt this in FuncScript - maybe in an even simpler way than Python:
 
 Output:
 
-```funcscript
-"hello"
+```javascript
+"hello";
 ```
 
 If we want to make it a two-step process, we can remove the `eval` and see the full structure:
@@ -134,11 +134,11 @@ If we want to make it a two-step process, we can remove the `eval` and see the f
 
 Output:
 
-```funcscript
+```javascript
 {
-  "say_hello": "[Function]",
-  "result": "hello"
-}
+  say_hello: "[Function]",
+  result: "hello",
+};
 ```
 
 ## _Functions with parameters_
@@ -173,8 +173,8 @@ Now let's do the exact same thing in FuncScript:
 
 Output:
 
-```funcscript
-"Hello Esubalew"
+```javascript
+"Hello Esubalew";
 ```
 
 Or if we don't have the argument ready and want to pass it at runtime:
@@ -188,8 +188,8 @@ Or if we don't have the argument ready and want to pass it at runtime:
 
 Output:
 
-```funcscript
-"Hello Augustus"
+```javascript
+"Hello Augustus";
 ```
 
 ## _Complex transformations with functions_
@@ -211,11 +211,11 @@ FuncScript can handle deeper and more complex tasks. Let's assume we want to mul
 
 Output:
 
-```funcscript
+```javascript
 [
-  { "old": 1, "newer": 0.01 },
-  { "old": 2, "newer": 0.02 }
-]
+  { old: 1, newer: 0.01 },
+  { old: 2, newer: 0.02 },
+];
 ```
 
 Remove `eval` and FuncScript shows the whole structure:
@@ -234,16 +234,16 @@ Remove `eval` and FuncScript shows the whole structure:
 
 Output:
 
-```funcscript
+```javascript
 {
-  "rate": 0.01,
-  "numbers": [1, 2],
-  "multiply": "[Function]",
-  "multiplied": [
-    { "old": 1, "newer": 0.01 },
-    { "old": 2, "newer": 0.02 }
-  ]
-}
+  rate: 0.01,
+  numbers: [1, 2],
+  multiply: "[Function]",
+  multiplied: [
+    { old: 1, newer: 0.01 },
+    { old: 2, newer: 0.02 },
+  ],
+};
 ```
 
 The `eval` keyword can also help us extract specific values:
@@ -263,8 +263,8 @@ The `eval` keyword can also help us extract specific values:
 
 Output:
 
-```funcscript
-0.01
+```javascript
+0.01;
 ```
 
 ## _Simplifying step by step_
@@ -284,14 +284,14 @@ If we want to make the function more flexible, we can pass parameters instead of
 
 Output:
 
-```funcscript
+```javascript
 [
-  { "old": 1, "newer": 0.01 },
-  { "old": 2, "newer": 0.02 },
-  { "old": 3, "newer": 0.03 },
-  { "old": 4, "newer": 0.04 },
-  { "old": 5, "newer": 0.05 }
-]
+  { old: 1, newer: 0.01 },
+  { old: 2, newer: 0.02 },
+  { old: 3, newer: 0.03 },
+  { old: 4, newer: 0.04 },
+  { old: 5, newer: 0.05 },
+];
 ```
 
 Or even shorter with inline lambdas:
@@ -308,11 +308,11 @@ Or even shorter with inline lambdas:
 
 Output:
 
-```funcscript
+```javascript
 [
-  { "old": 1, "newer": 0.01 },
-  { "old": 2, "newer": 0.02 }
-]
+  { old: 1, newer: 0.01 },
+  { old: 2, newer: 0.02 },
+];
 ```
 
 Or get rid of naming entirely and go fully inline:
@@ -328,11 +328,11 @@ Or get rid of naming entirely and go fully inline:
 
 Output:
 
-```funcscript
+```javascript
 [
-  { "old": 1, "newer": 0.01 },
-  { "old": 2, "newer": 0.02 }
-]
+  { old: 1, newer: 0.01 },
+  { old: 2, newer: 0.02 },
+];
 ```
 
 ## _Conclusion_
@@ -351,6 +351,8 @@ The beauty is in the simplicity: what starts as `{a: 10}` can evolve into comple
 ---
 
 <div class="footnote">
-<p><sup>1</sup> run is a universal multi-language runner and smart REPL<sup>2</sup> (Read-Eval-Print Loop) written in Rust. <a href="https://github.com/sigoden/runmulti" target="_blank">run</a></p>
-<p><sup>2</sup> A read-eval-print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">Read-eval-print loop</a></p>
+<p id="fn1"><sup>1</sup> FuncScript is a superset of JSON that overlaps with much of JavaScript syntax yet introduces its own twists. <a href="https://www.funcscript.org/" target="_blank">FuncScript</a></p>
+<p id="fn2"><sup>2</sup> fs-cli is the command line interface for executing FuncScript expressions. <a href="https://www.funcscript.org/developers/fs-cli/" target="_blank">fs-cli</a></p>
+<p id="fn3"><sup>3</sup> FuncScript Studio is a web-based environment for experimenting with FuncScript. <a href="https://www.funcscript.org/fsstudio/" target="_blank">FuncScript Studio</a></p>
+<p id="fn4"><sup>4</sup> run is a universal multi-language runner and smart REPL written in Rust that lets you execute code in 25+ languages from the command line. <a href="https://run.esubalew.dev/" target="_blank">run</a></p>
 </div>
