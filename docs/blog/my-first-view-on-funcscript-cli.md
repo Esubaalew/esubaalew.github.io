@@ -114,7 +114,7 @@ npx fs-cli "[]"
 # Value: []
 ```
 
-**Takeaway:** Don't do things unquoted. Or make sure you know which behavior results in the action you executed.
+> Don't do things unquoted. Or make sure you know which behavior results in the action you executed.
 
 ---
 
