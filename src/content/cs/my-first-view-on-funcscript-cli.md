@@ -397,6 +397,10 @@ The error message is also misleading to be honest. "Failed to parse expression" 
 
 ---
 
+<div class="translation-link">
+Want to read this in another format? <a href="/blog/my-first-view-on-funcscript-cli">Read on Blog</a>
+</div>
+
 <div class="footnote">
 <p><sup>1</sup> A read–eval–print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">Read–eval–print loop</a></p>
 <p><sup>2</sup> run is a universal multi-language runner and smart REPL (Read-Eval-Print Loop) written in Rust. <a href="https://github.com/sigoden/runmulti" target="_blank">run</a></p>

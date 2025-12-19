@@ -254,6 +254,10 @@ The beauty is in the simplicity: what starts as `{a: 10}` can evolve into comple
 
 ---
 
+> Want to read this in another format? [Read on CS](/cs/do-we-have-functions-in-funcscript)
+
+---
+
 <sup>1</sup> FuncScript is a superset of JSON that overlaps with much of JavaScript syntax yet introduces its own twists. [FuncScript](https://www.funcscript.org/)
 
 <sup>2</sup> fs-cli is the command line interface for executing FuncScript expressions. [fs-cli](https://www.funcscript.org/developers/fs-cli/)

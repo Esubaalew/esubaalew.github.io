@@ -187,6 +187,10 @@ fs-cli is a powerful tool for working with FuncScript expressions from the comma
 
 ---
 
+> Want to read this in another format? [Read on CS](/cs/my-first-view-on-funcscript-cli)
+
+---
+
 <sup>1</sup> A read–eval–print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. [Read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
 
 <sup>2</sup> run is a universal multi-language runner and smart REPL written in Rust. [run](https://run.esubalew.dev/)

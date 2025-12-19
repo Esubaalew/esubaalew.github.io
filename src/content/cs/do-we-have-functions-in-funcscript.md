@@ -350,6 +350,10 @@ The beauty is in the simplicity: what starts as `{a: 10}` can evolve into comple
 
 ---
 
+<div class="translation-link">
+Want to read this in another format? <a href="/blog/do-we-have-functions-in-funcscript">Read on Blog</a>
+</div>
+
 <div class="footnote">
 <p id="fn1"><sup>1</sup> FuncScript is a superset of JSON that overlaps with much of JavaScript syntax yet introduces its own twists. <a href="https://www.funcscript.org/" target="_blank">FuncScript</a></p>
 <p id="fn2"><sup>2</sup> fs-cli is the command line interface for executing FuncScript expressions. <a href="https://www.funcscript.org/developers/fs-cli/" target="_blank">fs-cli</a></p>
