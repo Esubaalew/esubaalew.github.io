@@ -21,53 +21,6 @@ If you want a **real-world Rust use case** (orchestrating Python/R/JS from a Rus
 
 ---
 
-<details>
-<summary><strong>Table of contents</strong></summary>
-
-- [Website and Docs](#website-and-docs)
-- [Overview](#overview---universal-multi-language-runner)
-  - [What is run?](#what-is-run)
-  - [Who is this for?](#who-is-this-for)
-  - [Why was run created?](#why-was-run-created)
-  - [Why Rust?](#why-rust)
-- [Highlights](#-highlights)
-- [Quickstart](#-quickstart)
-- [Installation](#-installation)
-- [How it works](#-how-it-works)
-- [Supported languages](#-supported-languages)
-  - [Complete Language Aliases Reference](#complete-language-aliases-reference)
-- [Command Variations - Flexible Syntax](#command-variations---flexible-syntax)
-- [Command-Line Flags Reference](#command-line-flags-reference)
-- [When to Use --lang (Important)](#when-to-use---lang-important)
-- [Main Function Flexibility](#main-function-flexibility)
-- [Examples](#-examples)
-- [REPL](#-repl)
-  - [Interactive REPL - Line by Line or Paste All](#interactive-repl---line-by-line-or-paste-all)
-  - [Variable Persistence & Language Switching](#variable-persistence--language-switching)
-  - [REPL Commands](#repl-commands)
-- [Stdin Piping Examples](#stdin-piping-examples)
-- [Language-Specific Notes](#language-specific-notes)
-- [License](#-license)
-
-</details>
-
----
-
-# Website and Docs
-
-The official website and full documentation are available here:
-
-- Website: [run.esubalew.et](https://run.esubalew.et/)
-- Docs: [run.esubalew.et](https://run.esubalew.et/)
-
-Use these links to explore features, language guides, and detailed examples.
-
----
-
-# Overview - Universal Multi-Language Runner
-
-A powerful command-line tool for executing code in **25+ programming languages**.
-
 ## What is run?
 
 `run` is a universal multi-language runner and smart REPL (Read-Eval-Print Loop) written in Rust. It provides a unified interface for executing code across many programming languages without the hassle of managing different command styles per toolchain.
@@ -110,7 +63,7 @@ Traditional workflows require separate setup and different commands per language
 
 ---
 
-## Highlights {: #-highlights}
+## Highlights
 
 - **One CLI** across runtimes
 - **Persistent REPL** per language session
@@ -120,7 +73,7 @@ Traditional workflows require separate setup and different commands per language
 
 ---
 
-## Quickstart {: #-quickstart}
+## Quickstart
 
 ```bash
 # Show build metadata for the current binary
@@ -144,7 +97,7 @@ echo "Hello from stdin" | run python --code "import sys; print(sys.stdin.read().
 
 ---
 
-## Installation {: #-installation}
+## Installation
 
 All release assets are published on the GitHub Releases page, including macOS builds for both Apple Silicon (`arm64`) and Intel (`x86_64`). Pick the method that fits your platform:
 
@@ -220,7 +173,7 @@ run --version
 
 ---
 
-## How it works {: #-how-it-works}
+## How it works
 
 `run` shells out to real toolchains under the hood. Each language engine knows how to:
 
@@ -233,7 +186,7 @@ This keeps the core lightweight while making it easy to support many runtimes.
 
 ---
 
-## Supported languages {: #-supported-languages}
+## Supported languages
 
 `run` supports 25+ languages out of the box, spanning scripting, systems, and scientific stacks:
 
@@ -344,8 +297,6 @@ run --lang python --code "print('hello')"
 
 ## When to Use --lang (Important)
 
-{: #when-to-use---lang-important }
-
 Auto-detection is convenient, but **ambiguous syntax** can exist across languages. Use `--lang` when you want deterministic behavior.
 
 ```bash
@@ -389,7 +340,7 @@ Hello, world!
 
 ---
 
-## Examples {: #-examples}
+## Examples
 
 If you’re browsing the `run` repo, real programs typically live under an `examples/` tree—each language often includes a small `hello` and a slightly richer scenario so you can validate your toolchain quickly.
 
@@ -401,7 +352,7 @@ run examples/python/counter.py
 
 ---
 
-## REPL {: #-repl}
+## REPL
 
 The REPL supports built-in commands for managing your session:
 
@@ -498,7 +449,3 @@ Practical tips that save time:
 - **Groovy / shells**: quote here-docs to prevent `$` interpolation by the shell.
 
 ---
-
-## License {: #-license}
-
-`run` is released under its repository license. See the `LICENSE` file in the `run` project for details.
