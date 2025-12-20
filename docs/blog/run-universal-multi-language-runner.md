@@ -17,7 +17,7 @@ og:type: "article"
 
 This post is a **full tutorial** for `run` itself: what it is, why it exists, and how to use it day-to-day.
 
-If you want a **real-world Rust use case** (orchestrating Python/R/JS from a Rust program), read the earlier blog: [Using Run-Kit to Seamlessly Mix Multiple Languages in a Single Rust Codebase](using-run-kit-multi-language-rust.md) (also published on the website as [Using Run-Kit to Seamlessly Mix Multiple Languages in a Single Rust Codebase](https://www.esubalew.dev/blog/using-run-kit-multi-language-rust)).
+If you want a **real-world Rust use case** (orchestrating Python/R/JS from a Rust program), read the earlier blog: [Using Run-Kit to Seamlessly Mix Multiple Languages in a Single Rust Codebase](using-run-kit-multi-language-rust.md).
 
 ---
 
