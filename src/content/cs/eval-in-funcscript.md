@@ -416,6 +416,45 @@ And since we don't have key-value pairs anymore, we can even get rid of `{}`:
 
 ---
 
+## _Eval in conditional expressions_
+
+Before finishing the exploration of eval, let's also see another example: eval in conditional expressions.
+
+The rule in FuncScript when it comes to conditions follows this pattern: `key: if condition then assignValue else assignOther` - where `assignOther` is used when the condition is unsatisfied.
+
+```javascript
+{
+  value: 10;
+  message: if value > 0 then "oh at least positive" else "damn negative";
+}
+```
+
+Output:
+
+```javascript
+{
+  value: 10,
+  message: "oh at least positive",
+};
+```
+
+So here we can use eval to directly evaluate the if result without needing an intermediate key:
+
+```javascript
+{
+  value: 10;
+  eval if value > 0 then "oh at least positive" else "damn negative";
+}
+```
+
+Output:
+
+```javascript
+"oh at least positive";
+```
+
+---
+
 ## _Conclusion_
 
 The `eval` keyword in FuncScript is a powerful tool for:
