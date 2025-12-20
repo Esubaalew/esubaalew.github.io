@@ -11,7 +11,7 @@ date: "2023-09-24"
 
 Sometimes, I feel bored and restless. For my boredom, I usually choose walking or writing as a solution.
 
-Today, that restlessness hit me suddenly, so I took myself out of the campus and headed towards French Legation. Usually, when I travel from neighborhood to neighborhood in Addis Ababa, I don't use transport. Using a taxi is not only a waste of money, but it also deprives me of the many benefits I get from walking. As I was walking briskly, a very lovely little girl caught my eye. Sometimes, I enjoy approaching children I like, greeting them, asking them questions, and telling them things I know. To me, children are better than the youth of this era. They are better than the adults who lose themselves in a world of madness - changing their clothes and personalities without changing their inner thoughts - who sell their sense of shame and buy clothes and habits that only reflect Western culture.
+Today, that restlessness hit me suddenly, so I took myself out of the campus and headed towards Ferensay Legasion (a district name in Yeka Sub-City, Addis Ababa). Usually, when I travel from neighborhood to neighborhood in Addis Ababa, I don't use transport. Using a taxi is not only a waste of money, but it also deprives me of the many benefits I get from walking. As I was walking briskly, a very lovely little girl caught my eye. Sometimes, I enjoy approaching children I like, greeting them, asking them questions, and telling them things I know. To me, children are better than the youth of this era. They are better than the adults who lose themselves in a world of madness - changing their clothes and personalities without changing their inner thoughts - who sell their sense of shame and buy clothes and habits that only reflect Western culture.
 
 I slowed my pace and reached out my hand toward the car she was leaning against. "How are you, little one?" I said, offering a greeting.
 
@@ -31,7 +31,7 @@ Fear gripped me tightly. I didn't know what to answer. In the middle of this, I 
 
 "I caught him red-handed trying to steal my child; he's a thief!" the man shouted.
 
-I don't remember much of what happened next. I only remember finding myself in front of the French Abune Gebre Menfes Kidus Church. Though the details weren't clear to me, I knew I had run away and escaped from the police and the child's father.
+I don't remember much of what happened next. I only remember finding myself in front of the Ferensay Abune Gebre Menfes Kidus Church. Though the details weren't clear to me, I knew I had run away and escaped from the police and the child's father.
 
 I prayed at the church. After thanking my Creator for snatching me from the teeth of trouble, I turned toward my destination.
 
