@@ -17,6 +17,15 @@ Thoughts on software engineering, machine learning, and the mathematical foundat
 
 ## Latest Posts
 
+### [run: Universal Multi-Language Runner & Persistent REPL (Tutorial)](run-universal-multi-language-runner.md)
+**December 20, 2025**
+
+A structured, beginner-friendly guide to `run`: one CLI to execute snippets, files, and stdin across 25+ languages—plus a persistent REPL you can switch on the fly.
+
+**Tags:** Rust, Polyglot, REPL, run, Tutorial, CLI, Programming
+
+---
+
 ### [The Vibe Check: When AI Builds the House, Who Knows Where the Plumbing Is?](the-vibe-check-when-ai-builds-the-house-who-knows-where-the-plumbing-is.md)
 **November 28, 2025**
 

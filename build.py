@@ -930,17 +930,17 @@ def generate_og_images():
         import sys
         sys.path.insert(0, str(ROOT / "scripts"))
         from generate_og_images import main as og_main
-        print("🖼️  Generating OG images...")
+        print("Generating OG images...")
         og_main()
     except ImportError as e:
-        print(f"⚠️  OG generation skipped (missing dependency: {e})")
+        print(f"OG generation skipped (missing dependency: {e})")
     except Exception as e:
-        print(f"⚠️  OG generation failed: {e}")
+        print(f"OG generation failed: {e}")
 
 
 def main():
     """Build the site."""
-    print("\n🔨 Building site...\n")
+    print("\nBuilding site...\n")
     
     # Try to generate OG images first
     generate_og_images()
@@ -953,7 +953,7 @@ def main():
     
     # Get blog posts
     posts = get_blog_posts()
-    print(f"📝 Found {len(posts)} blog posts\n")
+    print(f"Found {len(posts)} blog posts\n")
     
     # Build pages
     build_home(posts)
@@ -1028,7 +1028,7 @@ def main():
     # Generate sitemap
     generate_sitemap(posts, wegs, poems, geez_pages, cs_articles)
     
-    print("\n✨ Site built successfully!")
+    print("\nSite built successfully!")
     print(f"   Output: {OUTPUT}\n")
 
 

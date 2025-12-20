@@ -33,10 +33,10 @@ This is a common problem in many academic programs, where grades are often seen 
 
 It's important to recognize that **grades are not the only factor** that will determine your success in your chosen career field. While good grades can certainly open doors and provide opportunities, they are not a guarantee of success. In order to truly excel, you must also be able to demonstrate:
 
-- 🛠️ **Practical skills and experience**
-- 💪 **Strong work ethic**
-- 📚 **Willingness to learn and grow**
-- 🚀 **Real-world project portfolio**
+- **Practical skills and experience**
+- **Strong work ethic**
+- **Willingness to learn and grow**
+- **Real-world project portfolio**
 
 ---
 

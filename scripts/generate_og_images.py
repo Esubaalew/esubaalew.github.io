@@ -185,17 +185,17 @@ def convert_svg_to_png(svg_path: Path, png_path: Path):
             check=True,
             capture_output=True
         )
-        print(f"✅ Generated {png_path.name}")
+        print(f"Generated {png_path.name}")
         return True
     except (subprocess.CalledProcessError, FileNotFoundError):
         try:
             import cairosvg
             cairosvg.svg2png(url=str(svg_path), write_to=str(png_path), 
                            output_width=OUTPUT_WIDTH, output_height=OUTPUT_HEIGHT)
-            print(f"✅ Generated {png_path.name} (via cairosvg)")
+            print(f"Generated {png_path.name} (via cairosvg)")
             return True
         except ImportError:
-            print(f"⚠️  PNG conversion skipped - install cairosvg or rsvg-convert")
+            print("PNG conversion skipped - install cairosvg or rsvg-convert")
             return False
 
 
@@ -224,12 +224,12 @@ def process_blog_posts():
         
         title = extract_title_from_md(md_file)
         if not title:
-            print(f"⚠️  Skipping {md_file.name} - No title found")
+            print(f"Skipping {md_file.name} - No title found")
             continue
         
         svg_content = generate_svg(title)
         og_svg.write_text(svg_content, encoding="utf-8")
-        print(f"✅ Generated {og_svg.name}")
+        print(f"Generated {og_svg.name}")
         
         convert_svg_to_png(og_svg, og_png)
         generated += 1
@@ -264,12 +264,12 @@ def process_works(content_dir: Path, work_type: str, force_regenerate: bool = Fa
         
         title = extract_title_from_md(md_file)
         if not title:
-            print(f"⚠️  Skipping {md_file.name} - No title found")
+            print(f"Skipping {md_file.name} - No title found")
             continue
         
         svg_content = generate_svg(title)
         og_svg.write_text(svg_content, encoding="utf-8")
-        print(f"✅ Generated {og_svg.name}")
+        print(f"Generated {og_svg.name}")
         
         convert_svg_to_png(og_svg, og_png)
         
@@ -294,7 +294,7 @@ def update_og_image_in_md(md_file: Path, og_image_path: str):
     
     if new_content != content:
         md_file.write_text(new_content, encoding="utf-8")
-        print(f"📝 Updated {md_file.name} with new OG image")
+        print(f"Updated {md_file.name} with new OG image")
 
 
 def main():
@@ -305,9 +305,9 @@ def main():
     force = "--force" in sys.argv
     
     if force:
-        print("🔄 Force regenerating all OG images...\n")
+        print("Force regenerating all OG images...\n")
     
-    print("📚 Processing blog posts...")
+    print("Processing blog posts...")
     blog_gen, blog_skip = process_blog_posts()
     
     print("\n📖 Processing wegs...")

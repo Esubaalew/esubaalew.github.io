@@ -130,6 +130,7 @@ nav:
   - Projects: projects.md
   - Blog:
     - blog/index.md
+    - blog/run-universal-multi-language-runner.md
     - blog/the-vibe-check-when-ai-builds-the-house-who-knows-where-the-plumbing-is.md
     - blog/using-run-kit-multi-language-rust.md
     - blog/bridging-rust-python-pyo3.md
