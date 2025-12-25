@@ -265,6 +265,22 @@
         margin: 2rem 0;
       }
 
+      /* Optional image inside the Ge'ez card */
+      .geez-image {
+        margin: 0 auto 2rem;
+        max-width: 760px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+        background: var(--color-bg);
+      }
+
+      .geez-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
       @media (max-width: 640px) {
         .geez-container {
           padding: 2rem 1.5rem;
@@ -324,6 +340,7 @@
         <div class="geez-ornament">፨</div>
 
         <div class="geez-container">
+          {{image_section}}
           <div class="geez-verse">
             <div class="geez-primary">{{geez_text}}</div>
             {{meaning_section}} {{reference_section}} {{memorial_section}}

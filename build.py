@@ -7,6 +7,7 @@ Converts markdown to HTML with minimal dependencies.
 import os
 import re
 import shutil
+import html as html_lib
 from pathlib import Path
 from datetime import datetime
 import markdown
@@ -628,6 +629,17 @@ def build_geez():
             <div class="geez-memorial">
               <span class="memorial-label">ማስታወሻ:</span> {geez_content["memorial"]}
             </div>'''
+
+        # Optional image inside the Ge'ez card (e.g. scanned text / manuscript)
+        image_section = ""
+        image_src = meta.get("image", "").strip() if isinstance(meta.get("image", ""), str) else ""
+        if image_src:
+            alt = meta.get("image_alt") or meta.get("title", "Ge'ez")
+            alt_escaped = html_lib.escape(str(alt), quote=True)
+            image_section = f'''
+          <figure class="geez-image">
+            <img src="{image_src}" alt="{alt_escaped}" loading="lazy" decoding="async" />
+          </figure>'''
         
         html = render_template(
             template,
@@ -640,6 +652,7 @@ def build_geez():
             og_image=f"{SITE_URL}{meta.get('og:image', '/assets/og-image.png')}",
             canonical_url=f"{SITE_URL}{url}",
             geez_text=geez_text_html,
+            image_section=image_section,
             meaning_section=meaning_section,
             reference_section=reference_section,
             memorial_section=memorial_section,
@@ -870,6 +883,16 @@ def copy_static():
             if img_file.is_file():
                 shutil.copy(img_file, getem_out / img_file.name)
         print("✓ Copied getem images")
+
+    # Copy Ge'ez images (misloch)
+    geez_misloch = CONTENT / "geez" / "misloch"
+    if geez_misloch.exists():
+        geez_out = OUTPUT / "geez" / "misloch"
+        geez_out.mkdir(parents=True, exist_ok=True)
+        for img_file in geez_misloch.glob("*"):
+            if img_file.is_file():
+                shutil.copy(img_file, geez_out / img_file.name)
+        print("✓ Copied geez images")
 
 
 def generate_sitemap(posts: list[dict], wegs: list[dict], poems: list[dict], geez_pages: list[dict], cs_articles: list[dict]):
