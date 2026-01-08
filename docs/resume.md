@@ -42,7 +42,7 @@ Strong foundation in software engineering, database systems, and information tec
 **INTAPS** | Addis Ababa, Ethiopia  
 *June 2025 - Present*
 
-- Lead development of a mission-critical **Cadastre Information System (CIS)** serving major Ethiopian cities, supporting land administration and community services
+- Work at development of a mission-critical **Cadastre Information System (CIS)** serving major Ethiopian cities, supporting land administration and community services
 - Architect and maintain scalable solutions using **ASP.NET Core**, **PostgreSQL**, and **Docker**, ensuring reliability and high availability
 - Work on very critical software system for large Ethiopian city that serves wider Ethiopian community
 
